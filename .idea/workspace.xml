@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0875101f-c9e0-4ef2-945f-6eeda6b04bc8" name="Changes" comment="i18 active redux toolik active">
+      <change afterPath="$PROJECT_DIR$/project/src/components/gallery-section.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/components/news-slider.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Baden-Baden.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project" beforeDir="false" afterPath="$PROJECT_DIR$/project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/jsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/next.config.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/postcss.config.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/image/about.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/image/baden-icons/bed-double.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/image/baden-icons/car-taxi-front.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/image/baden-icons/washing-machine.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/image/baden-icons/wifi.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/image/baden-logo/baden-baden-logo-white.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/image/baden-logo/baden-baden-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/image/bg-noise.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/image/image 1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/image/img-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/image/img-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/image/img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/image/img1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/image/img2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/image/img3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/image/room1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/image/room2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/image/room3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/image/room4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/image/room5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/image/room6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/image/staying/bed-double.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/image/staying/car-taxi-front.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/image/staying/washing-machine.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/image/staying/wifi.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/image/unsplash_Cj7a21nHLyo-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/image/unsplash_Cj7a21nHLyo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/image/uzb-img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/app/about/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/app/about/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/app/gallery/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/app/gallery/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/app/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/app/news/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/app/news/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/app/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/image-ui.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/image-ui.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/news-card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/news-card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/rooms-slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/rooms-slider.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/section-title.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/section-title.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/section-ui.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/section-ui.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/tailwind.config.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/project" />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2fljkqBcdTy8HV7YCJepimKTXNu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Node.js.Image-UI.jsx.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.index.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.page.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.rooms-slider.jsx.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.tailwind.config.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/projects/Next/Baden-Baden/project/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\webstorm\\WebStorm 2023.3.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projects\Next\Baden-Baden\project\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.dev">
+    <configuration name="rooms-slider.jsx" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/project/src/components/rooms-slider.jsx" working-dir="$PROJECT_DIR$/project/src/components">
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/project/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+        <item itemvalue="Node.js.rooms-slider.jsx" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0875101f-c9e0-4ef2-945f-6eeda6b04bc8" name="Changes" comment="" />
+      <created>1714382704866</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714382704866</updated>
+      <workItem from="1714382705967" duration="292000" />
+      <workItem from="1714383005616" duration="9620000" />
+      <workItem from="1714458129705" duration="9994000" />
+      <workItem from="1714480197805" duration="3590000" />
+      <workItem from="1714540861793" duration="21197000" />
+      <workItem from="1714634083603" duration="8001000" />
+      <workItem from="1714647283450" duration="1640000" />
+      <workItem from="1714715593295" duration="13856000" />
+      <workItem from="1714800851009" duration="2737000" />
+      <workItem from="1714809328885" duration="9753000" />
+      <workItem from="1714899040605" duration="11270000" />
+      <workItem from="1714973177881" duration="10839000" />
+    </task>
+    <task id="LOCAL-00001" summary="news card">
+      <option name="closed" value="true" />
+      <created>1714401851742</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714401851742</updated>
+    </task>
+    <task id="LOCAL-00002" summary="news card">
+      <option name="closed" value="true" />
+      <created>1714401908536</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714401908536</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="news card" />
+    <MESSAGE value="i18 active redux toolik active" />
+    <option name="LAST_COMMIT_MESSAGE" value="i18 active redux toolik active" />
+  </component>
+</project>
