@@ -1,0 +1,13 @@
+export { default as ImageUI } from './image-ui';
+export { default as SectionTitle } from './section-title';
+export { default as NewsCard } from './news-card';
+export { default as SectionUI } from './section-ui';
+export { default as HotelAmenitiesCard } from './hotel-amenities-card';
+export { default as RoomsSlider } from './rooms-slider';
+export { default as AdditionalServicesCard } from './additional-services-card';
+export { default as Slider } from './slider';
+export { default as Header } from './header';
+export { default as HeaderBooking } from './header-booking';
+export { default as AccordionAbout } from './accordion-about';
+export { default as GallerySection } from './gallery-section';
+export { default as NewsSlider } from './news-slider';

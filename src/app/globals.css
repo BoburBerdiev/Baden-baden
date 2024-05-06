@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*       SLIDER   */
+.header-slider .swiper-pagination {
+    display: none !important;
+}
+
+.section-slider .swiper-pagination-bullet {
+    width: 20px;
+    height: 4px;
+    background-color: #af8d64f3;
+    border-radius: 0;
+}
+
+
+.pagintaion-slider {
+    display: inline-flex !important;
+    width: auto !important;
+}
+
+.pagintaion-slider   .swiper-pagination-bullet {
+    display: inline-block !important;
+    width: 8px !important;
+    height: 8px !important;
+    background-color: #B3BECA ;
+    border-radius: 100%;
+}
+
+.pagintaion-slider  .swiper-pagination-bullet-active {
+    background-color: #00274D
+}
+
+.room-slider-pagination.spagintaion-slider   .swiper-pagination-bullet {
+    background-color: #4F6986  !important;
+    border-radius: 100%;
+}
+
+.pagintaion-slider  .swiper-pagination-bullet-active {
+    background-color: white;
+}
