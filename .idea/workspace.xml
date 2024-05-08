@@ -5,17 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0875101f-c9e0-4ef2-945f-6eeda6b04bc8" name="Changes" comment="i18 active redux toolik active">
-      <change afterPath="$PROJECT_DIR$/src/components/parallax-scroll.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/cn.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/room-card.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/gallery/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/gallery/page.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/room/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/room/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/accordion-about.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/accordion-about.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/gallery-section.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gallery-section.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/image-ui.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/image-ui.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/news-card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/news-card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slider.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JSX File" />
         <option value="JavaScript File" />
+        <option value="JSX File" />
       </list>
     </option>
   </component>
@@ -134,7 +136,7 @@
       <workItem from="1714998234639" duration="12314000" />
       <workItem from="1715149420175" duration="943000" />
       <workItem from="1715150419456" duration="195000" />
-      <workItem from="1715151086067" duration="4070000" />
+      <workItem from="1715151086067" duration="11448000" />
     </task>
     <task id="LOCAL-00001" summary="news card">
       <option name="closed" value="true" />

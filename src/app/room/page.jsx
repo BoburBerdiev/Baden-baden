@@ -1,10 +1,16 @@
-import React from 'react';
+'use client'
+import {RoomCard, SectionUI} from "@/components";
 
 const Page = () => {
   return (
-      <div>
-        
-      </div>
+      <SectionUI title={'Наши номера'}>
+        <div className="flex flex-col gap-10 md:gap-[60px]">
+          <RoomCard />
+          <RoomCard />
+          <RoomCard />
+          <RoomCard />
+        </div>
+      </SectionUI>
   );
 };
 

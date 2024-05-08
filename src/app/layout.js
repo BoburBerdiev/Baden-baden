@@ -1,8 +1,5 @@
 import "./globals.css";
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/navigation';
-import 'swiper/css/thumbs';
+
 import "react-datepicker/dist/react-datepicker.css";
 import { Jost, Forum} from "next/font/google";
 import Layout from "@/Layout/Layout";

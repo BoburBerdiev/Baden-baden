@@ -5,6 +5,10 @@ import {Client, HydrationProvider} from "react-hydration-provider";
 import {Provider} from "react-redux";
 import store, {persistor} from "@/store";
 import {PersistGate} from "redux-persist/integration/react";
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
 
 const Layout = ({children}) => {
     return (

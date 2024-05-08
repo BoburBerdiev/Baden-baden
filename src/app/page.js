@@ -89,7 +89,9 @@ export default function Home() {
 
 
      <SectionUI title={'Фотогалерея'}>
-       <GallerySection isForIndex={true} />
+       <div className={'py-10'}>
+        <GallerySection isForIndex={true} />
+       </div>
      </SectionUI>
    </main>
   );

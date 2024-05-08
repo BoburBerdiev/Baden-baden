@@ -1,11 +1,11 @@
-
+'use client'
 import {ImageUI} from "@/components/index";
 const GallerySection = ({isForIndex}) => {
   const onInit = () => {
     console.log('lightGallery has been initialized');
   };
   return (
-      <div className={'grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-3  py-10'}>
+      <div className={'grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-3  '}>
 
         <div className={'space-y-1 md:space-y-3'}>
           <a href={'/image/img.jpg'} className={'relative block aspect-[16/12]'}>
