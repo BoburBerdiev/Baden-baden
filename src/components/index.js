@@ -12,4 +12,5 @@ export { default as RoomCard } from './room-card';
 export { default as Slider } from './slider';
 export { default as AccordionAbout } from './accordion-about';
 export { default as GallerySection } from './gallery-section';
-// export { default as NewsSlider } from './news-slider';
+export { default as NewsSlider } from './news-slider';
+export { default as ButtonUI } from './button-ui';

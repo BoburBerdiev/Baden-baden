@@ -1,6 +1,6 @@
 'use client'
 import {
-    AdditionalServicesCard, GallerySection,
+    AdditionalServicesCard, ButtonUI, GallerySection,
     Header,
     HotelAmenitiesCard,
     ImageUI, Navbar,
@@ -9,8 +9,10 @@ import {
     SectionUI
 } from "@/components";
 import NewsSlider from "../components/news-slider";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
+  const {t} = useTranslation()
   return (
    <main>
      <Header />
@@ -26,9 +28,7 @@ export default function Home() {
             <AdditionalServicesCard />
           </div>
          <div className={'flex items-center justify-center col-span-1 md:col-span-2'}>
-           <button>
-             salom
-           </button>
+          <ButtonUI content={t('btn.more')}  hrefToPage={'/about'} borderBtn />
          </div>
        </div>
      </SectionUI>
@@ -50,9 +50,12 @@ export default function Home() {
        {/*        referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>*/}
      </SectionUI>
      <SectionUI title={'Удобства отеля'} modeBlue={true} isNoContainer={true}>
-       <div className={'pb-5'}>
+       <div className={'pb-5 md:pb-10'}>
         <RoomsSlider/>
        </div>
+        <div className="flex flex-col items-center pb-2">
+          <ButtonUI borderBtn borderWhite content={t('btn.moreAll')}/>
+        </div>
      </SectionUI>
      <SectionUI title={'Удобства отеля'}
                 subTitle={'Наш отель предлагает широкий спектр удобств для комфортного пребывания. Наши удобства включают в себя просторные и уютные номера с современной мебелью, бесплатный Wi-Fi на всей территории отеля, услуги прачечной и химчистки. Мы также предлагаем услуги консьержа, обмена валюты и трансфер до аэропорта, чтобы сделать ваше пребывание максимально приятным и комфортным'} modeBlue={true}  >
@@ -80,6 +83,13 @@ export default function Home() {
 
 
      </SectionUI>
+
+     <SectionUI title={'Фотогалерея'}>
+       <GallerySection isForIndex={true} />
+       <div className="flex flex-col items-center pb-1.5 pt-5 md:pt-10">
+          <ButtonUI content={t('btn.moreAll')} hrefToPage={'/gallery'} borderBtn />
+       </div>
+     </SectionUI>
      <SectionUI title={'Новостной блог'}
                 subTitle={'Добро пожаловать в новостной блог нашего отеля, где мы делимся последними новостями, событиями и увлекательными историями. Узнайте о наших специальных предложениях, интересных мероприятиях и уникальных возможностях, чтобы сделать ваше пребывание у нас еще более запоминающимся.'}
      >
@@ -88,11 +98,6 @@ export default function Home() {
 
 
 
-     <SectionUI title={'Фотогалерея'}>
-       <div className={'py-10'}>
-        <GallerySection isForIndex={true} />
-       </div>
-     </SectionUI>
    </main>
   );
 }
