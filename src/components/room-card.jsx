@@ -1,8 +1,10 @@
 import {LuMaximize} from "react-icons/lu";
 import {IoBedOutline, IoPersonOutline} from "react-icons/io5";
-import {Slider} from "@/components/";
+import {ButtonUI, Slider} from "@/components/";
+import { useTranslation } from "react-i18next";
 
 const RoomCard = ({isLeftImage}) => {
+  const {t} = useTranslation( )
   return (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 lg:gap-[60px]">
         <div className={`h-[300px] md:h-[350px] lg:h-[380px] relative ${isLeftImage ? 'order-1 md:order-2' : ''} `}>
@@ -31,12 +33,8 @@ const RoomCard = ({isLeftImage}) => {
           </p>
           <p className="mt-3 lg:mt-5 text-first font-normal text-lg md:text-2xl">450 000 UZS / за ночь </p>
           <div className="flex mt-5 lg:mt-10 justify-center w-full gap-1">
-            <div className="flex flex-col gap-[3.5px]">
-              <a href="#" className="p-[10px_26px] md:p-[12px_30px] bg-first text-btnText">Забронировать </a>
-              <span className="w-full h-[1px] bg-first"></span>
-            </div>
-            <a href="#"
-               className="p-[10px_26px] md:p-[12px_30px] bg-white text-first border border-first">Подробнее</a>
+            <ButtonUI content={t('btn.booking')} onClick={''}/>
+            <ButtonUI content={t('btn.more')} onlyHref hrefToPage={'/room/1'}/>
           </div>
         </div>
       </div>
