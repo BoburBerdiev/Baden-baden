@@ -41,24 +41,19 @@
     background-color: white;
 }
 
-/* ===== Scrollbar CSS ===== */
-/* Firefox */
-.gallery-scroll-bar * {
-    scrollbar-width: auto;
-    scrollbar-color: #cf24ff #ffffff;
+
+.room-slider  .swiper-pagination-bullet, .room-slider .mySwiper2 .swiper-pagination-bullet {
+    width: 40px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.50) !important;
+    border-radius: 0;
 }
 
-/* Chrome, Edge, and Safari */
-.gallery-scroll-bar *::-webkit-scrollbar {
-    width: 23px;
+.room-slider  .swiper-pagination-bullet-active, .room-slider .mySwiper2 .swiper-pagination-bullet-active {
+    width: 40px;
+    height: 4px;
+    background-color: white !important;
+    border-radius: 0;
 }
 
-.gallery-scroll-bar *::-webkit-scrollbar-track {
-    background: #ffffff;
-}
 
-.gallery-scroll-bar *::-webkit-scrollbar-thumb {
-    background-color: #cf24ff;
-    border-radius: 10px;
-    border: 3px solid #ffffff;
-}

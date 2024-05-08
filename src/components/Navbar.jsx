@@ -1,3 +1,5 @@
+'use client'
+
 import React, {useState} from 'react';
 import ImageUi from "@/components/image-ui";
 import Link from "next/link";

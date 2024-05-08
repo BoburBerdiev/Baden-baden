@@ -95,6 +95,9 @@ export default function Home() {
      >
        <NewsSlider/>
      </SectionUI>
+
+
+
    </main>
   );
 }
