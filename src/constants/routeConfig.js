@@ -1,26 +1,26 @@
 export const navLink=[
     {
         link:'/',
-        text:'Главная'
+        text:'navbar.home'
     },
     {
-        link:'/',
-        text:'Номера'
+        link:'/room',
+        text:'navbar.rooms'
     },
     {
-        link:'/',
-        text:'Об отеле'
+        link:'/about',
+        text:'navbar.about'
     },
     {
-        link:'/',
-        text:'Фотогалерея'
+        link:'/gallery',
+        text:'navbar.gallery'
     },
     {
-        link:'/',
-        text:'Новости'
+        link:'/news',
+        text:'navbar.news'
     },
     {
-        link:'/',
-        text:'Контакты'
+        link:'/contact',
+        text:'navbar.contact'
     }
 ]

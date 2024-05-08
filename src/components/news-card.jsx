@@ -1,7 +1,9 @@
 import Link from "next/link";
 import {ImageUI} from "@/components/";
+import { useTranslation } from "react-i18next";
 
 const NewsCard = () => {
+  const {t} = useTranslation()
   return (
 
 
@@ -19,7 +21,7 @@ const NewsCard = () => {
             acquisitions of 2021 so far, in reverse chronological order.</p>
           <Link href="#"
              className="inline-flex items-center  underline font-jost">
-            Read more
+              {t('btn.more')}
           </Link>
         </div>
       </div>

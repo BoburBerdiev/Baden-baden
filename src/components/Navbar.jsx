@@ -12,6 +12,7 @@ const Navbar = () => {
     const handleBurger = () => {
         setSidebar(!sidebar)
     }
+    const {t} = useTranslation()
     return (
         <nav className={"bg-currentBlue bg-[url('/image/bg-noise.jpg')] "}>
             <div className=" py-[10px] border-b-[0.5px] border-navBorder hidden md:block">
@@ -38,7 +39,7 @@ const Navbar = () => {
                         <ul className={`nav flex flex-col duration-700 z-[100] top-[70px] ${sidebar ? 'left-0' : '-left-full'} fixed w-80 bg-[url('/image/bg-noise.jpg')] bg-currentBlue gap-7 pt-5  items-center border border-currentBlue h-screen md:hidden`}>
                             {
                                 navLink.map((link,ind) => (
-                                    <li key={ind}><Link href={link.link}>{link.text} </Link></li>
+                                    <li key={ind}><Link href={link.link}>{t(`${link.text}`)} </Link></li>
 
                                 ))
                             }
@@ -46,7 +47,7 @@ const Navbar = () => {
                         <ul className="md:flex justify-between items-center w-1/3 hidden">
                             {
                                 navLink.slice(0, 3).map((link, ind) => (
-                                        <li key={ind}><Link href={link.link}>{link.text} </Link></li>
+                                        <li key={ind}><Link href={link.link}>{t(`${link.text}`)} </Link></li>
                                     )
                                 )
                             }
@@ -63,14 +64,15 @@ const Navbar = () => {
                         <ul className="md:flex justify-between items-center w-1/3 hidden">
                             {
                                 navLink.slice(3, 6).map((link, ind) => (
-                                        <li key={ind}><Link href={link.link}>{link.text} </Link></li>
+                                        <li key={ind}><Link href={link.link}>{t(`${link.text}`)} </Link></li>
                                     )
                                 )
                             }
 
                         </ul>
-                        <p className="flex items-center gap-2 md:hidden"> Ru <i className="w-4 h-4"
-                                                                                data-lucide="chevron-down"></i></p>
+                        <div className="md:hidden"> 
+                        <DropdownLang/>
+                        </div>
                     </div>
                 </div>
             </div>
