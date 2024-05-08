@@ -18,12 +18,13 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        jost: ["var(--jost)"],
+        jost: ["var(--font-jost)"],
         forum: ["var(--font-forum)"],
       },
       colors: {
        currentBlue:'#00274D',
-        currentBlack:'#444444'
+        currentBlack:'#444444',
+        bgSocial:'#D9D9D9'
       },
       boxShadow: {
         'inner': '[-1px_3px_5px_0px_rgba(0,0,0,0.75)]',

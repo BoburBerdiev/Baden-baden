@@ -1,3 +1,5 @@
+export { default as Navbar } from './Navbar';
+export { default as Footer } from './Footer';
 export { default as ImageUI } from './image-ui';
 export { default as SectionTitle } from './section-title';
 export { default as NewsCard } from './news-card';

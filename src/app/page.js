@@ -1,12 +1,12 @@
 'use client'
 import {
-  AdditionalServicesCard, GallerySection,
-  Header,
-  HotelAmenitiesCard,
-  ImageUI,
-  NewsCard,
-  RoomsSlider,
-  SectionUI
+    AdditionalServicesCard, GallerySection,
+    Header,
+    HotelAmenitiesCard,
+    ImageUI, Navbar,
+    NewsCard,
+    RoomsSlider,
+    SectionUI
 } from "@/components";
 import NewsSlider from "../components/news-slider";
 
