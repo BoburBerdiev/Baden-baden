@@ -3,6 +3,7 @@ import ImageUi from "@/components/image-ui";
 import Link from "next/link";
 import {LuAlignLeft} from "react-icons/lu";
 import {nav, navLink} from "@/constants/routeConfig";
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
     const [sidebar, setSidebar] = useState(false)
@@ -18,9 +19,8 @@ const Navbar = () => {
                         <div className="flex gap-2 lg:gap-[34px] items-center">
                             <a href="tel:+998555121100">+998 55 512 11 00</a>
                             <a href="tel:+998555121100">+998 55 512 11 00</a>
-                            <p className="flex items-center gap-2"> Русский <i className="w-4 h-4"
-                                                                               data-lucide="chevron-down"></i></p>
-                        </div>
+                            <DropdownLang/>
+                           </div>
                         <div className="whitespace-nowrap">
                             <p>ул. Гейдара Алиева, 165, Мирабадский район, Ташкент, 100025, Узбекистан</p>
                         </div>
@@ -77,3 +77,54 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+const DropdownLang = () =>{
+    const {t} = useTranslation()
+
+    const langList = [
+        {
+            title: t('lang.ru'),
+            value: 'ru',
+            id: 1
+        },
+        {
+            title: t('lang.en'),
+            value: 'en',
+            id: 2
+        },
+        {
+            title: t('lang.uz'),
+            value: 'uz',
+            id: 3
+        }
+    ]
+    const [dropdown , setDropdown] = useState(false)
+
+    const opendropdown = () => {
+        setDropdown(prevstate => !prevstate)
+    }
+    window.addEventListener('scroll' , () => {
+        if (window.scrollY > 0) {
+            setDropdown(false)
+        }
+    })
+    return (
+        <>
+        <div className="relative">
+                                <p className=" cursor-pointer text-white font-berlin" onClick={opendropdown}>Русский</p>
+                                    <div className={`grid w-24 ${dropdown ? "grid-rows-[1fr]" : 'grid-rows-[0fr]'} absolute top-[26px]  z-20 left-0 duration-200 transition-all ease   `}>
+                                        <div className={`overflow-hidden bg-currentBlue flex flex-col   ${dropdown ? "border-b border-x border-white " : ''} rounded-b`}>
+                                            {
+                                                langList.map((item) => (
+                                                    <div key={item.id} className="hover:bg-black/10 px-3 py-1  flex items-center gap-2 cursor-pointer">
+                                                        <span>{item.title}</span>
+                                                    </div>
+
+                                                ))
+                                            }
+                                        </div>
+                                    </div>
+                               </div>
+        </>
+    )
+}
