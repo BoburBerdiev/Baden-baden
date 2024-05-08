@@ -8,26 +8,32 @@ import {SlLocationPin} from "react-icons/sl";
 
 const Footer = () => {
     return (
-        <footer className="w-full bg-currentBlue">
+        <footer className="w-full bg-currentBlue bg-[url('/image/bg-noise.jpg')]">
             <div className="container">
                 <div className=" py-6 md:py-10 flex lg:flex-row flex-col gap-10 lg:gap-32 items-center font-jost">
                     <Link href="/" className="w-36 h-20 md:w-44 md:h-28 block">
                         <img src="/image/baden-baden-logo-white 1.png" alt="" className="w-full h-full object-contain"/>
                     </Link>
                     <div
-                        className="grid grid-cols-3 sm:grid-cols-6  gap-x-10  sm:gap-x-10 md:gap-x-12 lg:gap-x-24 xl:gap-x-36 text-white font-jost">
+                        className="grid grid-cols-3 sm:grid-cols-6  gap-x-6  sm:gap-x-10 md:gap-x-12 lg:gap-x-24 xl:gap-x-36 text-white font-jost">
                         <ul className="col-span-2 flex flex-col gap-5 order-1  text-sm">
                             <li>
                                 <a href="tel:+998555121100" className="flex gap-3.5 items-center">
                                     <LuPhone className={'text-xl'}/>
 
+                                    <span className={'hover:border-b hover:border-white border-b border-transparent duration-300'}>
                                     +998 55
-                                    512 11 00</a>
+                                    512 11 00
+                                    </span>
+                                </a>
                             </li>
                             <li>
                                 <a href="mailto:info@baden-baden.uz" className="flex gap-3.5 items-center">
                                     <MdOutlineMailOutline className={'text-xl'}/>
-                                    info@baden-baden.uz</a>
+                                    <span className={'hover:border-b hover:border-white border-b border-transparent duration-300'}>
+                                    info@baden-baden.uz
+                                    </span>
+                                </a>
                             </li>
                             <li>
                                 <p className="flex gap-3.5 items-center">
@@ -39,7 +45,7 @@ const Footer = () => {
                         <ul className=" whitespace-nowrap flex flex-col gap-5 min-[360px]:mb-2 md:mb-0 order-2 font-medium ">
                             {
                                 navLink.slice(0, 3).map((link, ind) => (
-                                        <li key={ind}><Link href={link.link}>{link.text} </Link></li>
+                                        <li key={ind}><Link href={link.link} className={'hover:border-b hover:border-white border-b border-transparent duration-300'}>{link.text} </Link></li>
                                     )
                                 )
                             }
@@ -47,17 +53,17 @@ const Footer = () => {
                         <ul className=" whitespace-nowrap flex flex-col gap-5 order-4 sm:order-3 font-medium font-jost">
                             {
                                 navLink.slice(3, 6).map((link, ind) => (
-                                        <li key={ind}><Link href={link.link}>{link.text} </Link></li>
+                                        <li key={ind}><Link href={link.link} className={'hover:border-b hover:border-white border-b border-transparent duration-300'}>{link.text} </Link></li>
                                     )
                                 )
                             }
 
                         </ul>
-                        <div className="col-span-2 flex flex-col gap-4 order-3 sm:order-4 mt-5 sm:mt-0 lg:text-start text-right">
+                        <div className="col-span-2 flex flex-col gap-4 order-3 sm:order-4 mt-5 sm:mt-0 lg:text-start sm:text-center">
                             <p>Наши соц сети:</p>
-                            <div className="flex items-center lg:justify-start justify-end gap-4 lg:gap-[30px]">
+                            <div className="flex items-center lg:justify-start sm:justify-center gap-4 lg:gap-[30px]">
                                 <a target="_blank" href="https://instagram.com"
-                                   className="bg-bgSocial hover:opacity-700 p-2 rounded-full">
+                                   className="bg-bgSocial  p-2 rounded-full">
                                     <RiInstagramLine className={'text-currentBlue text-base'}/>
                                 </a>
                                 <a target="_blank" href="https://facebook.com"
@@ -74,7 +80,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="bg-currentBlue w-full border-t-[1px] border-light border-b-0  py-2 md:p-0">
+            <div className=" w-full border-t-[1px] border-light border-b-0  py-2 md:p-0">
                 <div className="container">
                     <div className="flex flex-col-reverse sm:flex-row items-center justify-between text-white">
                         <p className="text-light font-jost text-xs ">©{new Date().getFullYear()}. Все права защищены.</p>

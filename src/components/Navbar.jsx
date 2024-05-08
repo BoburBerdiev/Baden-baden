@@ -10,7 +10,7 @@ const Navbar = () => {
         setSidebar(!sidebar)
     }
     return (
-        <nav className={'bg-currentBlue'}>
+        <nav className={"bg-currentBlue bg-[url('/image/bg-noise.jpg')] "}>
             <div className=" py-[10px] border-b-[0.5px] border-navBorder hidden md:block">
                 <div className="container">
                     <div
@@ -33,7 +33,7 @@ const Navbar = () => {
                         className="flex justify-between items-center  py-4 md:py-7 text-white font-normal text-sm lg:text-lg font-jost   ">
                         <LuAlignLeft className={'text-white text-xl block md:hidden cursor-pointer'}
                                      onClick={handleBurger}/>
-                        <ul className={`nav flex flex-col duration-700 z-[100] top-[70px] ${sidebar ? 'left-0' : '-left-full'} fixed w-80 bg-currentBlue gap-7 pt-5  items-center border border-currentBlue h-screen md:hidden`}>
+                        <ul className={`nav flex flex-col duration-700 z-[100] top-[70px] ${sidebar ? 'left-0' : '-left-full'} fixed w-80 bg-[url('/image/bg-noise.jpg')] bg-currentBlue gap-7 pt-5  items-center border border-currentBlue h-screen md:hidden`}>
                             {
                                 navLink.map((link,ind) => (
                                     <li key={ind}><Link href={link.link}>{link.text} </Link></li>
