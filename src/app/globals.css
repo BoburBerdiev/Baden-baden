@@ -40,3 +40,25 @@
 .pagintaion-slider  .swiper-pagination-bullet-active {
     background-color: white;
 }
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+.gallery-scroll-bar * {
+    scrollbar-width: auto;
+    scrollbar-color: #cf24ff #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+.gallery-scroll-bar *::-webkit-scrollbar {
+    width: 23px;
+}
+
+.gallery-scroll-bar *::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+.gallery-scroll-bar *::-webkit-scrollbar-thumb {
+    background-color: #cf24ff;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+}
