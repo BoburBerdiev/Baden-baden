@@ -5,10 +5,10 @@ import { useTranslation } from "react-i18next";
 
 const RoomCard = ({isLeftImage}) => {
   const {t} = useTranslation( )
+  const borderStyle = `z-[2]  before:border-[#00274D] after:border-[#00274D] relative w-full h-full  before:content-[''] before:duration-150  before:absolute before:w-[96%] before:h-[90%] before:-top-[2%] before:z-[1]  before:left-[2%] before:border-[0.5px]  before:z-1 after:content-[''] after:duration-150  after:absolute after:z-[0] after:w-[104%] after:h-[90%] after:-top-[-4%] after:left-[-2%] after:border  after:z-2`
   return (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 lg:gap-[60px]">
-        <div className={`h-[300px] md:h-[350px] lg:h-[380px] relative ${isLeftImage ? 'order-1 md:order-2' : ''} `}>
-          {/*<ImageUI src={"/image/img2.jpg"} />*/}
+        <div className={`${borderStyle}  h-[300px] md:h-[350px] lg:h-[380px] relative ${isLeftImage ? 'order-1 md:order-2' : ''} `}>
           <Slider PaginationMod={true} PaginationInner={true} />
         </div>
         <div className={`flex flex-col items-center justify-center md:py-10 ${isLeftImage ? ' order-2 md:order-1' : ''}`}>

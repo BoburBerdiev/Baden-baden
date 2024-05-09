@@ -16,13 +16,13 @@ const Slider = ({
                    Quality,
                   card
                 }) => {
+
+
   return (
-      <div
-          className={`bg-transparent h-full`}
-      >
+
         <Swiper
             loop={true}
-            className={` w-full h-full relative room-slider `}
+            className={` w-full h-full relative room-slider`}
             spaceBetween={30}
             pagination={{
               clickable: true,
@@ -38,7 +38,7 @@ const Slider = ({
           {
             list?.map(item => (
 
-          <SwiperSlide key={item?.id}>
+          <SwiperSlide key={item?.id} className={`w-full h-full`}>
               <div className={`w-full h-full relative`}>
                 <ImageUI isBorder={true} src={item?.image} alt={'banner'} quality={Quality} priority={priority}
                          imageStyle={'object-center'}
@@ -64,7 +64,6 @@ const Slider = ({
               </div>
             </div>
         </Swiper>
-      </div>
   );
 };
 

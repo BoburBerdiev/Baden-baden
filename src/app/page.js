@@ -111,9 +111,9 @@ const LocationInfos = () => {
           <div className="w-6 h-6 relative shrink-0">
             <ImageUI src={'/image/baden-icons/wifi.svg'} alt={'icon'} objectFitContain={true}/>
           </div>
-          <h3 className='text-base md:text-xl font-medium leading-none'>Рестораны и кафе</h3>
+          <h3 className='text-base md:text-xl font-medium font-jost leading-none'>Рестораны и кафе</h3>
         </div>
-        <ul data-aos='fade-up' data-aos-delay={300} className='space-y-[5px] md:space-y-[10px]'>
+        <ul data-aos='fade-up' data-aos-delay={300} className='space-y-[5px] md:space-y-[10px]  font-jost'>
 
           <li  className='flex justify-between text-base gap-4 md:gap-10 font-thin'>
             <p>Lorem ipsum dolor.</p>

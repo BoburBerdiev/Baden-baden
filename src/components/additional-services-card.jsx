@@ -7,7 +7,7 @@ const AdditionalServicesCard = () => {
         <div className={`relative aspect-[4/3] md:aspect-square  `}>
           <ImageUI src={'/image/room1.jpg'} imageStyle={'z-10'} isBorder={true}/>
         </div>
-        <p className={'hidden md:block md:text-lg'}>
+        <p className={'hidden md:block md:text-lg font-jost'}>
           *Утонченный лаунж-бар с уникальной атмосферой
         </p>
       </div>
