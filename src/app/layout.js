@@ -24,7 +24,6 @@ const forum = Forum({
 });
 
 export default function RootLayout({children}) {
-
     return (
         <html lang="en" className={`font-jost ${jost.variable} ${forum.variable}`}>
         <body>

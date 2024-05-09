@@ -2,7 +2,7 @@
 
 import {useState} from 'react';
 
-const AccordionAbout = ({title , subTitle}) => {
+const AccordionAbout = ({title , subTitle  ,selectImage , image}) => {
 
   const [isOpen , setIsOpen] = useState(false)
 
@@ -14,9 +14,12 @@ const AccordionAbout = ({title , subTitle}) => {
             >
           <h2 >
             <button
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={() => {
+                  selectImage(image)
+                  setIsOpen(!isOpen)
+                }}
                 type="button"
-                    className={`${isOpen && 'underline underline-offset-2'} font-forum z-[3] relative flex items-center justify-between w-full pt-2 md:pt-5 text-xl md:text-4xl bg-white text-currentBlue`}
+                    className={`${isOpen && 'underline underline-offset-2'} font-forum z-[3] relative flex items-start justify-between w-full pt-2 md:pt-5 text-xl md:text-4xl bg-white text-currentBlue text-left`}
                    >
               <p>{title}</p>
             </button>

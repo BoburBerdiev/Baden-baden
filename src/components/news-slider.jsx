@@ -67,8 +67,7 @@ const NewsSlider = () => {
         <SwiperSlide className={"h-full pt-[2%]"}>
           <NewsCard/>
         </SwiperSlide>
-        <div className="relative flex items-center justify-center py-4 mt-5 md:mt-10 gap-x-5">
-
+        <div className="relative flex items-center justify-center py-2 mt-5  gap-x-5">
           <div className="inline-flex items-center gap-x-4 my-pagination-cards pagintaion-slider"></div>
         </div>
       </Swiper>
