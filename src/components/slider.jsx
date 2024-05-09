@@ -3,18 +3,10 @@ import {  Navigation, Pagination} from "swiper/modules";
 import {ImageUI} from "@/components/";
 import {GrPrevious, GrNext} from "react-icons/gr";
 
-
-const list = [
-  {image: '/image/room1.jpg',id:3},
-  {image: '/image/room2.jpg',id:4},
-  {image: '/image/room3.jpg',id:1},
-  {image: '/image/room4.jpg',id:2}
-]
-
 const Slider = ({
                   priority = false,
                    Quality,
-                  card
+                  card, images
                 }) => {
 
 
@@ -36,7 +28,7 @@ const Slider = ({
         >
 
           {
-            list?.map(item => (
+            images?.map(item => (
 
           <SwiperSlide key={item?.id} className={`w-full h-full`}>
               <div className={`w-full h-full relative`}>

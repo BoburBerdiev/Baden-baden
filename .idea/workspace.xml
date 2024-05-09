@@ -5,24 +5,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0875101f-c9e0-4ef2-945f-6eeda6b04bc8" name="Changes" comment="slider full">
-      <change afterPath="$PROJECT_DIR$/src/components/Pages/AboutContent.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Pages/ContactContent.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Pages/RoomContent.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helper/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/axois.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SEO/SEO.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SEO/SEO.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Pages/HomeContent.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Pages/NewContent.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/image/about.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/image/image 1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/image/img-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/image/img-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/image/img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/image/img1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/image/img2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/image/img3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/image/room1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/image/room2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/image/room3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/image/room4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/image/room5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/image/room6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/image/unsplash_Cj7a21nHLyo-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/image/unsplash_Cj7a21nHLyo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Layout/Layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Layout/Layout.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/about/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/about/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contact/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contact/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/gallery/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/gallery/page.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/news/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/page.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/room/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/room/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/AboutContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/AboutContent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/ContactContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/ContactContent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/RoomContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/RoomContent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/accordion-about.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/accordion-about.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/additional-services-card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/additional-services-card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/gallery-section.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gallery-section.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/hotel-amenities-card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hotel-amenities-card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/news-card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/news-card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/news-slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/news-slider.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/room-card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/room-card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/rooms-slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/rooms-slider.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/section-title.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/section-title.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slider.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/localization/ru.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/localization/ru.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,32 +84,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Node.js.Image-UI.jsx.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.index.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.page.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.rooms-slider.jsx.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.tailwind.config.js.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/projects/Next/Baden-Baden/src&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev (1).executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\webstorm\\WebStorm 2023.3.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Node.js.Image-UI.jsx.executor": "Run",
+    "Node.js.index.js.executor": "Run",
+    "Node.js.page.js.executor": "Run",
+    "Node.js.rooms-slider.jsx.executor": "Run",
+    "Node.js.tailwind.config.js.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/projects/Baden-baden/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev (1).executor": "Run",
+    "npm.dev.executor": "Run",
+    "settings.editor.selected.configurable": "settings.nodejs",
+    "ts.external.directory.path": "D:\\webstorm\\WebStorm 2023.3.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projects\Baden-baden\src" />
       <recent name="D:\projects\Next\Baden-Baden\src" />
       <recent name="D:\projects\Next\Baden-Baden" />
       <recent name="$PROJECT_DIR$/public/image" />
@@ -145,6 +174,8 @@
       <workItem from="1715150419456" duration="195000" />
       <workItem from="1715151086067" duration="26948000" />
       <workItem from="1715233508003" duration="7523000" />
+      <workItem from="1715241548049" duration="3000" />
+      <workItem from="1715242692692" duration="19515000" />
     </task>
     <task id="LOCAL-00001" summary="news card">
       <option name="closed" value="true" />

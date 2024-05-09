@@ -9,16 +9,14 @@ const AboutContent = ({aboutTitle ,aboutFacilities , amenities ,aboutTitleAmenit
   const [facilitesImage ,setFacilitesImage] = useState()
 
 
-  useEffect(() => {
-    setFacilitesImage(aboutFacilities[0].inner_image?.image)
-  } , [aboutFacilities])
+
   return (
       <>
         <SectionUI title={langSelect(lang ,aboutTitle?.title_ru , aboutTitle?.title_en ,aboutTitle?.title_uz )}
                    isEmbroidery={true}
                    subTitle={langSelect(lang ,aboutTitle?.sub_title_ru , aboutTitle?.sub_title_en ,aboutTitle?.sub_title_uz )}>
           <div className={`w-full aspect-video md:aspect-[5/2] relative`}>
-            <ImageUI src={aboutTitle?.image} alt={'banner'} priority={true}
+            <ImageUI src={aboutTitle?.image} alt={'banner'} priority={true} data-aos={'zoom-in'} data-aos-delay={50}
                      imageStyle={'object-center'}
                      card={false}/>
           </div>
@@ -26,12 +24,12 @@ const AboutContent = ({aboutTitle ,aboutFacilities , amenities ,aboutTitleAmenit
         <SectionUI>
           <div className={'grid  md:grid-cols-11 gap-5 md:gap-[100px] pb-10 md:pb-20'}>
             <div className=" relative w-full md:col-span-5 aspect-video h-full order-2 md:order-1">
-              <ImageUI isBorder={true} src={facilitesImage} alt={'banner'} priority={true} card={false}/>
+              <ImageUI data-aos={'fade-up'} isBorder={true} src={facilitesImage} alt={'banner'} priority={true} card={false}/>
             </div>
             <div className={'order-1 md:order-2 py-0 md:py-20 md:col-span-6'}>
               {
-                aboutFacilities?.map(facilites => (
-                    <AccordionAbout image={facilites?.inner_image?.image} title={langSelect(lang ,facilites?.title_ru , facilites?.title_en ,facilites?.title_uz )}     selectImage={setFacilitesImage}
+                aboutFacilities?.map((facilites ) => (
+                    <AccordionAbout  image={facilites?.inner_image?.image} title={langSelect(lang ,facilites?.title_ru , facilites?.title_en ,facilites?.title_uz )}     selectImage={setFacilitesImage}
                                     subTitle={langSelect(lang ,facilites?.sub_title_ru , facilites?.sub_title_en ,facilites?.sub_title_uz )}/>
                 ))
               }
@@ -52,10 +50,10 @@ const AboutContent = ({aboutTitle ,aboutFacilities , amenities ,aboutTitleAmenit
         <SectionUI title={langSelect(lang ,aboutTitleAmenities?.title_ru , aboutTitleAmenities?.title_en ,aboutTitleAmenities?.title_uz )}
                    subTitle={langSelect(lang ,aboutTitleAmenities?.sub_title_ru , aboutTitleAmenities?.sub_title_en ,aboutTitleAmenities?.sub_title_uz )}
                    modeBlue={true}>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5  ">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5  md:pb-20 pb-10">
             {
-              amenities?.map(item => (
-                  <HotelAmenitiesCard image={item?.image} title={langSelect(lang ,item?.title_ru , item?.title_en ,item?.title_uz )}/>
+              amenities?.map((item ,id ) => (
+                    <HotelAmenitiesCard id={id} image={item?.image} title={langSelect(lang ,item?.title_ru , item?.title_en ,item?.title_uz )}/>
               ))
             }
           </div>

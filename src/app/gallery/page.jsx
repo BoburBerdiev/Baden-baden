@@ -9,8 +9,8 @@ const Page = () => {
       <div>
         <SectionUI title={t('gallery.title')} isEmbroidery={true}>
           <div className={'py-10 space-y-1 md:space-y-3'}>
-          <GallerySection/>
-          <GallerySection/>
+          {/*<GallerySection/>*/}
+          {/*<GallerySection/>*/}
           </div>
         </SectionUI>
       </div>

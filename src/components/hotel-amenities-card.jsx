@@ -1,8 +1,8 @@
 import {ImageUI} from "@/components/index";
 
-const HotelAmenitiesCard = ({title , image}) => {
+const HotelAmenitiesCard = ({title , image , id}) => {
   return (
-      <div className={'flex flex-col justify-center items-center gap-2 md:gap-4 text-white text-center border-[0.2px] border-white p-5 md:p-10'}>
+      <div data-aos={'fade-up'} data-aos-delay={id*100} className={'flex flex-col justify-center items-center gap-2 md:gap-4 text-white text-center border-[0.2px] border-white p-5 md:p-10'}>
         <div className={'relative w-14 h-14'}>
           <ImageUI  src={image} objectFitContain={true} alt={title}/>
         </div>

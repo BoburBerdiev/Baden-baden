@@ -41,13 +41,13 @@ const RoomsSlider = () => {
           className="w-full relative z-20 mySwiper h-full flex items-center justify-center"
       >
 
-        <SwiperSlide className={"h-full pt-[5%] md:pt-[2%] px-5 md:px-0 relative"}>
+        <SwiperSlide data-aos={'fade-up'} className={"h-full pt-[5%] md:pt-[2%] px-5 md:px-0 relative"}>
           <RoomsCard/>
         </SwiperSlide>
-        <SwiperSlide className={"h-full pt-[5%] md:pt-[2%] px-5 md:px-0 relative"}>
+        <SwiperSlide data-aos={'fade-up'} className={"h-full pt-[5%] md:pt-[2%] px-5 md:px-0 relative"}>
           <RoomsCard/>
         </SwiperSlide>
-        <SwiperSlide className={"h-full pt-[5%] md:pt-[2%] px-5 md:px-0 relative"}>
+        <SwiperSlide data-aos={'fade-up'} className={"h-full pt-[5%] md:pt-[2%] px-5 md:px-0 relative"}>
           <RoomsCard/>
         </SwiperSlide>
         <button

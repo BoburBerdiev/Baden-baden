@@ -10,6 +10,7 @@ const AccordionAbout = ({title , subTitle  ,selectImage , image}) => {
   return (
 
         <div
+            data-aos={'fade-up'}
           className={'relative'}
             >
           <h2 >

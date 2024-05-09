@@ -153,9 +153,8 @@
       },
       "areaSymbol": "м²",
       "humenSymbol": "чел",
-      "filterSymbol": "ванная",
-      "filterSymbols": "ванны",
-      "balconySymbol": "балкон"
+      "bedromSymbol": "спальни",
+      "filterSymbols": "ванны"
     }
   }
 }

@@ -1,5 +1,5 @@
 "use client";
-
+import AOS from 'aos';
 import {Footer, Navbar} from "@/components";
 import {Client, HydrationProvider} from "react-hydration-provider";
 import {Provider} from "react-redux";
@@ -11,8 +11,16 @@ import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import {usePathname} from "next/navigation";
+import 'aos/dist/aos.css';
+import {useEffect} from "react";
 
 const Layout = ({children}) => {
+    useEffect(() => {
+        AOS.init({
+            easing: 'ease', // default easing for AOS animations
+            once: true // whether animation should happen only once - while scrolling down
+        });
+    }, []);
     const router=usePathname()
     return (
         <HydrationProvider>
