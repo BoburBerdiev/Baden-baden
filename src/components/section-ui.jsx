@@ -8,7 +8,7 @@ const SectionUI = ({children , subTitle , title ,modeBlue =false  , cityBg , isN
         {
             cityBg &&
             <div className={" h-[200px] md:h-full left-0 md:left-[-10%] bottom-0 absolute w-full md:w-[50%] "}>
-              <ImageUI src={'/image/uzb-img.png'} objectFitContain={true}/>
+              <ImageUI src={'/image/uzb-img.png'} objectFitContain={true} alt={'sectoin image'}/>
             </div>
         }
         {

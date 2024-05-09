@@ -9,27 +9,27 @@ const GallerySection = ({isForIndex}) => {
 
         <div className={'space-y-1 md:space-y-3'}>
           <a href={'/image/img.jpg'} className={'relative block aspect-[16/12]'}>
-            <ImageUI src={'/image/img.jpg'}/>
+            <ImageUI src={'/image/img.jpg'} alt={'gallery'}/>
           </a>
           <a href={'/image/img2.jpg'} className={'relative block aspect-[12/16]'}>
-            <ImageUI src={'/image/img2.jpg'}/>
+            <ImageUI src={'/image/img2.jpg'} alt={'gallery'}/>
           </a>
         </div>
         <div className={'space-y-1 md:space-y-3'}>
           <a href={'/image/img3.jpg'} className={'relative block aspect-[12/16]'}>
-            <ImageUI src={'/image/img3.jpg'}/>
+            <ImageUI src={'/image/img3.jpg'} alt={'gallery'}/>
           </a>
           <a href={'/image/img-1.jpg'} className={'relative block aspect-[16/12]'}>
-            <ImageUI src={'/image/img-1.jpg'}/>
+            <ImageUI src={'/image/img-1.jpg'} alt={'gallery'}/>
           </a>
         </div>
 
         <div className={`space-y-3  ${isForIndex ? 'md:block hidden' : 'block'} `}>
           <a href={'/image/img1.jpg'} className={'relative block aspect-[16/12]'}>
-            <ImageUI src={'/image/img1.jpg'}/>
+            <ImageUI src={'/image/img1.jpg'} alt={'gallery'}/>
           </a>
           <a href={'/image/img-3.jpg'} className={'relative block aspect-[12/16]'}>
-            <ImageUI src={'/image/img-3.jpg'}/>
+            <ImageUI src={'/image/img-3.jpg'} alt={'gallery'}/>
           </a>
         </div>
       </div>

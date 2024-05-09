@@ -3,7 +3,7 @@ import {  ImageUI ,HeaderBooking} from "@/components";
 const Header = ({home}) => {
   return (
       <>
-        <header className='relative w-full h-screen'>
+        <section className='relative w-full h-screen'>
           <div className={`w-full h-full relative`}>
             <ImageUI src={'/image/img1.jpg'} alt={'banner'} priority={true}
                      imageStyle={'object-center'}
@@ -12,7 +12,7 @@ const Header = ({home}) => {
           </div>
           {/*<Slider  isHeader={true}   PaginationMod={false} priority={true}  />*/}
           {/*<HeaderBooking />*/}
-        </header>
+        </section>
       </>
   )
 }
