@@ -32,7 +32,7 @@ const SEO = ({ title, description, canonical, ogUrl, ogTitle, ogDescription, ogI
             href: ogImage,
           },
           {
-            rel: 'The-Tower-Hotel-Tashkent',
+            rel: 'Baden-Baden',
             href: ogImage,
             sizes: '76x76'
           },
@@ -53,7 +53,7 @@ const SEO = ({ title, description, canonical, ogUrl, ogTitle, ogDescription, ogI
           },
           {
             name: 'keywords',
-            content: keywords.join(', '),
+            content: keywords.join(','),
           }
         ]}
     />

@@ -5,7 +5,7 @@ const apiService = {
 
 
     async getData(url) {
-        const data = await axios.get(url)
+        const {data} = await axios.get(url)
         return data;
     },
 

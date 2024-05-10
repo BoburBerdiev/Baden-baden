@@ -3,3 +3,4 @@ export { default as AboutContent } from './AboutContent';
 export { default as RoomContent } from './RoomContent';
 export { default as NewContent } from './NewContent';
 export { default as HomeContent } from './HomeContent';
+export { default as GalleryContent } from './GalleryContent';

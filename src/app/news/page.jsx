@@ -1,14 +1,15 @@
 import {NewContent} from "@/components/Pages";
 async function getRoom() {
   const resTitleNew = await  fetch(`${process.env.NEXT_PUBLIC_API_URL}/about/index-news-section/`, { cache: 'no-store' })
-  const TitleNew = await resTitleNew.json()
-  return TitleNew
+  const titleNew = await resTitleNew.json()
+  return titleNew
 }
 
-export default async function Page ({TitleNew}) {
+export default async function Page () {
 
+  const titleNew = await getRoom()
   return (
-      <NewContent titleNew={TitleNew}  />
+      <NewContent titleNew={titleNew}  />
   );
 };
 

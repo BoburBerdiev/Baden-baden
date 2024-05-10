@@ -2,12 +2,12 @@ import Link from "next/link";
 import {ImageUI} from "@/components/";
 import { useTranslation } from "react-i18next";
 
-const NewsCard = ({title ,  subTitle , link , image}) => {
+const NewsCard = ({title ,  subTitle , link , image , id}) => {
   const {t} = useTranslation()
   return (
 
 
-      <div className="bg-white  border-currentBlue  border p-2 group duration-75 hover:shadow-currentBlue/40 cursor-pointer ">
+      <div  className="bg-white  border-currentBlue  border p-2 group duration-75 hover:shadow-currentBlue/40 cursor-pointer ">
         <div className={` relative duration-75 -mt-5  before:content-[''] group-hover:before:top-[0] before:duration-150  before:absolute before:w-[90%] before:h-[90%] before:-top-[5%] before:left-[5%]   before:border before:border-currentBlue group-hover:shadow-md`} >
           <div className={'w-full h-full p-1 aspect-video relative overflow-hidden'}>
           <ImageUI src={image} alt={'banner'}  imageStyle={'group-hover:scale-105 group-hover:duration-300'} />

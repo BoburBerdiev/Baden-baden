@@ -13,8 +13,11 @@ import 'swiper/css/thumbs';
 import {usePathname} from "next/navigation";
 import 'aos/dist/aos.css';
 import {useEffect} from "react";
+import {QueryClient, QueryClientProvider} from "react-query";
 
 const Layout = ({children}) => {
+    const queryClient = new QueryClient();
+
     useEffect(() => {
         AOS.init({
             easing: 'ease', // default easing for AOS animations
@@ -24,6 +27,7 @@ const Layout = ({children}) => {
     const router=usePathname()
     return (
         <HydrationProvider>
+            <QueryClientProvider client={queryClient}>
             <Client>
                 <Provider store={store}>
                     <PersistGate loading={null} persistor={persistor}>
@@ -35,6 +39,7 @@ const Layout = ({children}) => {
                     </PersistGate>
                 </Provider>
             </Client>
+            </QueryClientProvider>
         </HydrationProvider>
 
     );
