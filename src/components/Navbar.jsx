@@ -35,7 +35,7 @@ const Navbar = () => {
     const {t} = useTranslation()
     return (
         <nav
-            className={`${router === '/' ? isScroll ? "bg-currentBlue bg-[url('/image/bg-noise.jpg')] " : "bg-transparent " : "bg-currentBlue bg-[url('/image/bg-noise.jpg')] "} ${isScroll ? "-translate-y-10" : ""} duration-300  top-0 fixed  left-0 z-10 w-full`}>
+            className={`${router === '/' ? isScroll ? "bg-currentBlue bg-[url('/image/bg-noise.jpg')] " : "bg-transparent " : "bg-currentBlue bg-[url('/image/bg-noise.jpg')] "} ${isScroll ? "md:-translate-y-10" : ""} duration-300  top-0 fixed  left-0 z-[100] w-full`}>
             <div className={` py-[10px] border-b-[0.5px] border-navBorder opacity-70  hidden md:block `}>
                 <div className="container">
                     <div

@@ -11,7 +11,7 @@ const Header = ({home}) => {
 
           </div>
           {/*<Slider  isHeader={true}   PaginationMod={false} priority={true}  />*/}
-          {/*<HeaderBooking />*/}
+          <HeaderBooking />
         </section>
       </>
   )

@@ -10,6 +10,11 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
+import 'swiper/css/grid';
+import 'lightgallery/css/lightgallery.css';
+import 'lightgallery/css/lg-zoom.css';
+import 'lightgallery/css/lg-thumbnail.css';
+
 import {usePathname} from "next/navigation";
 
 const Layout = ({children}) => {
@@ -20,7 +25,7 @@ const Layout = ({children}) => {
                 <Provider store={store}>
                     <PersistGate loading={null} persistor={persistor}>
                         <Navbar/>
-                        <main className={`min-h-screen ${router==='/' ? "": "mt-[125px]" } `}>
+                        <main className={`min-h-screen ${router==='/' ? "": "mt-[72px] md:mt-[125px]" } `}>
                         {children}
                         </main>
                         <Footer/>

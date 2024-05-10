@@ -1,14 +1,12 @@
-import {ButtonUI, DropdownBooking, NumberGuests, TypeRoom} from "@/components";
-import {useEffect, useState} from "react";
+import {ButtonUI, DropdownBooking, NumberGuests} from "@/components";
+import {useState} from "react";
 import DatePicker from 'react-datepicker'
 import moment from "moment";
 import 'moment/locale/uz'
 import { useTranslation } from 'react-i18next'
-// import {useDispatch, useSelector} from "react-redux";
-// import { changleTimeBooking } from "@/slice/booking";
-// import {useQuery} from "react-query";
-// import apiService from "@/service/axois";
-// import {langSelect} from "@/helper";
+import {useDispatch, useSelector} from "react-redux";
+import {changleTimeBooking} from "@/slice/booking";
+import {langSelect} from "@/helper";
 
 
 
@@ -17,42 +15,42 @@ import { useTranslation } from 'react-i18next'
 const HeaderBooking = () => {
   moment.locale('uz')
   const {t} = useTranslation()
-  // const {lang} = useSelector(state => state.langSlice)
-  // const dispatch = useDispatch();
-  // const [startDate, setStartDate] = useState(null);
-  // const [endDate, setEndDate] = useState(null);
-  //
+  const {lang} = useSelector(state => state.langSlice)
+  const dispatch = useDispatch();
+  const { timeBooking ,typeBooking ,countRoomBooking ,countOlderBooking ,countChildrenBooking} = useSelector(
+      (state) => state.bookingSlice);
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
+
   // const { data: typeRoom  , refetch: typeRoomRefetch} = useQuery("typeRoom", () =>
   //     apiService.getData( 'rooms-simple/') , { enabled: false}
   // );
-  //
+
   // useEffect(() =>{
   //   typeRoomRefetch()
   // } , [])
-  //
-  //
-  //
-  //
-  // const handleDateChange = (date) => {
-  //   dispatch(changleTimeBooking([`${date[0]}` ,`${date[1]}`]))
-  //   setStartDate(date[0])
-  //   setEndDate(date[1])
-  // };
+
+  const handleDateChange = (date) => {
+    dispatch(changleTimeBooking([`${date[0]}` ,`${date[1]}`]))
+    setStartDate(date[0])
+    setEndDate(date[1])
+  };
 
   return (
       <div
-          className={'container z-100  absolute bottom-10 md:bottom-[125px] left-1/2 -translate-x-1/2   z-10  '}>
-        <div className={'bg-white py-2 shadow-xl md:py-4 lg:py-6 px-5 sm:px-[35px] md:px-[50px]  xl:px-[70px] flex lg:flex-row flex-col items-center justify-center gap-2 md:gap-5 xl:gap-12'}>
+          className={' container z-[80]  absolute bottom-10 md:bottom-[125px] left-1/2 -translate-x-1/2    '}>
+        <div className={'border   border-white bg-transparent text-white py-2 shadow-xl md:py-4 lg:py-6 px-5 sm:px-[35px] md:px-[50px]  xl:px-[70px] flex lg:flex-row flex-col items-center justify-center gap-2 md:gap-5 xl:gap-12  relative w-full h-full  before:content-[\'\'] before:border-white  before:duration-150  before:absolute before:w-[96%] before:h-[120%] before:-top-[10%]  before:left-[2%] before:border-[0.5px]   before:-z-10 '}>
 
           <DropdownBooking
               title={t('index.headerBooking.checkIn')}
-              subTitle={t('index.headerBooking.entryDay')}
+              subTitle={timeBooking[0] ? moment(timeBooking[0]).format('ll') : t('index.headerBooking.entryDay')}
               titleSecond={t('index.headerBooking.departure')}
-              subTitleSecond={t('index.headerBooking.departureDay')}>
+              subTitleSecond={timeBooking[1] ? moment(timeBooking[1]).format('ll') : t('index.headerBooking.departureDay')}>
             <DatePicker
                 selected={null}
-                startDate={10}
-                endDate={20}
+                onChange={handleDateChange}
+                startDate={startDate}
+                endDate={endDate}
                 selectsRange
                 dataFormat={'dd/MM/yyyy'}
                 inline
@@ -60,23 +58,17 @@ const HeaderBooking = () => {
                 minDate={moment().add(0, 'days').toDate()}
             />
           </DropdownBooking>
-          <div className={'bg-brown w-full lg:w-[2px] h-[1px] md:h-0.5 lg:h-6 relative z-10'}/>
+          <div className={'bg-white w-full lg:w-[2px] h-full md:h-0.5 lg:h-6 relative z-10'}/>
 
           <DropdownBooking
               title={t('index.headerBooking.numberOfGuests')}
-              subTitle={'salom'}
+              subTitle={`${countRoomBooking} ${t('index.headerBooking.room')} ${countOlderBooking} ${t('index.headerBooking.adults')}, ${countChildrenBooking} ${t('index.headerBooking.children')}`}
           >
             <NumberGuests  />
           </DropdownBooking>
-          <div className={'bg-brown w-full lg:w-[2px] h-[1px] md:h-0.5 lg:h-6 relative z-10'}/>
-          <DropdownBooking
-              title={t('index.headerBooking.typeOfNumber')}
-              subTitle={  t('index.headerBooking.choose')}
-          >
-            <TypeRoom  />
-          </DropdownBooking>
+
           <div >
-            {/*<ButtonUI text={t('btn.booking')} href={'/booking'} />*/}
+            <ButtonUI content={t('btn.booking')} borderWhite={true}  />
           </div>
         </div>
       </div>
