@@ -118,6 +118,7 @@ const HomeContent = ({banner , aboutTitle , additionalServices ,aboutTitleAmenit
 export default HomeContent;
 
 const LocationInfos = ({ image ,title ,landmark , id}) => {
+    const {t} = useTranslation()
 
   const {lang} = useSelector(state => state.langSlice)
   return (
