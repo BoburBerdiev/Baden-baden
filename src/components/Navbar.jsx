@@ -36,7 +36,7 @@ const Navbar = () => {
     return (
         <nav
             className={`${router === '/' ? isScroll ? "bg-currentBlue bg-[url('/image/bg-noise.jpg')] " : "bg-transparent " : "bg-currentBlue bg-[url('/image/bg-noise.jpg')] "} ${isScroll ? "md:-translate-y-10" : ""} duration-300  top-0 fixed  left-0 z-[100] w-full`}>
-            <div className={` py-[10px] border-b-[0.5px] border-navBorder opacity-70  hidden md:block `}>
+            <div className={` py-[10px] border-b-[0.5px] border-navBorder opacity-70  hidden md:block relative z-20`}>
                 <div className="container">
                     <div
                         className="flex text-white font-jost text-xs lg:text-sm justify-between items-center font-normal">
@@ -51,7 +51,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-            <div className=" relative w-full">
+            <div className=" relative w-full z-10">
                 <div className="container">
                     <div
                         className="flex justify-between items-center  py-4 md:py-7 text-white font-normal text-sm lg:text-lg font-jost   ">
@@ -79,7 +79,7 @@ const Navbar = () => {
                                 </div>
                             </div>
                         </ul>
-                        <ul className="md:flex justify-between items-center w-1/3 hidden">
+                        <ul className="md:flex justify-between items-center w-1/3 hidden relative z-10">
                             {
                                 navLink.slice(0, 3).map((link, ind) => (
                                         <li key={ind}><Link href={link.link}>{t(`${link.text}`)} </Link></li>
@@ -154,7 +154,7 @@ const DropdownLang = () => {
             <div className="relative">
                 <p className=" cursor-pointer text-white font-berlin" onClick={opendropdown}>Русский</p>
                 <div
-                    className={`grid w-24 ${dropdown ? "grid-rows-[1fr]" : 'grid-rows-[0fr]'} absolute top-[26px]  z-20 left-0 duration-200 transition-all ease   `}>
+                    className={`grid w-24 ${dropdown ? "grid-rows-[1fr]" : 'grid-rows-[0fr]'} absolute top-[26px]  z-[9999] left-0 duration-200 transition-all ease   `}>
                     <div
                         className={`overflow-hidden bg-currentBlue flex flex-col   ${dropdown ? "border-b border-x border-white " : ''} rounded-b`}>
                         {
