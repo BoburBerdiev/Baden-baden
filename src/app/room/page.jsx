@@ -1,18 +1,17 @@
-'use client'
 
 import {RoomContent} from "@/components/Pages";
 
-async function getContact() {
-  const res = await  fetch(`${process.env.NEXT_PUBLIC_API_URL}/about/contact`, { cache: 'no-store' })
-  const contact = await res.json()
-  return contact
+async function getRoom() {
+  const resRoom = await  fetch(`${process.env.NEXT_PUBLIC_API_URL}/rooms`, { cache: 'no-store' })
+  const room = await resRoom.json()
+  return room
 }
 
 export default async function Page () {
-  const contact = await getContact()
+  const room = await getRoom()
 
   return (
-     <RoomContent />
+     <RoomContent room={room} />
   );
 };
 

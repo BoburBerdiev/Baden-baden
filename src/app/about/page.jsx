@@ -7,7 +7,7 @@ async function getAbout() {
   const resAboutFacilities = await  fetch(`${process.env.NEXT_PUBLIC_API_URL}/about/about-facilities/`, { cache: 'no-store' })
   const aboutFacilities = await resAboutFacilities.json()
 
-  // resAboutFacilities
+  // resAmenities
   const resAmenities = await  fetch(`${process.env.NEXT_PUBLIC_API_URL}/about/index-service-section/`, { cache: 'no-store' })
   const amenities = await resAmenities.json()
 

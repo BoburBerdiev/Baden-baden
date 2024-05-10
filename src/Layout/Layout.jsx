@@ -1,5 +1,5 @@
 "use client";
-
+import AOS from 'aos';
 import {Footer, Navbar} from "@/components";
 import {Client, HydrationProvider} from "react-hydration-provider";
 import {Provider} from "react-redux";
@@ -16,11 +16,23 @@ import 'lightgallery/css/lg-zoom.css';
 import 'lightgallery/css/lg-thumbnail.css';
 
 import {usePathname} from "next/navigation";
+import 'aos/dist/aos.css';
+import {useEffect} from "react";
+import {QueryClient, QueryClientProvider} from "react-query";
 
 const Layout = ({children}) => {
+    const queryClient = new QueryClient();
+
+    useEffect(() => {
+        AOS.init({
+            easing: 'ease', // default easing for AOS animations
+            once: true // whether animation should happen only once - while scrolling down
+        });
+    }, []);
     const router=usePathname()
     return (
         <HydrationProvider>
+            <QueryClientProvider client={queryClient}>
             <Client>
                 <Provider store={store}>
                     <PersistGate loading={null} persistor={persistor}>
@@ -32,6 +44,7 @@ const Layout = ({children}) => {
                     </PersistGate>
                 </Provider>
             </Client>
+            </QueryClientProvider>
         </HydrationProvider>
 
     );

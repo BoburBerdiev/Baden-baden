@@ -1,8 +1,12 @@
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Navigation, Pagination} from "swiper/modules";
 import {NewsCard} from "@/components/index";
+import {langSelect} from "@/helper";
+import {useSelector} from "react-redux";
 
-const NewsSlider = () => {
+const NewsSlider = ({news}) => {
+  const {lang} = useSelector(state => state.langSlice)
+
   return (
       <Swiper
           autoplay={{
@@ -43,30 +47,13 @@ const NewsSlider = () => {
           modules={[Navigation, Pagination]}
           className="w-full mySwiper h-full flex items-center justify-center"
       >
-        <SwiperSlide className={"h-full pt-[2%]"}>
-          <NewsCard/>
-        </SwiperSlide>
-        <SwiperSlide className={"h-full pt-[2%]"}>
-          <NewsCard/>
-        </SwiperSlide>
-        <SwiperSlide className={"h-full pt-[2%]"}>
-          <NewsCard/>
-        </SwiperSlide>
-        <SwiperSlide className={"h-full pt-[2%]"}>
-          <NewsCard/>
-        </SwiperSlide>
-        <SwiperSlide className={"h-full pt-[2%]"}>
-          <NewsCard/>
-        </SwiperSlide>
-        <SwiperSlide className={"h-full pt-[2%]"}>
-          <NewsCard/>
-        </SwiperSlide>
-        <SwiperSlide className={"h-full pt-[2%]"}>
-          <NewsCard/>
-        </SwiperSlide>
-        <SwiperSlide className={"h-full pt-[2%]"}>
-          <NewsCard/>
-        </SwiperSlide>
+        {
+            news?.map((item , id) => (
+                <SwiperSlide   key={item?.id}  className={"h-full pt-[2%]"} >
+                  <NewsCard image={item?.image} link={item?.link} title={langSelect(lang ,item?.title_ru , item?.title_en ,item?.title_uz )} subTitle={langSelect(lang ,item?.sub_title_ru , item?.sub_title_en ,item?.sub_title_uz )}/>
+                </SwiperSlide>
+          ) )
+        }
         <div className="relative flex items-center justify-center py-2 mt-5  gap-x-5">
           <div className="inline-flex items-center gap-x-4 my-pagination-cards pagintaion-slider"></div>
         </div>
