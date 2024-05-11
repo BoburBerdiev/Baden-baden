@@ -4,13 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0875101f-c9e0-4ef2-945f-6eeda6b04bc8" name="Changes" comment="navbar bitti">
-      <change afterPath="$PROJECT_DIR$/src/components/Pages/Page-Inner.jsx" afterDir="false" />
+    <list default="true" id="0875101f-c9e0-4ef2-945f-6eeda6b04bc8" name="Changes" comment="news infinty scroll add full">
+      <change afterPath="$PROJECT_DIR$/src/components/reviews-card.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/reviews-slider.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Layout/Layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Layout/Layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/room/[id]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/room/[id]/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/ContactContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/ContactContent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/GalleryContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/GalleryContent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/HomeContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/HomeContent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/NewContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/NewContent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/RoomContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/RoomContent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/gallery-section.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gallery-section.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/news-slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/news-slider.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/rooms-slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/rooms-slider.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,30 +54,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Node.js.Image-UI.jsx.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.index.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.page.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.rooms-slider.jsx.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.tailwind.config.js.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/projects/Baden-baden/src&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;/home/islom/.nvm/versions/node/v18.17.0/bin/node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev (1).executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/islom/.local/share/JetBrains/Toolbox/apps/webstorm/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Node.js.Image-UI.jsx.executor": "Run",
+    "Node.js.index.js.executor": "Run",
+    "Node.js.page.js.executor": "Run",
+    "Node.js.rooms-slider.jsx.executor": "Run",
+    "Node.js.tailwind.config.js.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/projects/Baden-baden/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev (1).executor": "Run",
+    "npm.dev.executor": "Run",
+    "settings.editor.selected.configurable": "settings.nodejs",
+    "ts.external.directory.path": "D:\\webstorm\\WebStorm 2023.3.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\projects\Baden-baden\src" />
@@ -77,6 +87,7 @@
       <recent name="D:\projects\Next\Baden-Baden\project\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\Baden-baden\src\components" />
       <recent name="D:\projects\Next\Baden-Baden\src" />
     </key>
   </component>
@@ -138,7 +149,8 @@
       <workItem from="1715233508003" duration="7523000" />
       <workItem from="1715241548049" duration="3000" />
       <workItem from="1715242692692" duration="19568000" />
-      <workItem from="1715334157627" duration="4922000" />
+      <workItem from="1715334157627" duration="8978000" />
+      <workItem from="1715378526646" duration="7711000" />
     </task>
     <task id="LOCAL-00001" summary="news card">
       <option name="closed" value="true" />
@@ -180,7 +192,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715292096758</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="news infinty scroll add full">
+      <option name="closed" value="true" />
+      <created>1715339300077</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715339300077</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,7 +223,6 @@
     <MESSAGE value="marge +" />
     <MESSAGE value="slider full" />
     <MESSAGE value="aos 80% ,  next-seo start" />
-    <option name="LAST_COMMIT_MESSAGE" value="aos 80% ,  next-seo start" />
     <option name="LAST_COMMIT_MESSAGE" value="slider full" />
   </component>
   <component name="XDebuggerManager">

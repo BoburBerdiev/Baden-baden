@@ -64,7 +64,7 @@ const NewContent = ({titleNew}) => {
               next={newsCardRefetch}
               hasMore={hasMore}
               loader={<div className={'flex w-full justify-center items-center mt-5 mb-3'}> <AiOutlineLoading3Quarters
-                  className={'animate-spin text-darkBlue '}/> </div>}
+                  className={'animate-spin text-currentBlue '}/> </div>}
               className={'grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-x-5 lg:gap-y-10 py-10'}
               dataLength={productInfinity?.count || []}>
 

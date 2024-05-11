@@ -6,7 +6,7 @@ import {
   Header,
   HotelAmenitiesCard,
   RoomsSlider,
-  SectionUI, NewsSlider, ImageUI
+  SectionUI, NewsSlider, ImageUI, ReviewsSlider,
 } from "@/components";
 import { useTranslation } from "react-i18next";
 import {useSelector} from "react-redux";
@@ -57,7 +57,7 @@ const HomeContent = ({banner , aboutTitle , additionalServices ,aboutTitleAmenit
         </SectionUI>
         <SectionUI title={t('index.section2.title')} modeBlue={true} isNoContainer={true}>
           <div className={'pb-5 md:pb-10'}>
-            <RoomsSlider/>
+            <RoomsSlider room={room}/>
           </div>
           <div data-aos={'fade-up'} data-aos-delay={50} className="flex flex-col items-center pb-2">
             <ButtonUI borderBtn borderWhite content={t('btn.moreAll')} hrefToPage={'/room'}/>
@@ -102,12 +102,15 @@ const HomeContent = ({banner , aboutTitle , additionalServices ,aboutTitleAmenit
         <SectionUI title={langSelect(lang ,newsTitle?.title_ru , newsTitle?.title_en ,newsTitle?.title_uz )}
                    subTitle={langSelect(lang ,newsTitle?.sub_title_ru , newsTitle?.sub_title_en ,newsTitle?.sub_title_uz )}
         >
-          <div className={'md:pb-20 pb-10'}>
             <NewsSlider news={news}/>
-
+        </SectionUI>
+        <SectionUI title={langSelect(lang ,newsTitle?.title_ru , newsTitle?.title_en ,newsTitle?.title_uz )}
+                   subTitle={langSelect(lang ,newsTitle?.sub_title_ru , newsTitle?.sub_title_en ,newsTitle?.sub_title_uz )}
+        >
+          <div className={'md:pb-20 pb-10 flex gap-10'}>
+            <ReviewsSlider/>
           </div>
         </SectionUI>
-
 
 
       </>

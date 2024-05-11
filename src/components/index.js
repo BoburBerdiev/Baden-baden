@@ -18,3 +18,4 @@ export { default as DropdownBooking } from './dropdown-booking';
 export { default as NumberGuests } from './number-guests';
 export { default as TypeRoom } from './type-room';
 export { default as HeaderBooking } from './header-booking';
+export { default as ReviewsSlider } from './reviews-slider';
