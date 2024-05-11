@@ -8,14 +8,26 @@ import {
   RoomsSlider,
   SectionUI, NewsSlider, ImageUI, ReviewsSlider,
 } from "@/components";
-import { useTranslation } from "react-i18next";
+import {useTranslation} from "react-i18next";
 import {useSelector} from "react-redux";
 import {langSelect} from "@/helper";
 import {indexSEO} from "@/SEO/SEO.config";
 import SEO from "@/SEO/SEO";
-const HomeContent = ({banner , aboutTitle , additionalServices ,aboutTitleAmenities , amenities , landmarkcategories ,gallery , news ,newsTitle , room}) => {
-  const {t} = useTranslation()
-  const {lang} = useSelector(state => state.langSlice)
+
+const HomeContent = ({
+                         banner,
+                         aboutTitle,
+                         additionalServices,
+                         aboutTitleAmenities,
+                         amenities,
+                         landmarkcategories,
+                         gallery,
+                         news,
+                         newsTitle,
+                         room
+                     }) => {
+    const {t} = useTranslation()
+    const {lang} = useSelector(state => state.langSlice)
 
   return (
       <>

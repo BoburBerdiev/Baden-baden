@@ -85,6 +85,13 @@
 
 }
 
+@media (max-width: 1024px) {
+.react-datepicker__month-container{
+    float: none !important;
+}
+
+}
+
 .react-datepicker .react-datepicker__day-name {
     color: white !important;
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;

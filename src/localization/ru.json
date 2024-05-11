@@ -93,6 +93,18 @@
       "reviewDate": "Растянутое время:"
     },
     "roomInner": {
+      "allComforts": "Общие",
+      "servicesTitle": "Удобства и услуги",
+      "services": {
+        "service1": "Ванная",
+        "service2": "Завтрак",
+        "service3": "Кофе/Чай",
+        "service4": "Тапочки",
+        "service5": "Фен",
+        "service6": "Кондиционер",
+        "service7": "Телевизор",
+        "service8": "Wifi"
+      },
       "areaSymbol": "м²",
       "humenSymbol": "чел",
       "bedromSymbol": "спальни",

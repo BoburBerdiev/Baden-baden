@@ -2,7 +2,7 @@ import {HeaderBooking, ImageUI} from "@/components";
 const Header = ({title, image}) => {
   return (
       <>
-        <section className='relative w-full h-screen overflow-hidden'>
+        <section className='relative w-full h-screen'>
           <div className={`w-full h-full relative z-[0]`}>
             <ImageUI src={image} alt={title} priority={true}
                      imageStyle={'object-center'}

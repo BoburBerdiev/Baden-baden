@@ -39,7 +39,7 @@ const HeaderBooking = () => {
   return (
       <div
           className={' container z-[80]  absolute bottom-10 md:bottom-[125px] left-1/2 -translate-x-1/2    '}>
-        <div className={'border   border-white bg-transparent text-white py-2 shadow-xl md:py-4 lg:py-6 px-5 sm:px-[35px] md:px-[50px]  xl:px-[70px] flex lg:flex-row flex-col items-center justify-center gap-2 md:gap-5 xl:gap-12  relative w-full h-full  before:content-[\'\'] before:border-white  before:duration-150  before:absolute before:w-[96%] before:h-[120%] before:-top-[10%]  before:left-[2%] before:border-[0.5px]   before:-z-10 '}>
+        <div className={'border   border-white bg-transparent text-white py-2 shadow-xl  lg:py-4 px-5 sm:px-[30px] md:px-[20px]  xl:px-[30px] flex lg:flex-row flex-col items-center justify-center gap-2 md:gap-5  relative w-full h-full  before:content-[\'\'] before:border-white  before:duration-150  before:absolute before:w-[96%] before:h-[120%] before:-top-[10%]  before:left-[2%] before:border-[0.5px]   before:-z-10 '}>
 
           <DropdownBooking
               title={t('index.headerBooking.checkIn')}

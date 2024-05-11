@@ -14,11 +14,10 @@ const Navbar = ({contact}) => {
     const [sidebar, setSidebar] = useState(false)
     const [isScroll, setIsScroll] = useState(false)
     const router = usePathname()
-    const handleBurger = () => {
+    const handleBurger = (e) => {
+        e.stopPropagation()
         setSidebar(!sidebar)
     }
-
-
 
     const onScroll = useCallback(event => {
         const {scrollY} = window;
@@ -36,13 +35,25 @@ const Navbar = ({contact}) => {
         }
     }, []);
 
+    useEffect(() => {
+        const handleCLoseNav = () => {
+            setSidebar(false)
+        }
+        window.addEventListener('click', handleCLoseNav)
+
+        return () => {
+            window.removeEventListener('click', handleCLoseNav)
+        }
+    }, [sidebar])
+
+
     const {t} = useTranslation()
     const {lang} = useSelector(state => state.langSlice)
 
     return (
         <nav
-            className={`${router === '/' ? isScroll ? "bg-currentBlue bg-[url('/image/bg-noise.jpg')] " : "bg-transparent " : "bg-currentBlue bg-[url('/image/bg-noise.jpg')] "} ${isScroll ? "md:-translate-y-10" : ""} duration-300  top-0 fixed  left-0 z-[100] w-full`}>
-            <div className={` py-[10px] border-b-[0.5px] border-navBorder opacity-70  hidden md:block relative z-20`}>
+            className={`${router === '/' ? isScroll ? "bg-currentBlue bg-[url('/image/bg-noise.jpg')] " : "bg-transparent " : "bg-currentBlue bg-[url('/image/bg-noise.jpg')] "} ${isScroll ? "md:-translate-y-10" : ""} duration-300 top-0 fixed  left-0 z-[100] w-full`}>
+            <div className={`z-20 py-[10px] border-b-[0.5px] border-navBorder opacity-70  hidden md:block `}>
                 <div className="container">
                     <div
                         className="flex text-white font-jost text-xs lg:text-sm justify-between items-center font-normal">
@@ -66,7 +77,7 @@ const Navbar = ({contact}) => {
                             <LuAlignLeft className={'text-white text-xl  cursor-pointer'}
                                          onClick={handleBurger}/>
                         </div>
-                        <ul className={`nav flex flex-col duration-700 z-[100] top-[70px] ${sidebar ? 'left-0' : '-left-full'} fixed w-80 bg-[url('/image/bg-noise.jpg')] bg-currentBlue gap-7 pt-5  items-center border border-currentBlue h-screen md:hidden`}>
+                        <ul onClick={(e)=>e.stopPropagation()} className={`nav flex flex-col duration-700 z-[100] top-[70px] ${sidebar ? 'left-0' : '-left-full'} fixed w-80 bg-[url('/image/bg-noise.jpg')] bg-currentBlue gap-7 pt-5  items-center border border-currentBlue h-screen md:hidden`}>
                             {
                                 navLink.map((link, ind) => (
                                     <li key={ind}><Link href={link.link}>{t(`${link.text}`)} </Link></li>
@@ -145,27 +156,65 @@ const DropdownLang = () => {
         }
     ]
     const [dropdown, setDropdown] = useState(false)
+    const [language, setLanguage] = useState({
+        title: t('lang.ru'),
+        value: 'ru',
+        id: 1
+    },)
 
-    const opendropdown = () => {
+    const opendropdown = (e) => {
+        e.stopPropagation()
         setDropdown(prevstate => !prevstate)
     }
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 0) {
+
+    const handleLang=(lang)=>{
+        console.log(lang)
+        setLanguage(lang)
+        setDropdown(false)
+    }
+
+    useEffect(() => {
+        const scrollDrop=()=>{
+            if (window.scrollY > 0) {
+                setDropdown(false)
+            }
+
+        }
+        window.addEventListener('scroll', scrollDrop)
+
+        return ()=>{
+            window.removeEventListener('scroll', scrollDrop)
+
+        }
+    }, []);
+
+
+    useEffect(() => {
+        const handleCLoseNav = () => {
             setDropdown(false)
         }
-    })
+        window.addEventListener('click', handleCLoseNav)
+
+        return () => {
+            window.removeEventListener('click', handleCLoseNav)
+        }
+    }, [dropdown])
+
     return (
         <>
             <div className="relative">
-                <p className=" cursor-pointer text-white font-berlin" onClick={opendropdown}>Русский</p>
+                <p className=" cursor-pointer text-white font-jost" onClick={opendropdown}>{language.title}</p>
                 <div
-                    className={`grid w-24 ${dropdown ? "grid-rows-[1fr]" : 'grid-rows-[0fr]'} absolute top-[26px]  z-[9999] left-0 duration-200 transition-all ease   `}>
+                    className={`grid w-24 ${dropdown ? "grid-rows-[1fr]" : 'grid-rows-[0fr]'} absolute top-[30px]  z-[150] left-0 duration-200 transition-all ease   `}>
                     <div
+                        onClick={e=>e.stopPropagation()}
                         className={`overflow-hidden bg-currentBlue flex flex-col   ${dropdown ? "border-b border-x border-white " : ''} rounded-b`}>
                         {
                             langList.map((item) => (
-                                <div key={item.id}
-                                     className="hover:bg-black/10 px-3 py-1  flex items-center gap-2 cursor-pointer">
+                                <div
+                                    onClick={()=>handleLang(item)}
+                                    key={item.id}
+                                     className="hover:bg-black/10 px-3 py-1 cursor-pointer  flex items-center gap-2 cursor-pointer">
                                     <span>{item.title}</span>
                                 </div>
 
