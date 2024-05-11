@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0875101f-c9e0-4ef2-945f-6eeda6b04bc8" name="Changes" comment="navbar bitti">
-      <change afterPath="$PROJECT_DIR$/src/components/Pages/Page-Inner.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Layout/Layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Layout/Layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/room/[id]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/room/[id]/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/hotel-amenities-card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hotel-amenities-card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/news-card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/news-card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/news-slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/news-slider.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/reviews-slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/reviews-slider.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/room-card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/room-card.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +205,6 @@
     <MESSAGE value="marge +" />
     <MESSAGE value="slider full" />
     <MESSAGE value="aos 80% ,  next-seo start" />
-    <option name="LAST_COMMIT_MESSAGE" value="aos 80% ,  next-seo start" />
     <option name="LAST_COMMIT_MESSAGE" value="slider full" />
   </component>
   <component name="XDebuggerManager">

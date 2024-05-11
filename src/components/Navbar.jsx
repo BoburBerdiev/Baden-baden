@@ -9,8 +9,10 @@ import {useTranslation} from 'react-i18next';
 import {usePathname} from "next/navigation";
 import {formatPhoneNumber, langSelect} from "@/helper";
 import {useSelector} from "react-redux";
+import {useQuery} from "react-query";
+import apiService from "@/service/api";
 
-const Navbar = ({contact}) => {
+const Navbar = () => {
     const [sidebar, setSidebar] = useState(false)
     const [isScroll, setIsScroll] = useState(false)
     const router = usePathname()
@@ -46,6 +48,12 @@ const Navbar = ({contact}) => {
         }
     }, [sidebar])
 
+    const { data: contact  , refetch: contactRefetch,  } = useQuery("getContact", () =>
+        apiService.getData( '/about/contact') , { enabled: false}
+    );
+    useEffect(() =>{
+        contactRefetch()
+    } , [])
 
     const {t} = useTranslation()
     const {lang} = useSelector(state => state.langSlice)
@@ -71,22 +79,24 @@ const Navbar = ({contact}) => {
             <div className=" relative w-full z-10">
                 <div className="container">
                     <div
-                        className="flex justify-between items-center  py-4 md:py-8 text-white font-normal text-sm lg:text-lg font-jost   ">
+                        className="flex items-center  py-4 md:py-8 text-white font-normal justify-between text-lg font-jost   ">
                         <div className={'w-10 block md:hidden'}>
 
                             <LuAlignLeft className={'text-white text-xl  cursor-pointer'}
                                          onClick={handleBurger}/>
                         </div>
-                        <ul onClick={(e)=>e.stopPropagation()} className={`nav flex flex-col duration-700 z-[100] top-[70px] ${sidebar ? 'left-0' : '-left-full'} fixed w-80 bg-[url('/image/bg-noise.jpg')] bg-currentBlue gap-7 pt-5  items-center border border-currentBlue h-screen md:hidden`}>
+                        <div onClick={(e)=>e.stopPropagation()} className={`  duration-700 z-[100] top-[70px] ${sidebar ? 'left-0' : '-left-full'} !box-border fixed w-full md:w-[80%] bg-[url('/image/bg-noise.jpg')] bg-currentBlue   p-5 h-[calc(100vh-70px)] flex flex-col justify-between border border-currentBlue  md:hidden`}>
+                            <ul className={'flex flex-col gap-4 lg:gap-7 items-center '}>
                             {
                                 navLink.map((link, ind) => (
                                     <li key={ind}><Link href={link.link}>{t(`${link.text}`)} </Link></li>
 
                                 ))
                             }
+                            </ul>
                             <div
-                                className="flex flex-col px-3 text-white font-jost gap-5 text-sm items-center font-normal">
-                                <div className="flex flex-col gap-2 lg:gap-[34px] items-center">
+                                className="flex mt-5 flex-col  border-t border-white pt-5 text-white font-jost  gap-2 md:gap-5 text-sm items-center font-normal">
+                                <div className="flex gap-4 lg:gap-[34px] items-center">
                                     <a href={`tel:${contact?.phone2}`}>{formatPhoneNumber(contact?.phone2)}</a>
                                     <a href={`tel:${contact?.phone2}`}>{formatPhoneNumber(contact?.phone2)}</a>
                                 </div>
@@ -94,7 +104,7 @@ const Navbar = ({contact}) => {
                                     <p >{langSelect(lang ,contact?.address_ru , contact?.address_en ,contact?.address_uz )}</p>
                                 </div>
                             </div>
-                        </ul>
+                        </div>
                         <ul className="md:flex justify-between items-center w-1/3 hidden relative z-10">
                             {
                                 navLink.slice(0, 3).map((link, ind) => (
@@ -187,6 +197,7 @@ const DropdownLang = () => {
 
         }
     }, []);
+
 
 
     useEffect(() => {

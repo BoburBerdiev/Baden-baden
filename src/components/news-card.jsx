@@ -2,7 +2,7 @@ import Link from "next/link";
 import {ImageUI} from "@/components/";
 import { useTranslation } from "react-i18next";
 
-const NewsCard = ({title ,  subTitle , link , image , id}) => {
+const NewsCard = ({title ,  subTitle , link , image }) => {
   const {t} = useTranslation()
   return (
 
@@ -14,8 +14,8 @@ const NewsCard = ({title ,  subTitle , link , image , id}) => {
 
           </div>
         </div>
-        <div className="p-4 space-y-3">
-            <h5 className="mb-2 h-16 tracking-tight font-jost  line-clamp-2 text-base md:text-xl font-medium text-currentBlue">{title}</h5>
+        <div className="p-2 md:p-4 space-y-2 md:space-y-3">
+            <h5 className="mb-2 h-12 md:h-16 tracking-tight font-jost  line-clamp-2 text-base md:text-xl font-medium text-currentBlue">{title}</h5>
           <p className="mb-3 font-normal text-currentBlack font-jost  line-clamp-2 md:line-clamp-3 text-sm md:text-base">{subTitle}</p>
           <a  href={link}
              className="inline-flex items-center  underline font-jost">

@@ -23,13 +23,6 @@ import apiService from "@/service/api";
 
 const Layout = ({children}) => {
 
-    // const { data: contact  , refetch: contactRefetch,  } = useQuery("getContact", () =>
-    //     apiService.getData( '/about/contact') , { enabled: false}
-    // );
-    //
-    // useEffect(() =>{
-    //     contactRefetch()
-    // } , [])
 
     useEffect(() => {
         AOS.init({
