@@ -49,12 +49,12 @@ const Navbar = () => {
         }
     }, [sidebar])
 
-    const { data: contact  , refetch: contactRefetch,  } = useQuery("getContact", () =>
-        apiService.getData( '/about/contact') , { enabled: false}
+    const {data: contact, refetch: contactRefetch,} = useQuery("getContact", () =>
+        apiService.getData('/about/contact'), {enabled: false}
     );
-    useEffect(() =>{
+    useEffect(() => {
         contactRefetch()
-    } , [])
+    }, [])
 
     const {t} = useTranslation()
     const {lang} = useSelector(state => state.langSlice)
@@ -72,7 +72,7 @@ const Navbar = () => {
                             <DropdownLang/>
                         </div>
                         <div className="whitespace-nowrap">
-                            <p>{langSelect(lang ,contact?.address_ru , contact?.address_en ,contact?.address_uz )}</p>
+                            <p>{langSelect(lang, contact?.address_ru, contact?.address_en, contact?.address_uz)}</p>
                         </div>
                     </div>
                 </div>
@@ -86,14 +86,23 @@ const Navbar = () => {
                             <LuAlignLeft className={'text-white text-xl  cursor-pointer'}
                                          onClick={handleBurger}/>
                         </div>
-                        <div onClick={(e)=>e.stopPropagation()} className={`  duration-700 z-[100] top-[70px] ${sidebar ? 'left-0' : '-left-full'} !box-border fixed w-full md:w-[80%] bg-[url('/image/bg-noise.jpg')] bg-currentBlue   p-5 h-[calc(100vh-70px)] flex flex-col justify-between border border-currentBlue  md:hidden`}>
+                        <div onClick={(e) => e.stopPropagation()}
+                             className={`  duration-700 z-[100] top-[70px] ${sidebar ? 'left-0' : '-left-full'} !box-border fixed w-full md:w-[80%] bg-[url('/image/bg-noise.jpg')] bg-currentBlue   p-5 h-[calc(100vh-70px)] flex flex-col justify-between border border-currentBlue  md:hidden`}>
                             <ul className={'flex flex-col gap-4 lg:gap-7 items-center '}>
-                            {
-                                navLink.map((link, ind) => (
-                                    <li key={ind}><Link href={link.link}>{t(`${link.text}`)} </Link></li>
+                                {
+                                    navLink.map((link, ind) => {
+                                        const active = router === link.link
+                                        return (
+                                            <li key={ind}><Link href={link.link}
+                                                                className={`${active ? 'border border-white px-1.5 py-0.5' : "border border-transparent px-1.5 py-0.5"}`}
+                                            >
+                                                {t(`${link.text}`)}
+                                            </Link>
+                                            </li>
 
-                                ))
-                            }
+                                        )
+                                    })
+                                }
                             </ul>
                             <div
                                 className="flex mt-5 flex-col  border-t border-white pt-5 text-white font-jost  gap-2 md:gap-5 text-sm items-center font-normal">
@@ -102,15 +111,19 @@ const Navbar = () => {
                                     <a href={`tel:${contact?.phone2}`}>{formatPhoneNumber(contact?.phone2)}</a>
                                 </div>
                                 <div className="text-center">
-                                    <p >{langSelect(lang ,contact?.address_ru , contact?.address_en ,contact?.address_uz )}</p>
+                                    <p>{langSelect(lang, contact?.address_ru, contact?.address_en, contact?.address_uz)}</p>
                                 </div>
                             </div>
                         </div>
                         <ul className="md:flex justify-between items-center w-1/3 hidden relative z-10">
                             {
-                                navLink.slice(0, 3).map((link, ind) => (
-                                        <li key={ind}><Link href={link.link}>{t(`${link.text}`)} </Link></li>
-                                    )
+                                navLink.slice(0, 3).map((link, ind) => {
+                                        const active = router === link.link
+
+                                        return (
+                                            <li key={ind}><Link href={link.link} className={`${active ? 'border border-white px-1.5 py-0.5' : "border border-transparent px-1.5 py-0.5"}`}>{t(`${link.text}`)} </Link></li>
+                                        )
+                                    }
                                 )
                             }
 
@@ -122,14 +135,18 @@ const Navbar = () => {
                                 <ImageUi
                                     alt={'baden baden logo'}
                                     src="/image/baden-baden-logo-white 1.png"
-                                         objectFitContain={true}/>
+                                    objectFitContain={true}/>
                             </div>
                         </Link>
                         <ul className="md:flex justify-between items-center w-1/3 hidden">
                             {
-                                navLink.slice(3, 6).map((link, ind) => (
-                                        <li key={ind}><Link href={link.link}>{t(`${link.text}`)} </Link></li>
+                                navLink.slice(3, 6).map((link, ind) => {
+                                    const active = router === link.link
+
+                                    return (
+                                        <li key={ind}><Link href={link.link} className={`${active ? 'border border-white px-1.5 py-0.5' : "border border-transparent px-1.5 py-0.5"}`}>{t(`${link.text}`)} </Link></li>
                                     )
+                                    }
                                 )
                             }
 
@@ -147,8 +164,8 @@ const Navbar = () => {
 export default Navbar;
 
 const DropdownLang = () => {
-    const {t,i18n} = useTranslation()
-const dispatch=useDispatch()
+    const {t, i18n} = useTranslation()
+    const dispatch = useDispatch()
     const langList = [
         {
             title: t('lang.ru'),
@@ -167,11 +184,7 @@ const dispatch=useDispatch()
         }
     ]
     const [dropdown, setDropdown] = useState(false)
-    const [language, setLanguage] = useState({
-        title: t('lang.ru'),
-        value: 'ru',
-        id: 1
-    },)
+
 
     const opendropdown = (e) => {
         e.stopPropagation()
@@ -179,15 +192,14 @@ const dispatch=useDispatch()
         setDropdown(prevstate => !prevstate)
     }
 
-    const handleLang=(lang)=>{
+    const handleLang = (lang) => {
         i18n.changeLanguage(lang.value)
         dispatch(changleLang(lang.value))
-        setLanguage(lang)
         setDropdown(false)
     }
 
     useEffect(() => {
-        const scrollDrop=()=>{
+        const scrollDrop = () => {
             if (window.scrollY > 0) {
                 setDropdown(false)
             }
@@ -195,12 +207,11 @@ const dispatch=useDispatch()
         }
         window.addEventListener('scroll', scrollDrop)
 
-        return ()=>{
+        return () => {
             window.removeEventListener('scroll', scrollDrop)
 
         }
     }, []);
-
 
 
     useEffect(() => {
@@ -217,18 +228,18 @@ const dispatch=useDispatch()
     return (
         <>
             <div className="relative">
-                <p className=" cursor-pointer text-white font-jost" onClick={opendropdown}>{language.title}</p>
+                <p className=" cursor-pointer text-white font-jost" onClick={opendropdown}>{t('lang.defualt')}</p>
                 <div
                     className={`grid w-24 ${dropdown ? "grid-rows-[1fr]" : 'grid-rows-[0fr]'} absolute top-[30px]  z-[150] left-0 duration-200 transition-all ease   `}>
                     <div
-                        onClick={e=>e.stopPropagation()}
+                        onClick={e => e.stopPropagation()}
                         className={`overflow-hidden bg-currentBlue flex flex-col   ${dropdown ? "border-b border-x border-white " : ''} rounded-b`}>
                         {
                             langList.map((item) => (
                                 <div
-                                    onClick={()=>handleLang(item)}
+                                    onClick={() => handleLang(item)}
                                     key={item.id}
-                                     className="hover:bg-black/10 px-3 py-1   flex items-center gap-2 cursor-pointer">
+                                    className="hover:bg-black/10 px-3 py-1   flex items-center gap-2 cursor-pointer">
                                     <span>{item.title}</span>
                                 </div>
 

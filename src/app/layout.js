@@ -19,6 +19,12 @@ const forum = Forum({
     display:'swap'
 });
 
+
+export const metadata = {
+    title: "Baden-Baden Hotel",
+    description: "Create memories to last a lifetime",
+    icons:'/image/icon.png'
+};
 export default function RootLayout({children}) {
     return (
         <html lang="en" className={`font-jost ${jost.variable} ${forum.variable}`}>

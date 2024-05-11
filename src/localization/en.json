@@ -11,6 +11,7 @@
 
     },
     "lang": {
+      "defualt": "English",
       "ru": "russian",
       "en": "english",
       "uz": "uzbek"

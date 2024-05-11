@@ -18,9 +18,8 @@ import 'lightgallery/css/lg-thumbnail.css';
 import {usePathname} from "next/navigation";
 import 'aos/dist/aos.css';
 import {useEffect} from "react";
-import {QueryClient, QueryClientProvider, useQuery} from "react-query";
-import apiService from "@/service/api";
-
+import {QueryClient, QueryClientProvider} from "react-query";
+import NextTopLoader from "nextjs-toploader";
 const Layout = ({children}) => {
 
 
@@ -32,21 +31,22 @@ const Layout = ({children}) => {
     }, []);
     const queryClient = new QueryClient();
 
-    const router=usePathname()
+    const router = usePathname()
     return (
         <HydrationProvider>
             <QueryClientProvider client={queryClient}>
-            <Client>
-                <Provider store={store}>
-                    <PersistGate loading={null} persistor={persistor}>
-                        <Navbar  />
-                        <main className={`min-h-screen ${router==='/' ? "": "mt-[72px] md:mt-[125px]" } `}>
-                        {children}
-                        </main>
-                        <Footer  />
-                    </PersistGate>
-                </Provider>
-            </Client>
+                <Client>
+                    <Provider store={store}>
+                        <PersistGate loading={null} persistor={persistor}>
+                            <Navbar/>
+                            <main className={`min-h-screen ${router === '/' ? "" : "mt-[72px] md:mt-[125px]"} `}>
+                                <NextTopLoader />
+                                {children}
+                            </main>
+                            <Footer/>
+                        </PersistGate>
+                    </Provider>
+                </Client>
             </QueryClientProvider>
         </HydrationProvider>
 
