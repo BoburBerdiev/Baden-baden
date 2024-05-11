@@ -4,9 +4,17 @@ import {ButtonUI} from "@/components";
 import { useTranslation } from 'react-i18next';
 import {useDispatch, useSelector} from "react-redux";
 import {
-    plusCountRoomBooking ,minusCountChildrenBooking, minusCountOlderBooking ,minusCountRoomBooking ,plusCountChildrenBooking ,plusCountOlderBooking} from "@/slice/booking";
+    plusCountRoomBooking,
+    minusCountChildrenBooking,
+    minusCountOlderBooking,
+    minusCountRoomBooking,
+    plusCountChildrenBooking,
+    plusCountOlderBooking,
+    changleCountOlderBooking, changleCountChildrenBooking, changleCountRoomBooking
+} from "@/slice/booking";
+import {useEffect} from "react";
 
-const NumberGuests = ({guests,setGuests}) => {
+const NumberGuests = ({isInner=false,adults=true,children=true}) => {
 
     const {t} = useTranslation()
     const dispatch = useDispatch()
@@ -32,10 +40,15 @@ const NumberGuests = ({guests,setGuests}) => {
         }
     }
 
+    useEffect(() => {
+        dispatch(changleCountRoomBooking(0))
+        dispatch(changleCountOlderBooking(0))
+        dispatch(changleCountChildrenBooking(0))
+    }, []);
     return (
         <div className={'border shadow-md border-brown'}>
-            <div className={'flex items-center justify-between   px-3 py-1 bg-currentBlue w-full'}>
-                <p className={'font-elegance text-white'}>
+            <div className={`${isInner?"hidden":"flex"}  items-center justify-between   px-3 py-1 bg-currentBlue w-full`}>
+                <p className={`font-jost text-white `}>
                     {t('index.headerBooking.roomNumber')}
                 </p>
                 <div className={'flex items-center gap-2'}>
@@ -45,20 +58,20 @@ const NumberGuests = ({guests,setGuests}) => {
                     >
                         <FiMinus className={'text-sm text-currentBlack'}/>
                     </button>
-                    <p className={'font-jost  text-xl text-white'}>{countRoomBooking}</p>
-                    <button className={'p-2 bg-white p-2 rounded-full  '}
+                    <p className={`font-jost  text-xl text-white `}>{countRoomBooking}</p>
+                    <button className={'p-2 bg-white  rounded-full  '}
                               onClick={()=>handleIncrement('room')}
                     >
                         <FaPlus className={'text-sm text-currentBlack'}/>
                     </button>
                 </div>
             </div>
-            <div className={'bg-transparent  px-3 py-4'}>
+            <div className={`${isInner ? "bg-currentBlue":"bg-currentBlack"}  px-3 py-4`}>
 
-                <div className={'grid grid-cols-2 gap-3'}>
+                <div className={`grid  ${adults&&children ? "grid-cols-2":"grid-cols-1"}  gap-3`}>
 
-                    <div className={'gap-y-1 flex flex-col items-center'}>
-                        <div className={'flex items-center gap-2 text-white '}>
+                    <div className={`${adults? "flex":"hidden"} gap-y-1  flex-col items-center text-white`}>
+                        <div className={`flex items-center gap-2   `}>
 
                             <button className={'p-2  hover:opacity-90'}  onClick={() => handleDecrement('older')} >
                                 <FiMinus className={'text-sm '}/>
@@ -76,8 +89,8 @@ const NumberGuests = ({guests,setGuests}) => {
                             {t('index.headerBooking.adults')}
                         </p>
                     </div>
-                    <div className={'gap-y-1 flex flex-col items-center'}>
-                        <div className={'flex items-center gap-2 text-white'}>
+                    <div className={` ${children? "flex":"hidden"} gap-y-1 flex flex-col items-center text-white`}>
+                        <div className={`flex items-center gap-2  `}>
                             <button className={'p-2  hover:opacity-90'}
                                     onClick={() => handleDecrement('child')}>
                                 <FiMinus className={'text-sm '}/>

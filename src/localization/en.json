@@ -150,15 +150,14 @@
       "allComforts": "Are common",
       "servicesTitle": "Facilities and services",
       "services": {
-        "service1": "A fitness center",
-        "service2": "Mini bar",
-        "service3": "Indoor pool",
-        "service4": "Air conditioner",
-        "service5": "TV",
-        "service6": "Free parking",
-        "service7": "Free Wi-Fi",
-        "service8": "City view",
-        "service9": "Excellent breakfast"
+        "service1": "Bath",
+        "service2": "Breakfast",
+        "service3": "Coffee",
+        "service4": "Foot wear",
+        "service5": "Fresh air",
+        "service6": "Кондиционер",
+        "service7": "TV",
+        "service8": "Wifi"
       },
       "areaSymbol": "m²",
       "humenSymbol": "person",

@@ -29,7 +29,7 @@ const AboutContent = ({aboutTitle ,aboutFacilities , amenities ,aboutTitleAmenit
             <div className={'order-1 md:order-2 py-0 md:py-20 md:col-span-6'}>
               {
                 aboutFacilities?.map((facilites ) => (
-                    <AccordionAbout  image={facilites?.inner_image?.image} title={langSelect(lang ,facilites?.title_ru , facilites?.title_en ,facilites?.title_uz )}     selectImage={setFacilitesImage}
+                    <AccordionAbout key={facilites?.id}  image={facilites?.inner_image?.image} title={langSelect(lang ,facilites?.title_ru , facilites?.title_en ,facilites?.title_uz )}     selectImage={setFacilitesImage}
                                     subTitle={langSelect(lang ,facilites?.sub_title_ru , facilites?.sub_title_en ,facilites?.sub_title_uz )}/>
                 ))
               }
@@ -53,7 +53,7 @@ const AboutContent = ({aboutTitle ,aboutFacilities , amenities ,aboutTitleAmenit
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5  md:pb-20 pb-10">
             {
               amenities?.map((item ,id ) => (
-                    <HotelAmenitiesCard id={id} image={item?.image} title={langSelect(lang ,item?.title_ru , item?.title_en ,item?.title_uz )}/>
+                    <HotelAmenitiesCard key={item.id} id={id} image={item?.image} title={langSelect(lang ,item?.title_ru , item?.title_en ,item?.title_uz )}/>
               ))
             }
           </div>

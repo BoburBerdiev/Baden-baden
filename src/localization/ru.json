@@ -141,15 +141,14 @@
       "allComforts": "Общие",
       "servicesTitle": "Удобства и услуги",
       "services": {
-        "service1": "Фитнес-центр",
-        "service2": "Мини-бар",
-        "service3": "Крытый бассейн",
-        "service4": "Кондиционер",
-        "service5": "Телевизор",
-        "service6": "Бесплатная парковка",
-        "service7": "Бесплатный Wi-Fi",
-        "service8": "Вид на город",
-        "service9": "Превосходный завтрак"
+        "service1": "Ванна",
+        "service2": "Завтрак",
+        "service3": "Кофе",
+        "service4": "Обувь для ног",
+        "service5": "Свежий воздух",
+        "service6": "Кондиционер",
+        "service7": "TV",
+        "service8": "Wifi"
       },
       "areaSymbol": "м²",
       "humenSymbol": "чел",

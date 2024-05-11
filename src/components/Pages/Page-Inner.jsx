@@ -1,15 +1,24 @@
 'use client'
-import {ButtonUI, RoomsSlider, SectionUI} from "@/components";
-import {LuBedDouble, LuMaximize, LuUsers} from "react-icons/lu";
+import {ButtonUI, DropdownBooking, NumberGuests, RoomsSlider, SectionUI} from "@/components";
+import {LuBath, LuBedDouble, LuFootprints, LuMaximize, LuSnowflake, LuUsers} from "react-icons/lu";
 import ImageUi from "@/components/image-ui";
 import {Swiper, SwiperSlide} from "swiper/react";
-
 import {FreeMode, Grid, Navigation, Thumbs} from 'swiper/modules';
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {GrNext, GrPrevious} from "react-icons/gr";
-import LightGallery from 'lightgallery/react'
-import lgThumbnail from 'lightgallery/plugins/thumbnail';
-import lgZoom from 'lightgallery/plugins/zoom';
+import moment from "moment/moment";
+import DatePicker from "react-datepicker";
+import {useTranslation} from "react-i18next";
+import {useDispatch, useSelector} from "react-redux";
+import {changleEndTimeBooking, changleStartTimeBooking, changleTimeBooking} from "@/slice/booking";
+import {BiCoffee} from "react-icons/bi";
+import {RiWindyLine} from "react-icons/ri";
+import {FaTv} from "react-icons/fa";
+import {IoWifi} from "react-icons/io5";
+import apiService from "@/service/api";
+import {useParams} from "next/navigation";
+import {useQuery} from "react-query";
+import {langSelect} from "@/helper";
 
 const imageArr = [
     {
@@ -32,63 +41,96 @@ const imageArr = [
     }
 ]
 
-const roomComforts = [
-    {
-        id: 1,
-        icon: <LuMaximize/>,
-        text: 'Телевизор'
-    },
-    {
-        id: 2,
-        icon: <LuMaximize/>,
-        text: 'Бесплатный Wi-Fi'
-    },
-    {
-        id: 3,
-        icon: <LuMaximize/>,
-        text: 'Кондиционер'
-    },
-    {
-        id: 4,
-        icon: <LuMaximize/>,
-        text: 'Тапочки'
-    },
-    {
-        id: 5,
-        icon: <LuMaximize/>,
-        text: 'Телевизор'
-    },
-    {
-        id: 6,
-        icon: <LuMaximize/>,
-        text: 'Бесплатный Wi-Fi'
-    },
-    {
-        id: 7,
-        icon: <LuMaximize/>,
-        text: 'Тапочки'
-    },
-    {
-        id: 8,
-        icon: <LuMaximize/>,
-        text: 'Кондиционер'
-    },
-
-]
 
 const Page = () => {
+    const {t} = useTranslation()
+    const {lang} = useSelector(state => state.langSlice)
+    const dispatch = useDispatch();
+    const {timeBooking, typeBooking, countRoomBooking, countOlderBooking, countChildrenBooking} = useSelector(
+        (state) => state.bookingSlice);
+    const [startDate, setStartDate] = useState(null);
+    const [endDate, setEndDate] = useState(null);
+    const {id} = useParams()
+    const {data: room, refetch: refetchRoom, isLoading: isLoadingRoom} = useQuery(["room", id], () =>
+        apiService.getDataByID('/rooms', id), {enabled: false}
+    );
 
+    const roomComforts = [
+        {
+            id: 1,
+            icon: <LuBath/>,
+            text: t('roomInner.services.service1')
+        },
+        {
+            id: 2,
+            icon: <LuBath/>,
+            text: t('roomInner.services.service2')
+        },
+        {
+            id: 3,
+            icon: <BiCoffee/>,
+            text: t('roomInner.services.service3')
+        },
+        {
+            id: 4,
+            icon: <LuFootprints/>,
+            text: t('roomInner.services.service4')
+        },
+        {
+            id: 5,
+            icon: <RiWindyLine/>,
+            text: t('roomInner.services.service5')
+        },
+        {
+            id: 6,
+            icon: <LuSnowflake/>,
+            text: t('roomInner.services.service6')
+        },
+        {
+            id: 7,
+            icon: <FaTv/>,
+            text: t('roomInner.services.service7')
+        },
+        {
+            id: 8,
+            icon: <IoWifi/>,
+            text: t('roomInner.services.service8')
+        },
+
+    ]
+
+    const handleDateChangeStart = (date) => {
+
+        dispatch(changleStartTimeBooking(`${date}`))
+        setStartDate(date)
+    };
+    const handleDateChangeEnd = (date) => {
+
+        dispatch(changleEndTimeBooking(`${date}`))
+        setEndDate(date)
+    };
+    useEffect(() => {
+        const thisDay = moment().add(0, 'days').toDate()
+        dispatch(changleTimeBooking([`${thisDay}`, `${thisDay}`]))
+    }, []);
+
+
+    useEffect(() => {
+        if (id) {
+            refetchRoom()
+        }
+    }, [id])
     return (
         <>
 
-            <SectionUI title={'Premiere suite'}
+            <SectionUI title={langSelect(lang ,room?.title_ru , room?.title_en ,room?.title_uz )}
                        isEmbroidery={true}
             >
 
             </SectionUI>
             <section className=" mb-7 sm:mb-14 md:mb-20 mt-5 md:mt-10">
                 <div className="container space-y-5 md:space-y-10">
-                    <SwiperInner/>
+                    <SwiperInner images={room?.images}/>
                     <div className="grid grid-cols-1 md:grid-cols-3  gap-5">
                         <div className="col-span-2 flex flex-col gap-5 md:gap-10">
                             <div className="flex flex-col gap-3 md:gap-5">
@@ -97,30 +139,20 @@ const Page = () => {
                                     className="flex whitespace-nowrap font-forum gap-5 md:gap-[50px] text-currentBlue text-lg  md:text-2xl  items-center">
                                     <div className="flex gap-3 md:gap-6 items-center">
                                         <LuMaximize className="text-xl md:text-3xl"/>
-                                        <span>70 м2</span>
+                                        <span>{room?.capacity} м2</span>
                                     </div>
                                     <div className="flex gap-3 md:gap-6 items-center">
                                         <LuUsers className="text-xl md:text-3xl"/>
-                                        <span>1-4 чел</span>
+                                        <span>{room?.num_people}чел</span>
                                     </div>
                                     <div className="flex gap-3 md:gap-6 items-center">
                                         <LuBedDouble className="text-xl md:text-3xl"/>
-                                        <span>2 спальни</span>
+                                        <span>{room?.num_bedrooms} спальни</span>
                                     </div>
                                 </div>
-                                <p className="text-currentBlack font-jost  md:text-lg text-start">Номер Premier
-                                    Suite создан для
-                                    того, чтобы удовлетворить самые взыскательные потребности гостей и обеспечить им
-                                    незабываемое пребывание. Площадь номера Premier Suite значительно превышает
-                                    стандартные
-                                    номера и состоит из нескольких помещений, включая спальню, гостиную, обеденную зону
-                                    и ванную
-                                    комнату. Дизайн номера выполнен в изысканном стиле с использованием дорогих
-                                    материалов и
-                                    элегантной мебели.
-                                    Проживание в номере Premier Suite обещает быть неповторимым опытом роскоши и
-                                    комфорта,
-                                    который позволит гостям насладиться пребыванием в отеле на полную катушку.</p>
+                                <p className="text-currentBlack font-jost  md:text-lg text-start">
+                                    {langSelect(lang ,room?.text_ru , room?.text_en ,room?.text_uz )}
+                                </p>
                             </div>
                             <div className="flex flex-col gap-3 md:gap-6 font-forum">
                                 <h2 className="font-normal text-currentBlue text-2xl md:text-3xl lg:text-[40px]">Удобства
@@ -144,15 +176,12 @@ const Page = () => {
                                     этот
                                     номер?</h3>
                                 <ul className="list-disc text-currentBlack font-jost font-normal   md:text-lg ml-5">
-                                    <li>Частный балкон</li>
-                                    <li>Элитная кровать 140x200 см</li>
-                                    <li>Обитое кресло у панорамного окна</li>
-                                    <li>Телевизор с ультра-высоким разрешением для просмотра фильмов о горных походах
-                                    </li>
-                                    <li>Письменный стол с USB-портами для документирования ваших приключений</li>
-                                    <li>Сейф в номере для хранения ваших лучших горных фотографий</li>
-                                    <li>Станция обслуживания с кофемашиной Lavazza, чайником и чаем</li>
-                                    <li>Удобные махровые полотенца и халаты</li>
+                                    {
+                                        room?.included_facilities?.map(included=>(
+                                            <li key={included.id}>  {langSelect(lang ,included?.title_ru , included?.title_en ,included?.title_uz )}</li>
+
+                                        ))
+                                    }
                                 </ul>
                             </div>
                         </div>
@@ -160,37 +189,57 @@ const Page = () => {
                             <div className=" border border-first">
                                 <div className="flex flex-col items-center p-3 lg:p-5">
                                     <h3 className="font-normal text-currentBlue text-2xl md:text-3xl lg:text-[40px] mb-2">Бронирование:</h3>
-                                    <p className="font-normal text-currentBlue text-base md:text-lg lg:text-2xl">450 000
+                                    <p className="font-normal text-currentBlue text-base md:text-lg lg:text-2xl">{room?.price}
                                         UZS / за
                                         ночь
                                     </p>
                                     <div
                                         className="flex flex-col gap-[11px] w-full mt-5 text-currentBlack font-jost font-normal">
-                                        <div
-                                            className="p-[10px_14px] w-full flex items-center border border-first  justify-between">
-                                            <p>Заезд</p><span className="flex items-center gap-1">2024-04-24<i
-                                            className="w-4 h-4"
-                                            data-lucide="chevron-down"></i></span>
-                                        </div>
-                                        <div
-                                            className="p-[10px_14px] w-full flex items-center border border-first  justify-between">
-                                            <p>Выезд</p><span className="flex items-center gap-1">2024-04-25<i
-                                            className="w-4 h-4"
-                                            data-lucide="chevron-down"></i></span>
-                                        </div>
-                                        <div className="flex items-center gap-2">
-                                            <div
-                                                className="p-[9px_6px] w-full flex items-center border border-first  justify-between">
-                                                <p>Взрослые</p><span className="flex items-center gap-1">1<i
-                                                className="w-4 h-4"
-                                                data-lucide="chevron-down"></i></span>
-                                            </div>
-                                            <div
-                                                className="p-[9px_6px] w-full flex items-center border border-first  justify-between">
-                                                <p>Дети</p><span className="flex items-center gap-1">0<i
-                                                className="w-4 h-4"
-                                                data-lucide="chevron-down"></i></span>
-                                            </div>
+                                        <DropdownBooking
+                                            title={t('index.headerBooking.checkIn')}
+                                            subTitle={timeBooking[0] ? moment(timeBooking[0]).format('ll') : t('index.headerBooking.entryDay')}
+
+                                            isInner={true}
+                                        >
+
+                                            <DatePicker
+                                                selected={null}
+                                                onChange={handleDateChangeStart}
+                                                startDate={startDate}
+                                                dataFormat={'dd/MM/yyyy'}
+                                                inline
+                                                minDate={moment().add(0, 'days').toDate()}
+                                            />
+                                        </DropdownBooking>
+                                        <DropdownBooking
+                                            title={t('index.headerBooking.departure')}
+                                            subTitle={timeBooking[1] ? moment(timeBooking[1]).format('ll') : t('index.headerBooking.departureDay')}
+
+                                            isInner={true}
+                                        >
+
+                                            <DatePicker
+                                                selected={null}
+                                                onChange={handleDateChangeEnd}
+                                                startDate={endDate}
+                                                dataFormat={'dd/MM/yyyy'}
+                                                inline
+                                                minDate={moment().add(0, 'days').toDate()}
+                                            />
+                                        </DropdownBooking>
+                                        <div className={'grid grid-cols-2 gap-2'}>
+                                            <DropdownBooking
+                                                title={t('index.headerBooking.adults')}
+                                                subTitle={` ${countOlderBooking}  `}
+                                                isInner={true}
+                                            > <NumberGuests isInner={true} children={false}/>
+                                            </DropdownBooking>
+                                            <DropdownBooking
+                                                title={t('index.headerBooking.children')}
+                                                subTitle={` ${countChildrenBooking} `}
+                                                isInner={true}
+                                            > <NumberGuests isInner={true} adults={false}/>
+                                            </DropdownBooking>
                                         </div>
                                     </div>
                                 </div>
@@ -217,11 +266,9 @@ const Page = () => {
 export default Page;
 
 
-const SwiperInner = () => {
+const SwiperInner = ({images}) => {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
-    const onInit = (a) => {
-        console.log(a);
-    };
+
 
     return (
         <>
@@ -238,14 +285,10 @@ const SwiperInner = () => {
                     modules={[FreeMode, Navigation, Thumbs]}
                     className="mySwiper2 h-[220px] sm:h-[300px]  lg:h-[450px] xl:h-[520px] lg:col-span-2 w-full"
                 >
-                        {
-                        imageArr.map((image, index) => (
-                            <SwiperSlide key={index} className={'relative w-full h-full'}>
-
-
-                                        <ImageUi alt={'inner image'} src={image.image}/>
-
-
+                    {
+                        images?.map((image) => (
+                            <SwiperSlide key={image?.id} className={'relative w-full h-full'}>
+                                <ImageUi alt={'inner image'} src={image.image}/>
                             </SwiperSlide>
                         ))
                     }
@@ -309,8 +352,8 @@ const SwiperInner = () => {
                     className="mySwiper  h-[100px] lg:h-[450px] xl:h-[520px] w-full"
                 >
                     {
-                        imageArr.map((image, ind) => (
-                            <SwiperSlide key={ind} className={'relative w-full h-full'}>
+                        images?.map((image) => (
+                            <SwiperSlide key={image?.id} className={'relative w-full h-full'}>
                                 <ImageUi alt={'inner image'} src={image.image}/>
                             </SwiperSlide>
                         ))
