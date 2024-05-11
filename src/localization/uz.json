@@ -148,13 +148,13 @@
     "allComforts": "Barchasi",
     "servicesTitle": "Qulayliklar va xizmatlar",
     "services": {
-      "service1": "Hammom",
+      "service1": "Vannaxona",
       "service2": "Nonushta",
-      "service3": "Kofe",
-      "service4": "Oyoq kiyimi",
+      "service3": "Kofe/ Choy",
+      "service4": "Shippak",
       "service5": "Toza havo",
       "service6": "Konditsioner",
-      "service7": "TV",
+      "service7": "Televizor",
       "service8": "Wifi"
     },
     "areaSymbol": "m²",

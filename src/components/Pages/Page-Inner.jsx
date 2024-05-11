@@ -42,7 +42,7 @@ const imageArr = [
 ]
 
 
-const Page = () => {
+const Page = ({roomCatalog}) => {
     const {t} = useTranslation()
     const {lang} = useSelector(state => state.langSlice)
     const dispatch = useDispatch();
@@ -251,12 +251,12 @@ const Page = () => {
                     </div>
                 </div>
             </section>
-            <SectionUI title={'Удобства отеля'} modeBlue={true} isNoContainer={true}>
+            <SectionUI title={t('index.section2.title')} modeBlue={true} isNoContainer={true}>
                 <div className={'pb-5 md:pb-10'}>
-                    <RoomsSlider/>
+                    <RoomsSlider room={roomCatalog}/>
                 </div>
-                <div className="flex flex-col items-center pb-10 md:pb-[60px] lg:pb-[90px]">
-                    <ButtonUI borderBtn borderWhite content={'Посмотреть все'}/>
+                <div data-aos={'fade-up'} data-aos-delay={50} className="flex flex-col items-center md:pb-20 pb-10">
+                    <ButtonUI borderBtn borderWhite content={t('btn.moreAll')} hrefToPage={'/room'}/>
                 </div>
             </SectionUI>
         </>

@@ -150,12 +150,12 @@
       "allComforts": "Are common",
       "servicesTitle": "Facilities and services",
       "services": {
-        "service1": "Bath",
+        "service1": "Bathroom",
         "service2": "Breakfast",
-        "service3": "Coffee",
-        "service4": "Foot wear",
-        "service5": "Fresh air",
-        "service6": "Кондиционер",
+        "service3": "Coffee/Tea",
+        "service4": "Slippers",
+        "service5": "Hairdryer",
+        "service6": "Air conditioner",
         "service7": "TV",
         "service8": "Wifi"
       },
