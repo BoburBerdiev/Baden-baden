@@ -24,7 +24,8 @@ const HomeContent = ({
                          gallery,
                          news,
                          newsTitle,
-                         room
+                         room,
+                         feedback
                      }) => {
     const {t} = useTranslation()
     const {lang} = useSelector(state => state.langSlice)
@@ -86,7 +87,7 @@ const HomeContent = ({
             }
           </div>
         </SectionUI>
-        <SectionUI title={'Ориентиры поблизости'} modeBlue={true} cityBg={true} >
+        <SectionUI title={t('index.section3.title')} modeBlue={true} cityBg={true} >
           <div className={'relative'}>
             <div className="grid grid-cols-1 md:grid-cols-2   pb-[60px] lg:pb-20">
               <div className={'hidden md:block'}>
@@ -120,12 +121,9 @@ const HomeContent = ({
                    subTitle={langSelect(lang ,newsTitle?.sub_title_ru , newsTitle?.sub_title_en ,newsTitle?.sub_title_uz )}
         >
           <div className={'md:pb-20 pb-10 flex gap-10'}>
-            <ReviewsSlider/>
+            <ReviewsSlider feedbacks={feedback && feedback}/>
           </div>
         </SectionUI>
-
-
-
       </>
   );
 };

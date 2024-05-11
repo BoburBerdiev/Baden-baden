@@ -59,7 +59,7 @@ const GalleryContent = () => {
 
   return (
       <div>
-        <SectionUI title={t('gallery.title')} isEmbroidery={true}>
+        <SectionUI title={'Фотогалерея'} isEmbroidery={true}>
             <InfiniteScroll
                 next={galleryCardRefetch}
                 hasMore={hasMore}

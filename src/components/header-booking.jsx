@@ -68,7 +68,7 @@ const HeaderBooking = () => {
           </DropdownBooking>
 
           <div >
-            <ButtonUI content={t('btn.booking')} borderWhite={true}  />
+            <ButtonUI content={t('btn.booking')}  borderBtn={true} borderWhite={true}  />
           </div>
         </div>
       </div>

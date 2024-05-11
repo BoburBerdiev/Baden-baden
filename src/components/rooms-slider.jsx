@@ -70,7 +70,7 @@ const RoomsSlider = ({room}) => {
   const RoomsCard = ({title ,image , person ,bedrooms ,capacity ,slug }) => {
     const {t} = useTranslation()
     return (
-        <Link href={`room/${slug}`} className={'block'}>
+        <Link href={`/room/${slug}`} className={'block'}>
           <div className={`w-full h-[300px] md:h-[550px]  relative duration-75 
                `}>
             <ImageUI isBorder={true} isBorderWhite={true} imageStyle={'object-center'} src={image} alt={'title'}/>

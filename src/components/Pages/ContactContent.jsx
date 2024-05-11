@@ -4,12 +4,13 @@ import {FaMapMarkerAlt, FaPhoneAlt} from "react-icons/fa";
 import {IoMail} from "react-icons/io5";
 import {formatPhoneNumber, langSelect} from "@/helper";
 import {useSelector} from "react-redux";
+import { useTranslation } from "react-i18next";
 
 const ContactContent = ({contact}) => {
   const {lang} = useSelector(state => state.langSlice)
-
+  const {t} = useTranslation()
   return (
-      <SectionUI title={"Наши контакты"} isEmbroidery={true}>
+      <SectionUI title={t('contact.title')} isEmbroidery={true}>
         <div className="flex flex-col items-center">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 text-center mb-10">
             <div data-aos={'fade-up'}  className="gap-1 md:gap-4 flex flex-col items-center text-lg text-text font-jost font-normal group">

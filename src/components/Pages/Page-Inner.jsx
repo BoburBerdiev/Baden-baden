@@ -114,20 +114,20 @@ const Page = ({roomCatalog}) => {
                     <div className="grid grid-cols-1 md:grid-cols-3  gap-5">
                         <div className="col-span-2 flex flex-col gap-5 md:gap-10">
                             <div className="flex flex-col gap-3 md:gap-5">
-                                <h2 className="font-normal text-currentBlue text-2xl md:text-3xl lg:text-[40px] font-forum  ">Описание</h2>
+                                <h2 className="font-normal text-currentBlue text-2xl md:text-3xl lg:text-[40px] font-forum  ">{t('roomInner.descr')}</h2>
                                 <div
                                     className="flex whitespace-nowrap font-forum gap-5 md:gap-[50px] text-currentBlue text-lg  md:text-2xl  items-center">
                                     <div className="flex gap-3 md:gap-6 items-center">
                                         <LuMaximize className="text-xl md:text-3xl"/>
-                                        <span>{room?.capacity} м2</span>
+                                        <span>{room?.capacity} <span> {t('roomInner.areaSymbol')} </span></span>
                                     </div>
                                     <div className="flex gap-3 md:gap-6 items-center">
                                         <LuUsers className="text-xl md:text-3xl"/>
-                                        <span>{room?.num_people}чел</span>
+                                        <span>{room?.num_people} <span> {t('roomInner.humenSymbol')} </span></span>
                                     </div>
                                     <div className="flex gap-3 md:gap-6 items-center">
                                         <LuBedDouble className="text-xl md:text-3xl"/>
-                                        <span>{room?.num_bedrooms} спальни</span>
+                                        <span>{room?.num_bedrooms} <span> {t('roomInner.bedromSymbol')} </span></span>
                                     </div>
                                 </div>
                                 <p className="text-currentBlack font-jost  md:text-lg text-start">
@@ -135,8 +135,7 @@ const Page = ({roomCatalog}) => {
                                 </p>
                             </div>
                             <div className="flex flex-col gap-3 md:gap-6 font-forum">
-                                <h2 className="font-normal text-currentBlue text-2xl md:text-3xl lg:text-[40px]">Удобства
-                                    номера</h2>
+                                <h2 className="font-normal text-currentBlue text-2xl md:text-3xl lg:text-[40px]">{t('roomInner.comfortsTitle')}</h2>
                                 <div
                                     className="grid grid-rows-4 grid-flow-col gap-3 md:gap-6">
                                     {
@@ -150,11 +149,7 @@ const Page = ({roomCatalog}) => {
                                 </div>
                             </div>
                             <div className="flex flex-col gap-3 md:gap-5">
-                                <h3 className="font-normal text-currentBlue text-2xl md:text-3xl lg:text-[40px] font-forum">Что
-                                    включено
-                                    в
-                                    этот
-                                    номер?</h3>
+                                <h3 className="font-normal text-currentBlue text-2xl md:text-3xl lg:text-[40px] font-forum">{t("roomInner.infosTitle")}</h3>
                                 <ul className="list-disc text-currentBlack font-jost font-normal   md:text-lg ml-5">
                                     {
                                         room?.included_facilities?.map(included=>(
@@ -168,10 +163,9 @@ const Page = ({roomCatalog}) => {
                         <div className="col-span-1">
                             <div className=" border border-first">
                                 <div className="flex flex-col items-center p-3 lg:p-5">
-                                    <h3 className="font-normal text-currentBlue text-2xl md:text-3xl lg:text-[40px] mb-2">Бронирование:</h3>
-                                    <p className="font-normal text-currentBlue text-base md:text-lg lg:text-2xl">{room?.price}
-                                        UZS / за
-                                        ночь
+                                    <h3 className="font-normal text-currentBlue text-2xl md:text-3xl lg:text-[40px] mb-2">{t('roomInner.bookingTitle')}</h3>
+                                    <p className="font-normal text-currentBlue text-base md:text-lg lg:text-2xl"><span>{room?.price} </span>
+                                     <span>{t("rooms.priceSymbol")}</span>
                                     </p>
                                     <div
                                         className="flex flex-col gap-[11px] w-full mt-5 text-currentBlack font-jost font-normal">
@@ -224,7 +218,7 @@ const Page = ({roomCatalog}) => {
                                     </div>
                                 </div>
                                 <div className="flex flex-col gap-5 md:gap-[30px] pb-3 lg:pb-5 px-3 lg:px-5">
-                                    <ButtonUI content={'Забронировать'}/>
+                                    <ButtonUI content={t('btn.booking')}/>
                                 </div>
                             </div>
                         </div>

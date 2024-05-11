@@ -16,49 +16,25 @@
     "btn": {
       "more":"Подробнее",
       "moreAll":"Посмотреть все",
-      "booking":"Забронировать",
-      "readMore": "Читать подробнее",
-      "allNums": "Все номера",
-      "viewAllPhoto": "Bсе фото",
-      "allNews": "Все новости",
-      "sendMesseng": "отправлять"
-    },
-    "notFound": {
-      "text": "Комната не найдена"
+      "booking":"Забронировать"
     },
     "modal": {
       "questionCorrect": "Ваш запрос принят",
       "contactYou": "Мы свяжемся с вами"
     },
     "footer": {
-
       "miniFooter": {
         "allrights": " Все права защищены.",
         "siteCreated": "Сайт создан:"
       },
       "ourSocials": "Наши соц сети:      "
-
-    },
-    "links": {
-      "viewReviews": "Посмотреть отзывы"
     },
     "contact": {
-      "title": "Свяжитесь с нами",
-      "phone": "Телефон:",
-      "mail":"Электронная почта:",
-      "address":"Адрес:"
+      "title": "Наши контакты"
     },
-    "news": {
-      "title": "Новостной блог"
-    },
-    "gallery": {
-      "title": "Фотогалерея"
-    },
-    "about": {
-      "headerTitle": "О нашем отеле",
-      "section1": {
-        "title": "Добро пожаловать в The Tower Hotel!"
-      }
+    "rooms":{
+      "title": "Наши номера",
+      "priceSymbol": "UZS / за ночь"
     },
     "index": {
       "headerBooking": {
@@ -75,31 +51,17 @@
        "typeOfNumber": "Тип номера",
        "choose": "Выбрать"
       },
-      "room": "Номер ",
       "section2": {
         "title": "Типы номеров"
       },
       "section3": {
-        "title": "Наши услуги"
+        "title": "Ориентиры поблизости"
       },
       "section4": {
         "title": "Ориентиры поблизости",
         "km": "км",
         "m": "м"
-      },
-      "section5": {
-        "title": "Фотогалерея"
-      },
-      "section6": {
-        "title": "Планируйте и экономьте",
-        "subtitle": "Забронируйте пребывание с предоплатой и съэкономьте до 25%"
-      },
-      "section7": {
-        "title": "Новостной блог"
       }
-    },
-    "rooms": {
-      "miniHeader": "Наши номера"
     },
     "booking": {
       "headerTitle": "Бронирование",
@@ -138,8 +100,10 @@
       "reviewDate": "Растянутое время:"
     },
     "roomInner": {
-      "allComforts": "Общие",
-      "servicesTitle": "Удобства и услуги",
+      "descr": "Описание",
+      "comfortsTitle": "Удобства номера",
+      "infosTitle": "Что включено в этот номер?",
+      "bookingTitle": "Бронирование:",
       "services": {
         "service1": "Ванная",
         "service2": "Завтрак",

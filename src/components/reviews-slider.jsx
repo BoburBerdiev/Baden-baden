@@ -2,23 +2,41 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import {Navigation, Pagination} from "swiper/modules";
 import {FaStar} from "react-icons/fa";
 import {ImageUI} from "@/components/index";
-const ReviewsSlider = () => {
+const ReviewsSlider = ({feedbacks}) => {
+  // const feedbacks = [
+  //   {
+  //     title: "Один из любимых отелей в Ташкенте!",
+  //     descr: "«Красивый отель! Великолепный завтрак! Отличное расположение! Просторные комфортные номера! Вежливый персонал!»",
+  //     fullName: "Svetlana",
+  //     country: "Россия"
+  //   },
+  //   {
+  //     title: "Один из любимых отелей в Ташкенте!",
+  //     descr: "«Красивый отель! Великолепный завтрак! Отличное расположение! Просторные комфортные номера! Вежливый персонал!»",
+  //     fullName: "Svetlana",
+  //     country: "Россия"
+  //   },
+  //   {
+  //     title: "Один из любимых отелей в Ташкенте!",
+  //     descr: "«Красивый отель! Великолепный завтрак! Отличное расположение! Просторные комфортные номера! Вежливый персонал!»",
+  //     fullName: "Svetlana",
+  //     country: "Россия"
+  //   },
+  // ]
   return (
-      <Swiper autoplay={{
+      <Swiper
+          autoplay={{
         delay: 5500,
         disableOnInteraction: false,
       }}
-              navigation={{
-                nextEl: ".swipper-button-next",
-                prevEl: ".swipper-button-prev",
-              }}
+
               breakpoints={{
                 0: {
-                  slidesPerView: 1.5,
+                  slidesPerView: 1.2,
                   spaceBetween: 10,
                 },
                 400: {
-                  slidesPerView: 2,
+                  slidesPerView: 1.8,
                   spaceBetween: 10,
                 },
                 768: {
@@ -39,18 +57,14 @@ const ReviewsSlider = () => {
               modules={[Navigation, Pagination]}
               className="w-full mySwiper h-full flex items-center justify-center"
       >
-        <SwiperSlide >
-          <ReviewsCard />
-        </SwiperSlide>
-        <SwiperSlide >
-          <ReviewsCard  />
-        </SwiperSlide>
-        <SwiperSlide >
-          <ReviewsCard />
-        </SwiperSlide>
-        <SwiperSlide >
-          <ReviewsCard  />
-        </SwiperSlide>
+        {
+          feedbacks?.map(card => (
+            <SwiperSlide >
+              <ReviewsCard key={card.id} title={card.title} descr={card.description} fullName={card.fullname} country={card.country} />
+            </SwiperSlide>
+          ))
+        }
+       
         <div className="relative flex items-center justify-center py-2 mt-5  gap-x-5">
           <div className="inline-flex items-center gap-x-4 my-pagination-cards pagintaion-slider"></div>
         </div>
@@ -61,7 +75,7 @@ const ReviewsSlider = () => {
 
 
 
-const ReviewsCard = ({image}) => {
+const ReviewsCard = ({image, title, descr, fullName, country}) => {
   return (
       <div className={'space-y-3 font-jost border border-currentBlue  p-5 md:p-10'}>
         <div className={'flex gap-2 '}>
@@ -70,9 +84,9 @@ const ReviewsCard = ({image}) => {
           <FaStar className={'text-lg text-[#E77C40]'} />
           <FaStar className={'text-lg text-[#E77C40]'} />
         </div>
-        <h5 className={' text-lg md:text-xl text-currentBlue'}> Один из любимых отелей в Ташкенте! </h5>
+        <h5 className={' text-lg md:text-xl text-currentBlue'}>{title && title} </h5>
         <p className={'text-[#444444]'}>
-          «Красивый отель! Великолепный завтрак! Отличное расположение! Просторные комфортные номера! Вежливый персонал!»
+          {descr && descr}
         </p>
         <div className={'flex gap-x-4'}>
           <div className={'relative w-[43px] h-[43px]  bg-red-300 rounded-full overflow-hidden shrink-0'}>
@@ -83,10 +97,10 @@ const ReviewsCard = ({image}) => {
           </div>
           <div className={' text-sm md:text-base space-y-1'}>
             <h6 className={'text-currentBlue'}>
-              Svetlana
+              {fullName && fullName}
             </h6>
             <p className={'text-sm'}>
-              Россия
+              {country && country}
             </p>
           </div>
         </div>

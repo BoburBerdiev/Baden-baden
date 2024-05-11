@@ -9,11 +9,15 @@ import { useTranslation } from "react-i18next";
 import {formatPhoneNumber, langSelect} from "@/helper";
 import {useSelector} from "react-redux";
 import {BiLogoTelegram} from "react-icons/bi";
+import {useQuery} from "react-query";
+import apiService from "@/service/api";
 
-const Footer = ({contact}) => {
+const Footer = () => {
     const {t} = useTranslation()
     const {lang} = useSelector(state => state.langSlice)
-
+    const { data: contact  , refetch: contactRefetch,  } = useQuery("getContact", () =>
+        apiService.getData( '/about/contact') , { enabled: false}
+    );
     return (
         <footer className="w-full bg-currentBlue bg-[url('/image/bg-noise.jpg')]">
             <div className="container">
@@ -26,7 +30,7 @@ const Footer = ({contact}) => {
                         <ul className="col-span-2 flex flex-col gap-5 order-1  text-sm">
                             <li>
                                 <a href={`tel:${contact?.phone1}`} className="flex gap-3.5 items-center">
-                                    <LuPhone className={'text-xl'}/>
+                                    <LuPhone className={'text-xl shrink-0'}/>
 
                                     <span className={'hover:border-b hover:border-white border-b border-transparent duration-300'}>
                                     {formatPhoneNumber(contact?.phone1)}
@@ -35,7 +39,7 @@ const Footer = ({contact}) => {
                             </li>
                             <li>
                                 <a href={`mailto:${contact?.email}`} className="flex gap-3.5 items-center">
-                                    <MdOutlineMailOutline className={'text-xl'}/>
+                                    <MdOutlineMailOutline className={'text-xl shrink-0'}/>
                                     <span className={'hover:border-b hover:border-white border-b border-transparent duration-300'}>
                                     {contact?.email1}
                                     </span>
@@ -43,7 +47,7 @@ const Footer = ({contact}) => {
                             </li>
                             <li>
                                 <p className="flex gap-3.5 items-center">
-                                    <SlLocationPin className={'text-xl'}/>
+                                    <SlLocationPin className={'text-xl shrink-0'}/>
                             <span>{langSelect(lang ,contact?.address_ru , contact?.address_en ,contact?.address_uz )}</span></p>
                             </li>
                         </ul>
