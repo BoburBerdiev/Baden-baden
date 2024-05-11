@@ -4,23 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0875101f-c9e0-4ef2-945f-6eeda6b04bc8" name="Changes" comment="news infinty scroll add full">
-      <change afterPath="$PROJECT_DIR$/src/components/reviews-card.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/reviews-slider.jsx" afterDir="false" />
+    <list default="true" id="0875101f-c9e0-4ef2-945f-6eeda6b04bc8" name="Changes" comment="reviews-card full news-full">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Layout/Layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Layout/Layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/ContactContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/ContactContent.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Pages/GalleryContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/GalleryContent.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Pages/HomeContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/HomeContent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/NewContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/NewContent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/RoomContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/RoomContent.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/gallery-section.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gallery-section.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/news-slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/news-slider.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/rooms-slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/rooms-slider.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +138,7 @@
       <workItem from="1715241548049" duration="3000" />
       <workItem from="1715242692692" duration="19568000" />
       <workItem from="1715334157627" duration="8978000" />
-      <workItem from="1715378526646" duration="7711000" />
+      <workItem from="1715378526646" duration="12319000" />
     </task>
     <task id="LOCAL-00001" summary="news card">
       <option name="closed" value="true" />
@@ -200,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715339300077</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="reviews-card full news-full">
+      <option name="closed" value="true" />
+      <created>1715408407675</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1715408407675</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,7 +219,8 @@
     <MESSAGE value="marge +" />
     <MESSAGE value="slider full" />
     <MESSAGE value="aos 80% ,  next-seo start" />
-    <option name="LAST_COMMIT_MESSAGE" value="slider full" />
+    <MESSAGE value="reviews-card full news-full" />
+    <option name="LAST_COMMIT_MESSAGE" value="reviews-card full news-full" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
