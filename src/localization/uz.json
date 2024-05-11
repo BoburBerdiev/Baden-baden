@@ -1,13 +1,12 @@
 {
   "translation": {
     "navbar": {
-      "home": "Asosiy",
-      "about": "Biz haqimizda",
-      "rooms": "Honalar",
-      "gallery": "Suratlar",
+      "home": "Bosh sahifa",
+      "about": "Mehmonxona haqida",
+      "rooms": "Xonalar",
+      "gallery": "Gallereya",
       "contact": "Aloqa",
-      "news": "Yangiliklar",
-      "searching": "Xona qidiring"
+      "news": "Yangiliklar"
     },
     "lang": {
       "defualt": "O'zbek",
@@ -20,149 +19,106 @@
     },
     "btn": {
       "more": "Batafsil",
-      "booking": "Band qilish",
-      "readMore": "Ko'proq o'qish",
-      "allNums": "Barcha xonalar",
-      "viewAllPhoto": "Barcha suratlarni ko'rish",
-      "allNews": "Barcha yangiliklar",
-      "sendMesseng": "Jo'natish"
+      "moreAll": "Hammasini ko'rish",
+      "booking": "Band qilish"
+    },
+    "modal": {
+      "questionCorrect": "Sizning so'rovingiz qabul qilindi",
+      "contactYou": "Biz siz bilan bog'lanamiz"
     },
     "footer": {
-      "menu": {
-        "title": "Yo'nalish",
-        "href1": "Mehmonxona haqida",
-        "href2": "Xonalar",
-        "href3": "Fotogalereya",
-        "href4": "Yangiliklar",
-        "href5": "Aloqa"
-      },
-      "address": {
-        "title": "Manzil"
-      },
-      "manager": {
-        "title": "Yangiliklarimizni kuzatib boring"
-      },
       "miniFooter": {
-        "allrights": "The Tower Hotel. Barcha huquqlar himoyalangan.",
-        "siteCreated": "Veb-sayt yaratilgan:"
-      }
-    },
-    "links": {
-      "viewReviews": "Sharhlarni ko'rish"
+        "allrights": "Barcha huquqlar himoyalangan.",
+        "siteCreated": "Sayt yaratildi:"
+      },
+      "ourSocials": "Bizning ijtimoiy tarmoqlar:"
     },
     "contact": {
-      "title": "Biz bilan bog'lanish",
-      "phone": "Telefon:",
-      "mail": "Elektron pochta:",
-      "address": "Manzil:"
+      "title": "Bizning aloqalar"
     },
-    "news": {
-      "title": "Yangiliklar blogi"
-    },
-    "gallery": {
-      "title": "Fotogalereya"
-    },
-    "about": {
-      "headerTitle": "Mehmonxonamiz haqida",
-      "section1": {
-        "title": "The Tower Hotelga Xush kelibsiz!"
-      }
+    "rooms": {
+      "title": "Bizning xonalar",
+      "priceSymbol": "UZS / bir tun uchun"
     },
     "index": {
       "headerBooking": {
-        "checkIn": "Belgilanish",
-        "entryDay": "Kelish kuni",
-        "departure": "Jo'nab ketish",
-        "departureDay": "Jo'nab ketish kuni",
+        "checkIn": "Kirish",
+        "entryDay": "Kelish",
+        "departure": "Chiqish",
+        "departureDay": "Jo'nab ketish",
         "numberOfGuests": "Mehmonlar soni",
         "room": "Xona",
-        "adults": "Kattalar",
-        "children": "Bolalar",
-        "roomNumber": "Xonalar",
-        "forChildren": "Bolalar (0-11 yosh)",
+        "adults": "kishi",
+        "children": "bola",
+        "roomNumber": "xonalarni",
+        "forChildren": "bola (0-11 yosh)",
         "typeOfNumber": "Xona turi",
         "choose": "Tanlash"
       },
-      "room": "Hona ",
       "section2": {
-        "title": "Xonalar turi"
-      },
-      "section3": {
-        "title": "Bizning xizmatlarimiz"
+        "title": "Xona turatlari"
       },
       "section4": {
-        "title": "Yaqin atrofdagi diqqatga sazovor joylar",
+        "title": "Yaqin manzillar",
         "km": "km",
         "m": "m"
-      },
-      "section5": {
-        "title": "Fotogalereya"
-      },
-      "section6": {
-        "title": "Rejalashtirish va saqlash",
-        "subtitle": "Oldindan toʻlov bilan turar joyni bron qiling va 25% gacha tejang"
-      },
-      "section7": {
-        "title": "Yangiliklar blogi"
       }
     },
-  "rooms": {
-    "miniHeader": "Bizning xonalarimiz"
-  },
-  "booking": {
-    "headerTitle": "Band qilish",
-    "headerSubtitle": "Bu bandlov tasdiqlanmagan. Biz sizning so'rovingizni ko'rib chiqamiz va bandlovingizni tasdiqlaymiz.",
-    "form": {
-      "title": "Ma'lumotlarni kiriting",
-      "arrival": "Kelish sanasi",
-      "departure": "Jo'nab ketish sanasi",
-      "adults": "Kattalar",
-      "children": "Bolalar",
+    "booking": {
+      "headerTitle": "Band qilish",
+      "headerSubtitle": "Ushbu band qabul qilinmagan. Biz so'rovingizni ko'rib chiqamiz va band qilishni tasdiqlaymiz.",
+      "form": {
+        "title": "Ma'lumotlarni kiriting",
+        "arrival": "Kelish sanasi",
+        "departure": "Jo'nab ketish sanasi",
+        "adults": "Kattalar",
+        "children": "Bolalar",
+        "surnameEN": "Familiya (inglizcha)",
+        "nameEN": "Ism (inglizcha)",
+        "number": "Telefon raqami",
+        "email": "Elektron pochta"
+      },
+      "request": {
+        "title": "So'rov uchun aloqa ma'lumotlari",
+        "textarea": "So'rovingizni kiriting"
+      },
+      "cancelRule": {
+        "title": "Bekor qilish qoidalari",
+        "text": "- Bandni bekor qilish yoki o'zgartirish 3 kun oldin soat 12:00 gacha ruxsat beriladi. Agar siz ushbu vaqtdan so'ng bekor qilsangiz yoki o'zgartirsangiz yoki kirish kunida kelmasangiz (kirishni bekor qilsangiz), sizning tushurilishi kerak bo'lgan to'lovi, sizning qolgan kunlarning birinchi tunining narxi qo'llaniladi.",
+        "text2": "- Bandni bekor qilish uchun xona band qilish bo'limiga murojaat qiling.",
+        "phone": "Telefon raqami"
+      }
+    },
+    "reviews": {
+      "title": "Izoh",
       "surnameEN": "Familiya (ingliz tilida)",
-      "nameEN": "Ism (ingliz tilida)",
-      "number": "Telefon nomer",
-      "email": "Elektron pochta"
+      "country": "Davlat",
+      "countryPlaceholder": "Sizning davlatingizni kiriting",
+      "notice": "Biz haqimizda xabardorlik",
+      "noticeTitle": "nomini yozing",
+      "review": "Izoh qoldiring",
+      "reviewClients": "Mijozlar izohlari",
+      "reviewDate": "Sifatli vaqt:"
     },
-    "request": {
-      "title": "So'rovlar uchun aloqa ma'lumotlari",
-      "textarea": "So'rovingizni kiriting"
-    },
-    "cancelRule": {
-      "title": "Bekor qilish siyosati",
-      "text": "- Bandlovni bekor qilish yoki o'zgartirishga kelishdan 3 kun oldin soat 12:00 gacha ruxsat beriladi. Agar siz ushbu vaqtdan keyin bekor qilsangiz yoki o'zgartirsangiz yoki kelish kunida ko'rinmasangiz (ko'rsatilmaydi), sizdan turar joyingizning birinchi kechasi narxiga teng to'lov olinadi..",
-      "text2": "- Bandlovni bekor qilish uchun xonani band qilish bo'limiga murojaat qiling.",
-      "phone": "tel.nomer"
+    "roomInner": {
+      "descr": "Tavsif",
+      "comfortsTitle": "Xona qulayliklari",
+      "infosTitle": "Bu xonaga nima kiritilgan?",
+      "bookingTitle": "Band qilish:",
+      "services": {
+        "service1": "Vannaxona",
+        "service2": "Nonushta",
+        "service3": "Kofe/ Choy",
+        "service4": "Shippak",
+        "service5": "Toza havo",
+        "service6": "Konditsioner",
+        "service7": "Televizor",
+        "service8": "Wifi"
+      },
+      "areaSymbol": "m²",
+      "humenSymbol": "kishi",
+      "bedromSymbol": "yotoqxona",
+      "filterSymbols": "hamam"
     }
-  },
-  "reviews": {
-    "title": "Ko‘rib chiqish",
-    "surnameEN": "To'liq ismingiz (ingliz tilida)",
-    "country": "Mamlakat",
-    "countryPlaceholder": "Mamlakatni yozing",
-    "notice": "Biz haqimizda habarnoma",
-    "noticeTitle": "sarlavha yozing",
-    "review": "Sharh yozing",
-    "reviewClients": "Mijozlarning sharhlari",
-    "reviewDate": "Yozilgan vaqti:"
-  },
-  "roomInner": {
-    "allComforts": "Barchasi",
-    "servicesTitle": "Qulayliklar va xizmatlar",
-    "services": {
-      "service1": "Vannaxona",
-      "service2": "Nonushta",
-      "service3": "Kofe/ Choy",
-      "service4": "Shippak",
-      "service5": "Toza havo",
-      "service6": "Konditsioner",
-      "service7": "Televizor",
-      "service8": "Wifi"
-    },
-    "areaSymbol": "m²",
-    "humenSymbol": "kishi",
-    "filterSymbol": "vannaxona",
-    "filterSymbols": "vannaxonalar",
-    "balconySymbol": "balkon"
-  }
   }
 }
