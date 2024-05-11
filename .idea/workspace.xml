@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0875101f-c9e0-4ef2-945f-6eeda6b04bc8" name="Changes" comment="navbar bitti">
-      <change beforePath="$PROJECT_DIR$/src/Layout/Layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Layout/Layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/hotel-amenities-card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hotel-amenities-card.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/news-card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/news-card.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/news-slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/news-slider.jsx" afterDir="false" />
+    <list default="true" id="0875101f-c9e0-4ef2-945f-6eeda6b04bc8" name="Changes" comment="metadata qoshildi, pull uchun">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/reviews-slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/reviews-slider.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/room-card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/room-card.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,6 +135,7 @@
       <workItem from="1715241548049" duration="3000" />
       <workItem from="1715242692692" duration="19568000" />
       <workItem from="1715334157627" duration="4922000" />
+      <workItem from="1715427518573" duration="6971000" />
     </task>
     <task id="LOCAL-00001" summary="news card">
       <option name="closed" value="true" />
@@ -182,7 +177,39 @@
       <option name="project" value="LOCAL" />
       <updated>1715292096758</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="pull uchun">
+      <option name="closed" value="true" />
+      <created>1715416609445</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715416609445</updated>
+    </task>
+    <task id="LOCAL-00007" summary="ozgarishlarni pull qilish">
+      <option name="closed" value="true" />
+      <created>1715428921339</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1715428921339</updated>
+    </task>
+    <task id="LOCAL-00008" summary="full">
+      <option name="closed" value="true" />
+      <created>1715429820738</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1715429820739</updated>
+    </task>
+    <task id="LOCAL-00009" summary="metadata qoshildi, pull uchun">
+      <option name="closed" value="true" />
+      <created>1715432597073</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1715432597073</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,14 +232,18 @@
     <MESSAGE value="marge +" />
     <MESSAGE value="slider full" />
     <MESSAGE value="aos 80% ,  next-seo start" />
-    <option name="LAST_COMMIT_MESSAGE" value="slider full" />
+    <MESSAGE value="pull uchun" />
+    <MESSAGE value="ozgarishlarni pull qilish" />
+    <MESSAGE value="full" />
+    <MESSAGE value="metadata qoshildi, pull uchun" />
+    <option name="LAST_COMMIT_MESSAGE" value="metadata qoshildi, pull uchun" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/layout.js</url>
-          <line>30</line>
+          <line>36</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
