@@ -10,66 +10,69 @@ import {AiOutlineLoading3Quarters} from "react-icons/ai";
 import InfiniteScroll from "react-infinite-scroll-component";
 const GalleryContent = () => {
   const {t} = useTranslation()
-  // const [page, setPage] = useState(1)
-  // const [productInfinity, setProductInfinity] = useState([])
-  // const [hasMore, setHasMore] = useState(false)
+  const [page, setPage] = useState(1)
+  const [productInfinity, setProductInfinity] = useState([])
+  const [hasMore, setHasMore] = useState(false)
 
-  // const {
-  //   data: galleryCard,
-  //   refetch: galleryCardRefetch,
-  //   isLoading:galleryIsLoading,
-  //   isSuccess: galleryCardSuccess,
-  // } = useQuery(
-  //     "gallery",
-  //     () =>
-  //         apiService.getData(
-  //             `/gallery-images?page=${page}`
-  //         ),
-  //     {
-  //       enabled: false,
-  //     }
-  // );
-  //
-  // useEffect(() => {
-  //   if (galleryCardSuccess) {
-  //     if (page === 1) {
-  //       setProductInfinity([...galleryCard?.results])
-  //
-  //       if (galleryCard?.results.length > 0) {
-  //         setHasMore(true)
-  //       }
-  //     } else {
-  //       setProductInfinity([...productInfinity, ...galleryCard?.results])
-  //     }
-  //     if (!galleryCard?.next) {
-  //       setHasMore(false)
-  //     } else {
-  //       setPage(prop => prop + 1)
-  //       setHasMore(true)
-  //     }
-  //   }
-  // }, [galleryCard])
-  //
-  // useEffect(() => {
-  //   galleryCardRefetch()
-  // }, []);
-  //
-  // console.log(galleryCard?.results)
+  const {
+    data: galleryCard,
+    refetch: galleryCardRefetch,
+    isLoading:galleryIsLoading,
+    isSuccess: galleryCardSuccess,
+  } = useQuery(
+      "gallery",
+      () =>
+          apiService.getData(
+              `/gallery-images?page=${page}&page_size=6`
+          ),
+      {
+        enabled: false,
+      }
+  );
+
+
+
+  useEffect(() => {
+    if (galleryCardSuccess) {
+      if (page === 1) {
+        setProductInfinity([galleryCard?.results])
+
+        if (galleryCard?.results.length > 0) {
+          setHasMore(true)
+        }
+      } else {
+        setProductInfinity([...productInfinity, galleryCard?.results])
+      }
+      if (!galleryCard?.next) {
+        setHasMore(false)
+      } else {
+        setPage(prop => prop + 1)
+        setHasMore(true)
+      }
+    }
+  }, [galleryCard])
+
+  useEffect(() => {
+    galleryCardRefetch()
+  }, []);
+
 
   return (
       <div>
         <SectionUI title={t('gallery.title')} isEmbroidery={true}>
-          <div className={'py-10 space-y-1 md:space-y-3'}>
-            {/*<InfiniteScroll*/}
-            {/*    next={galleryCardRefetch}*/}
-            {/*    hasMore={hasMore}*/}
-            {/*    loader={<div className={'flex w-full justify-center items-center mt-5 mb-3'}> <AiOutlineLoading3Quarters*/}
-            {/*        className={'animate-spin text-currentBlue '}/> </div>}*/}
-            {/*    className={'grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-x-5 lg:gap-y-10 py-10'}*/}
-            {/*    dataLength={productInfinity?.count || []}>*/}
-            {/*<GallerySection gallery={galleryCard}/>*/}
-            {/*</InfiniteScroll>*/}
-          </div>
+            <InfiniteScroll
+                next={galleryCardRefetch}
+                hasMore={hasMore}
+                loader={<div className={'flex w-full justify-center items-center mt-5 mb-3'}> <AiOutlineLoading3Quarters
+                    className={'animate-spin text-currentBlue '}/> </div>}
+                className={'py-10 space-y-1 md:space-y-3'}
+                dataLength={productInfinity?.count || []}>
+              {
+                productInfinity?.map((gallery , index) => (
+                  <GallerySection key={index} gallery={gallery} />
+                ))
+              }
+            </InfiniteScroll>
         </SectionUI>
       </div>
   );

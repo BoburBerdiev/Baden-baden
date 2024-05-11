@@ -95,7 +95,7 @@ const HomeContent = ({
               <div className={'grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-5 md:gap-y-[30px]'}>
                 {
                   landmarkcategories?.map((item , id) => (
-                      <LocationInfos  data-aos-delay={id*100} image={item?.image} title={item?.title} landmark={item?.landmarks}/>
+                      <LocationInfos  data-aos-delay={id*100} image={item?.image} title={langSelect(lang ,item?.title_ru , item?.title_en ,item?.title_uz )} landmark={item?.landmarks}/>
                   ))
                 }
               </div>
