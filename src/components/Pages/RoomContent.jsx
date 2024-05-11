@@ -9,7 +9,7 @@ const RoomContent = ({room}) => {
   const {lang} = useSelector(state => state.langSlice)
 
   return (
-      <SectionUI title={t('rooms.miniHeader')}>
+      <SectionUI title={t('rooms.title')}>
         <div className="flex flex-col md:pb-20 pb-10 pt-10  gap-10 md:gap-[60px]">
           {
             room?.map(( item , id) => (

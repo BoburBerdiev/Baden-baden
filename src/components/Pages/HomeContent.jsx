@@ -24,7 +24,8 @@ const HomeContent = ({
                          gallery,
                          news,
                          newsTitle,
-                         room
+                         room,
+                         feedback
                      }) => {
     const {t} = useTranslation()
     const {lang} = useSelector(state => state.langSlice)
@@ -120,7 +121,7 @@ const HomeContent = ({
                    subTitle={langSelect(lang ,newsTitle?.sub_title_ru , newsTitle?.sub_title_en ,newsTitle?.sub_title_uz )}
         >
           <div className={'md:pb-20 pb-10 flex gap-10'}>
-            <ReviewsSlider/>
+            <ReviewsSlider feedbacks={feedback && feedback}/>
           </div>
         </SectionUI>
       </>

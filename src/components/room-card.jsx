@@ -31,7 +31,7 @@ const RoomCard = ({isLeftImage ,price ,title ,subTitle ,person ,bedrooms ,capaci
           <p className="text-center text-textBlack  text-sm sm:text-lg font-normal ">
             {subTitle}
           </p>
-          <p className="mt-3 lg:mt-5 text-first font-normal text-lg md:text-2xl">${priceView(price)} UZS / за ночь </p>
+          <p className="mt-3 lg:mt-5 text-first font-normal text-lg md:text-2xl">{priceView(price)} {t("rooms.priceSymbol")} </p>
           <div className="flex mt-5 lg:mt-10 justify-center w-full gap-1">
             <ButtonUI content={t('btn.booking')} />
             <ButtonUI content={t('btn.more')} onlyHref hrefToPage={`room/${slug}`}/>

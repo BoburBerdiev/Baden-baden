@@ -32,6 +32,10 @@
     "contact": {
       "title": "Наши контакты"
     },
+    "rooms":{
+      "title": "Наши номера",
+      "priceSymbol": "UZS / за ночь"
+    },
     "index": {
       "headerBooking": {
        "checkIn": "Заезд",
@@ -93,8 +97,10 @@
       "reviewDate": "Растянутое время:"
     },
     "roomInner": {
-      "allComforts": "Общие",
-      "servicesTitle": "Удобства и услуги",
+      "descr": "Описание",
+      "comfortsTitle": "Удобства номера",
+      "infosTitle": "Что включено в этот номер?",
+      "bookingTitle": "Бронирование:",
       "services": {
         "service1": "Ванная",
         "service2": "Завтрак",
