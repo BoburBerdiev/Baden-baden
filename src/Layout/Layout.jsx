@@ -18,10 +18,18 @@ import 'lightgallery/css/lg-thumbnail.css';
 import {usePathname} from "next/navigation";
 import 'aos/dist/aos.css';
 import {useEffect} from "react";
-import {QueryClient, QueryClientProvider} from "react-query";
+import {QueryClient, QueryClientProvider, useQuery} from "react-query";
+import apiService from "@/service/api";
 
 const Layout = ({children}) => {
-    const queryClient = new QueryClient();
+
+    // const { data: contact  , refetch: contactRefetch,  } = useQuery("getContact", () =>
+    //     apiService.getData( '/about/contact') , { enabled: false}
+    // );
+    //
+    // useEffect(() =>{
+    //     contactRefetch()
+    // } , [])
 
     useEffect(() => {
         AOS.init({
@@ -29,6 +37,8 @@ const Layout = ({children}) => {
             once: true // whether animation should happen only once - while scrolling down
         });
     }, []);
+    const queryClient = new QueryClient();
+
     const router=usePathname()
     return (
         <HydrationProvider>
@@ -36,11 +46,11 @@ const Layout = ({children}) => {
             <Client>
                 <Provider store={store}>
                     <PersistGate loading={null} persistor={persistor}>
-                        <Navbar/>
+                        <Navbar  />
                         <main className={`min-h-screen ${router==='/' ? "": "mt-[72px] md:mt-[125px]" } `}>
                         {children}
                         </main>
-                        <Footer/>
+                        <Footer  />
                     </PersistGate>
                 </Provider>
             </Client>

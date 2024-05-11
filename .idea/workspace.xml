@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0875101f-c9e0-4ef2-945f-6eeda6b04bc8" name="Changes" comment="boking calendar full">
+    <list default="true" id="0875101f-c9e0-4ef2-945f-6eeda6b04bc8" name="Changes" comment="navbar bitti">
+      <change afterPath="$PROJECT_DIR$/src/components/Pages/Page-Inner.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/HomeContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/HomeContent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Page-Inner.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/Page-Inner.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dropdown-booking.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dropdown-booking.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/room-card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/room-card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Layout/Layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Layout/Layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/room/[id]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/room/[id]/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +139,6 @@
       <workItem from="1715241548049" duration="3000" />
       <workItem from="1715242692692" duration="19568000" />
       <workItem from="1715334157627" duration="4922000" />
-      <workItem from="1715351614121" duration="134000" />
     </task>
     <task id="LOCAL-00001" summary="news card">
       <option name="closed" value="true" />
@@ -173,23 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715212618116</updated>
     </task>
-    <task id="LOCAL-00005" summary="pull uchun">
+    <task id="LOCAL-00005" summary="aos 80% ,  next-seo start">
       <option name="closed" value="true" />
-      <created>1715339362495</created>
+      <created>1715292096758</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1715339362496</updated>
+      <updated>1715292096758</updated>
     </task>
-    <task id="LOCAL-00006" summary="boking calendar full">
-      <option name="closed" value="true" />
-      <created>1715340332079</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1715340332079</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,16 +202,16 @@
     <MESSAGE value="i18 active redux toolik active" />
     <MESSAGE value="marge +" />
     <MESSAGE value="slider full" />
-    <MESSAGE value="pull uchun" />
-    <MESSAGE value="boking calendar full" />
-    <option name="LAST_COMMIT_MESSAGE" value="boking calendar full" />
+    <MESSAGE value="aos 80% ,  next-seo start" />
+    <option name="LAST_COMMIT_MESSAGE" value="aos 80% ,  next-seo start" />
+    <option name="LAST_COMMIT_MESSAGE" value="slider full" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/layout.js</url>
-          <line>26</line>
+          <line>30</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

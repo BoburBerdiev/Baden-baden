@@ -43,7 +43,7 @@ async function getHome() {
   //     /about/index-news-section/
 
   // resRoom
-  const resRoom = await  fetch(`${process.env.NEXT_PUBLIC_API_URL}/about/index-news-section/`, { cache: 'no-store' })
+  const resRoom = await  fetch(`${process.env.NEXT_PUBLIC_API_URL}/index-rooms/`, { cache: 'no-store' })
   const room = await resRoom.json()
 
 

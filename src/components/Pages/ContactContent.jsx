@@ -16,20 +16,19 @@ const ContactContent = ({contact}) => {
               <FaMapMarkerAlt className={'text-xl md:text-3xl group-hover:text-currentBlue group-hover:text-currentBlue/90 duration-200'} />
               <span className="address "> {langSelect(lang ,contact?.address_ru , contact?.address_en ,contact?.address_uz )} </span>
             </div>
-            <a data-aos={'fade-up'} data-aos-delay={50} href={`tel:${contact?.phone}`}
+            <a data-aos={'fade-up'} data-aos-delay={50} href={`tel:${contact?.phone1}`}
                className="gap-1 md:gap-4 flex flex-col items-center text-lg text-text font-jost font-normal group">
               <FaPhoneAlt className={'text-xl md:text-3xl group-hover:text-currentBlue group-hover:text-currentBlue/90 duration-200'} />
-              <div className="flex flex-col ">
                 <span>{ formatPhoneNumber(contact?.phone1) }</span>
                 <span>{formatPhoneNumber(contact?.phone2)}</span>
 
-              </div>
             </a>
             <a data-aos={'fade-up'} data-aos-delay={50} href={`mailto:${contact?.email}`} target="_blank"
                className="gap-1 md:gap-4 flex flex-col items-center text-lg text-text font-jost font-normal group">
               <IoMail className={'text-xl md:text-3xl group-hover:text-currentBlue group-hover:text-currentBlue/90 duration-200'} />
-              <span className="">{contact?.email1}</span>
-              <span className="">{contact?.email2}</span>
+              <span>{contact?.email1}</span>
+              <span>{contact?.email2}</span>
+
             </a>
           </div>
           <div

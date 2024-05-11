@@ -6,9 +6,14 @@ import {LuPhone} from "react-icons/lu";
 import {MdOutlineMailOutline} from "react-icons/md";
 import {SlLocationPin} from "react-icons/sl";
 import { useTranslation } from "react-i18next";
+import {formatPhoneNumber, langSelect} from "@/helper";
+import {useSelector} from "react-redux";
+import {BiLogoTelegram} from "react-icons/bi";
 
-const Footer = () => {
+const Footer = ({contact}) => {
     const {t} = useTranslation()
+    const {lang} = useSelector(state => state.langSlice)
+
     return (
         <footer className="w-full bg-currentBlue bg-[url('/image/bg-noise.jpg')]">
             <div className="container">
@@ -20,28 +25,26 @@ const Footer = () => {
                         className="grid grid-cols-3 sm:grid-cols-6  gap-x-6  sm:gap-x-10 md:gap-x-12 lg:gap-x-24 xl:gap-x-36 text-white font-jost">
                         <ul className="col-span-2 flex flex-col gap-5 order-1  text-sm">
                             <li>
-                                <a href="tel:+998555121100" className="flex gap-3.5 items-center">
+                                <a href={`tel:${contact?.phone1}`} className="flex gap-3.5 items-center">
                                     <LuPhone className={'text-xl'}/>
 
                                     <span className={'hover:border-b hover:border-white border-b border-transparent duration-300'}>
-                                    +998 55
-                                    512 11 00
+                                    {formatPhoneNumber(contact?.phone1)}
                                     </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="mailto:info@baden-baden.uz" className="flex gap-3.5 items-center">
+                                <a href={`mailto:${contact?.email}`} className="flex gap-3.5 items-center">
                                     <MdOutlineMailOutline className={'text-xl'}/>
                                     <span className={'hover:border-b hover:border-white border-b border-transparent duration-300'}>
-                                    info@baden-baden.uz
+                                    {contact?.email1}
                                     </span>
                                 </a>
                             </li>
                             <li>
                                 <p className="flex gap-3.5 items-center">
                                     <SlLocationPin className={'text-xl'}/>
-                                    ул. Гейдара Алиева,
-                                    165, Ташкент.</p>
+                            <span>{langSelect(lang ,contact?.address_ru , contact?.address_en ,contact?.address_uz )}</span></p>
                             </li>
                         </ul>
                         <ul className=" whitespace-nowrap flex flex-col gap-5 min-[360px]:mb-2 md:mb-0 order-2 font-medium ">
@@ -64,18 +67,17 @@ const Footer = () => {
                         <div className="col-span-2 flex flex-col gap-4 order-3 sm:order-4 mt-5 sm:mt-0 lg:text-start sm:text-center">
                             <p>{t('footer.ourSocials')}</p>
                             <div className="flex items-center lg:justify-start sm:justify-center gap-4 lg:gap-[30px]">
-                                <a target="_blank" href="https://instagram.com"
+                                <a target="_blank"  href={`${contact?.instagram}`}
                                    className="bg-bgSocial  p-2 rounded-full">
                                     <RiInstagramLine className={'text-currentBlue text-base'}/>
                                 </a>
-                                <a target="_blank" href="https://facebook.com"
+                                <a href={`${contact?.facebook}`} target="_blank"
                                    className="bg-bgSocial p-[7.5px] rounded-full">
                                     <FaFacebookF className={'text-currentBlue text-base'}/>
                                 </a>
-                                <a target="_blank" href="https://twitter.com"
+                                <a href={`${contact?.telegram}`} target="_blank"
                                    className="bg-bgSocial p-[7.5px] rounded-full">
-                                    <FaTwitter className={'text-currentBlue text-base'}/>
-
+                                    <BiLogoTelegram   className={'text-currentBlue text-base'}/>
                                     </a>
                             </div>
                         </div>
