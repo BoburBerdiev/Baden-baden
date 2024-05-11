@@ -228,7 +228,7 @@ const dispatch=useDispatch()
                                 <div
                                     onClick={()=>handleLang(item)}
                                     key={item.id}
-                                     className="hover:bg-black/10 px-3 py-1 cursor-pointer  flex items-center gap-2 cursor-pointer">
+                                     className="hover:bg-black/10 px-3 py-1   flex items-center gap-2 cursor-pointer">
                                     <span>{item.title}</span>
                                 </div>
 
