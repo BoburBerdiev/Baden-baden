@@ -87,7 +87,7 @@ const HomeContent = ({
             }
           </div>
         </SectionUI>
-        <SectionUI title={t('index.section3.title')} modeBlue={true} cityBg={true} >
+        <SectionUI title={t('index.section4.title')} modeBlue={true} cityBg={true} >
           <div className={'relative'}>
             <div className="grid grid-cols-1 md:grid-cols-2   pb-[60px] lg:pb-20">
               <div className={'hidden md:block'}>
