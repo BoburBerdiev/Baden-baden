@@ -4,21 +4,19 @@ import {FaStar} from "react-icons/fa";
 import {ImageUI} from "@/components/index";
 const ReviewsSlider = () => {
   return (
-      <Swiper autoplay={{
+      <Swiper
+          autoplay={{
         delay: 5500,
         disableOnInteraction: false,
       }}
-              navigation={{
-                nextEl: ".swipper-button-next",
-                prevEl: ".swipper-button-prev",
-              }}
+
               breakpoints={{
                 0: {
-                  slidesPerView: 1.5,
+                  slidesPerView: 1.2,
                   spaceBetween: 10,
                 },
                 400: {
-                  slidesPerView: 2,
+                  slidesPerView: 1.8,
                   spaceBetween: 10,
                 },
                 768: {
