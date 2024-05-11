@@ -74,7 +74,7 @@ const HomeContent = ({banner , aboutTitle , additionalServices ,aboutTitleAmenit
             }
           </div>
         </SectionUI>
-        <SectionUI title={'Ориентиры поблизости'} modeBlue={true} cityBg={true} >
+        <SectionUI title={t('index.section3.title')} modeBlue={true} cityBg={true} >
           <div className={'relative'}>
             <div className="grid grid-cols-1 md:grid-cols-2   pb-[60px] lg:pb-20">
               <div className={'hidden md:block'}>
@@ -111,8 +111,6 @@ const HomeContent = ({banner , aboutTitle , additionalServices ,aboutTitleAmenit
             <ReviewsSlider/>
           </div>
         </SectionUI>
-
-
       </>
   );
 };

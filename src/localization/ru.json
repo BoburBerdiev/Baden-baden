@@ -16,49 +16,21 @@
     "btn": {
       "more":"Подробнее",
       "moreAll":"Посмотреть все",
-      "booking":"Забронировать",
-      "readMore": "Читать подробнее",
-      "allNums": "Все номера",
-      "viewAllPhoto": "Bсе фото",
-      "allNews": "Все новости",
-      "sendMesseng": "отправлять"
-    },
-    "notFound": {
-      "text": "Комната не найдена"
+      "booking":"Забронировать"
     },
     "modal": {
       "questionCorrect": "Ваш запрос принят",
       "contactYou": "Мы свяжемся с вами"
     },
     "footer": {
-
       "miniFooter": {
         "allrights": " Все права защищены.",
         "siteCreated": "Сайт создан:"
       },
       "ourSocials": "Наши соц сети:      "
-
-    },
-    "links": {
-      "viewReviews": "Посмотреть отзывы"
     },
     "contact": {
-      "title": "Свяжитесь с нами",
-      "phone": "Телефон:",
-      "mail":"Электронная почта:",
-      "address":"Адрес:"
-    },
-    "news": {
-      "title": "Новостной блог"
-    },
-    "gallery": {
-      "title": "Фотогалерея"
-    },
-    "about": {
-      "headerTitle": "О нашем отеле",
-      "section1": {
-        "title": "Добро пожаловать в The Tower Hotel!"
-      }
+      "title": "Наши контакты"
     },
     "index": {
       "headerBooking": {
@@ -75,31 +47,14 @@
        "typeOfNumber": "Тип номера",
        "choose": "Выбрать"
       },
-      "room": "Номер ",
       "section2": {
         "title": "Типы номеров"
-      },
-      "section3": {
-        "title": "Наши услуги"
       },
       "section4": {
         "title": "Ориентиры поблизости",
         "km": "км",
         "m": "м"
-      },
-      "section5": {
-        "title": "Фотогалерея"
-      },
-      "section6": {
-        "title": "Планируйте и экономьте",
-        "subtitle": "Забронируйте пребывание с предоплатой и съэкономьте до 25%"
-      },
-      "section7": {
-        "title": "Новостной блог"
       }
-    },
-    "rooms": {
-      "miniHeader": "Наши номера"
     },
     "booking": {
       "headerTitle": "Бронирование",
@@ -138,19 +93,6 @@
       "reviewDate": "Растянутое время:"
     },
     "roomInner": {
-      "allComforts": "Общие",
-      "servicesTitle": "Удобства и услуги",
-      "services": {
-        "service1": "Фитнес-центр",
-        "service2": "Мини-бар",
-        "service3": "Крытый бассейн",
-        "service4": "Кондиционер",
-        "service5": "Телевизор",
-        "service6": "Бесплатная парковка",
-        "service7": "Бесплатный Wi-Fi",
-        "service8": "Вид на город",
-        "service9": "Превосходный завтрак"
-      },
       "areaSymbol": "м²",
       "humenSymbol": "чел",
       "bedromSymbol": "спальни",
