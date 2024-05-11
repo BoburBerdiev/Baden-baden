@@ -20,26 +20,6 @@ import {useParams} from "next/navigation";
 import {useQuery} from "react-query";
 import {langSelect} from "@/helper";
 
-const imageArr = [
-    {
-        image: '/image/about.jpg'
-    },
-    {
-        image: '/image/image 1.jpg'
-    },
-    {
-        image: '/image/img1.jpg'
-    },
-    {
-        image: '/image/img2.jpg'
-    },
-    {
-        image: '/image/image 1.jpg'
-    },
-    {
-        image: '/image/about.jpg'
-    }
-]
 
 
 const Page = ({roomCatalog}) => {
@@ -58,42 +38,42 @@ const Page = ({roomCatalog}) => {
     const roomComforts = [
         {
             id: 1,
-            icon: <LuBath/>,
+            icon: <LuBath className={'text-currentBlack text-2xl'}/>,
             text: t('roomInner.services.service1')
         },
         {
             id: 2,
-            icon: <LuBath/>,
+            icon: <img className={'w-6 h-6'} src={'/image/baden-icons/breakfast.svg'} alt={'icon breakfast'}/>,
             text: t('roomInner.services.service2')
         },
         {
             id: 3,
-            icon: <BiCoffee/>,
+            icon: <BiCoffee className={'text-currentBlack text-2xl'}/>,
             text: t('roomInner.services.service3')
         },
         {
             id: 4,
-            icon: <LuFootprints/>,
+            icon: <LuFootprints className={'text-currentBlack text-2xl'}/>,
             text: t('roomInner.services.service4')
         },
         {
             id: 5,
-            icon: <RiWindyLine/>,
+            icon: <RiWindyLine className={'text-currentBlack text-2xl'}/>,
             text: t('roomInner.services.service5')
         },
         {
             id: 6,
-            icon: <LuSnowflake/>,
+            icon: <LuSnowflake className={'text-currentBlack text-2xl'}/>,
             text: t('roomInner.services.service6')
         },
         {
             id: 7,
-            icon: <FaTv/>,
+            icon: <FaTv className={'text-currentBlack text-2xl'}/>,
             text: t('roomInner.services.service7')
         },
         {
             id: 8,
-            icon: <IoWifi/>,
+            icon: <IoWifi className={'text-currentBlack text-2xl'}/>,
             text: t('roomInner.services.service8')
         },
 
@@ -161,7 +141,7 @@ const Page = ({roomCatalog}) => {
                                     className="grid grid-rows-4 grid-flow-col gap-3 md:gap-6">
                                     {
                                         roomComforts.map(room => (
-                                            <li key={room.id} className="flex items-center gap-3.5">
+                                            <li key={room.id} className="flex items-center gap-3.5 text-currentBlack">
                                                 {room.icon}
                                                 {room.text}
                                             </li>

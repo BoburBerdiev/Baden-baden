@@ -1,5 +1,4 @@
 'use client'
-
 import React, {useCallback, useEffect, useState} from 'react';
 import ImageUi from "@/components/image-ui";
 import Link from "next/link";
@@ -8,12 +7,15 @@ import {nav, navLink} from "@/constants/routeConfig";
 import {useTranslation} from 'react-i18next';
 import {usePathname} from "next/navigation";
 import {formatPhoneNumber, langSelect} from "@/helper";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {changleLang} from "@/slice/lang";
 
 const Navbar = ({contact}) => {
     const [sidebar, setSidebar] = useState(false)
     const [isScroll, setIsScroll] = useState(false)
     const router = usePathname()
+
+
     const handleBurger = (e) => {
         e.stopPropagation()
         setSidebar(!sidebar)
@@ -52,8 +54,8 @@ const Navbar = ({contact}) => {
 
     return (
         <nav
-            className={`${router === '/' ? isScroll ? "bg-currentBlue bg-[url('/image/bg-noise.jpg')] " : "bg-transparent " : "bg-currentBlue bg-[url('/image/bg-noise.jpg')] "} ${isScroll ? "md:-translate-y-10" : ""} duration-300 top-0 fixed  left-0 z-[100] w-full`}>
-            <div className={`z-20 py-[10px] border-b-[0.5px] border-navBorder opacity-70  hidden md:block `}>
+            className={`${router === '/' ? isScroll ? "bg-currentBlue bg-[url('/image/bg-noise.jpg')] " : "bg-transparent " : "bg-currentBlue bg-[url('/image/bg-noise.jpg')] "} ${isScroll ? "md:-translate-y-10 border-b border-white" : ""} duration-300 top-0 fixed  left-0 z-[100] w-full`}>
+            <div className={`relative z-20 py-[10px] border-b-[0.5px] border-navBorder opacity-70  hidden md:block `}>
                 <div className="container">
                     <div
                         className="flex text-white font-jost text-xs lg:text-sm justify-between items-center font-normal">
@@ -136,8 +138,8 @@ const Navbar = ({contact}) => {
 export default Navbar;
 
 const DropdownLang = () => {
-    const {t} = useTranslation()
-
+    const {t,i18n} = useTranslation()
+const dispatch=useDispatch()
     const langList = [
         {
             title: t('lang.ru'),
@@ -164,11 +166,13 @@ const DropdownLang = () => {
 
     const opendropdown = (e) => {
         e.stopPropagation()
+
         setDropdown(prevstate => !prevstate)
     }
 
     const handleLang=(lang)=>{
-        console.log(lang)
+        i18n.changeLanguage(lang.value)
+        dispatch(changleLang(lang.value))
         setLanguage(lang)
         setDropdown(false)
     }
