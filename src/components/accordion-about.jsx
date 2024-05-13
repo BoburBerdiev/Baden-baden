@@ -1,11 +1,18 @@
 'use client'
 
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 
-const AccordionAbout = ({title , subTitle  ,selectImage , image}) => {
+const AccordionAbout = ({title , subTitle  ,selectImage , image ,fristIsOpen = false}) => {
 
   const [isOpen , setIsOpen] = useState(false)
 
+  console.log(fristIsOpen)
+  console.log(isOpen)
+
+  useEffect(() => {
+    setIsOpen(fristIsOpen)
+    selectImage(image)
+  } , [fristIsOpen])
 
   return (
 

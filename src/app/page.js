@@ -57,6 +57,7 @@ async function getHome() {
 
   return [banner , aboutTitle, additionalServices ,aboutTitleAmenities , amenities , landmarkcategories , gallery ,news ,newsTitle ,room, feedback,feedbackTitle]
 }
+
 export default async function Home() {
   const [banner , aboutTitle , additionalServices , aboutTitleAmenities ,amenities ,landmarkcategories ,gallery ,news , newsTitle ,room, feedback,feedbackTitle] = await getHome()
   return (
