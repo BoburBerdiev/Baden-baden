@@ -8,7 +8,7 @@ const NewsSlider = ({news}) => {
   const {lang} = useSelector(state => state.langSlice)
 
   return (
-      <div className={'relative mySwiper'}>
+      <div className={'relative pb-5'}>
         <Swiper
             autoplay={{
               delay: 5500,
@@ -37,8 +37,8 @@ const NewsSlider = ({news}) => {
               el: ".my-pagination-cards",
             }}
             loop={true}
-            modules={Pagination}
-            className="w-full  h-full flex items-center justify-center"
+            modules={[Pagination]}
+            className="w-full  h-full relative mySwiper"
         >
           {
             news?.map(item => (
@@ -49,11 +49,11 @@ const NewsSlider = ({news}) => {
                 </SwiperSlide>
             ))
           }
-          <div className="relative flex items-center justify-center py-2 mt-5  gap-x-5">
-            <div className="inline-flex items-center gap-x-4 my-pagination-cards pagintaion-slider"></div>
-          </div>
-        </Swiper>
 
+        </Swiper>
+        <div className="relative  w-full flex items-center justify-center  mt-5 gap-x-5">
+          <div className="inline-flex items-center gap-x-4 my-pagination-cards pagintaion-slider"></div>
+        </div>
       </div>
 
   );

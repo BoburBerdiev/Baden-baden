@@ -3,70 +3,57 @@ import { Pagination} from "swiper/modules";
 import {FaStar} from "react-icons/fa";
 import {ImageUI} from "@/components/index";
 const ReviewsSlider = ({feedbacks}) => {
-  // const feedbacks = [
-  //   {
-  //     title: "Один из любимых отелей в Ташкенте!",
-  //     descr: "«Красивый отель! Великолепный завтрак! Отличное расположение! Просторные комфортные номера! Вежливый персонал!»",
-  //     fullName: "Svetlana",
-  //     country: "Россия"
-  //   },
-  //   {
-  //     title: "Один из любимых отелей в Ташкенте!",
-  //     descr: "«Красивый отель! Великолепный завтрак! Отличное расположение! Просторные комфортные номера! Вежливый персонал!»",
-  //     fullName: "Svetlana",
-  //     country: "Россия"
-  //   },
-  //   {
-  //     title: "Один из любимых отелей в Ташкенте!",
-  //     descr: "«Красивый отель! Великолепный завтрак! Отличное расположение! Просторные комфортные номера! Вежливый персонал!»",
-  //     fullName: "Svetlana",
-  //     country: "Россия"
-  //   },
-  // ]
+
   return (
+
       <Swiper
           autoplay={{
-        delay: 5500,
-        disableOnInteraction: false,
-      }}
+            delay: 5500,
+            disableOnInteraction: false,
+          }}
 
-              breakpoints={{
-                0: {
-                  slidesPerView: 1,
-                  spaceBetween: 10,
-                },
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
 
-                768: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
-                },
-
-
-              }}
-              pagination={{
-                clickable: true,
-                el: ".my-pagination-cards-reviews",
-              }}
-              loop={true}
-              modules={ Pagination}
-              className="w-full mySwiper h-full flex items-center justify-center"
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1380: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+          }}
+          pagination={{
+            clickable: true,
+            el: ".my-pagination-reviews",
+          }}
+          loop={true}
+          modules={[Pagination]}
+          className="w-full h-full relative mySwiper"
       >
         {
-          feedbacks?.map(card => (
-            <SwiperSlide >
-              <ReviewsCard key={card.id} title={card.title} descr={card.description} fullName={card.fullname} country={card.country} />
-            </SwiperSlide>
+          feedbacks?.map((card, ind) => (
+              <SwiperSlide key={ind}>
+                <ReviewsCard title={card.title} descr={card.description} fullName={card.fullname}
+                             country={card.country}/>
+              </SwiperSlide>
           ))
         }
-       
-        <div className="relative flex items-center justify-center py-2 mt-5  gap-x-5">
-          <div className="inline-flex items-center gap-x-4 my-pagination-cards-reviews pagintaion-slider"></div>
+        <div className="relative  w-full flex items-center justify-center  mt-5 gap-x-5">
+          <div className="inline-flex items-center gap-x-4 my-pagination-reviews pagintaion-slider"></div>
         </div>
       </Swiper>
+
   );
 };
-
-
 
 
 const ReviewsCard = ({image, title, descr, fullName, country}) => {
