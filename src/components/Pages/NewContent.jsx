@@ -72,6 +72,7 @@ const NewContent = ({titleNew}) => {
 
               productInfinity?.map((news , id) => (
                   <NewsCard
+                      key={news?.id}
                       id={id}
                       image={news?.image}
                       subTitle={langSelect(lang ,news?.text_ru, news?.text_en , news?.text_uz )}

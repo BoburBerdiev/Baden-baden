@@ -147,7 +147,7 @@ const LocationInfos = ({ image ,title ,landmark , id}) => {
         <ul data-aos='fade-up' data-aos-delay={300} className='space-y-[5px] md:space-y-[10px]  font-jost'>
           {
             landmark?.map(item => (
-                <li className='flex justify-between text-base gap-4 md:gap-10 font-thin'>
+                <li key={item?.id} className='flex justify-between text-base gap-4 md:gap-10 font-thin'>
                   <p>{langSelect(lang ,item?.title_ru , item?.title_en ,item?.title_uz )}</p>
                   <p className="shrink-0 text-[12px] lg:text-base"><span>{item?.distance}</span>
                     <span>{item?.distance_type === 'm' ? t('index.section4.m'):t('index.section4.km') }</span></p>
