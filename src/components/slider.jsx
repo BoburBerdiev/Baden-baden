@@ -51,8 +51,8 @@ const Slider = ({
                   <GrNext className="text-lg"/>
                 </button>
               </div>
-              <div className={' flex justify-center items-start w-full'}>
-                <div className="inline-flex items-center gap-x-4  inner-pagination"></div>
+              <div className={' flex justify-center items-center w-full'}>
+                <div className="inline-flex items-center gap-x-4 justify-self-center  inner-pagination"></div>
               </div>
             </div>
         </Swiper>
