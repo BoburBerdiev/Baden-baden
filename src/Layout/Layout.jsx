@@ -7,6 +7,7 @@ import store, {persistor} from "@/store";
 import "../localization/i18n";
 import {PersistGate} from "redux-persist/integration/react";
 import 'swiper/css';
+import 'swiper/css/pagination';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';

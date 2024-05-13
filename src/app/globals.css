@@ -5,6 +5,11 @@
 /*       SLIDER   */
 
 
+.swiper {
+    overflow-x: hidden;
+    overflow-y: visible !important;
+}
+
 .pagintaion-slider {
     display: inline-flex !important;
     width: auto !important;
@@ -17,6 +22,7 @@
     background-color: #B3BECA ;
     border-radius: 100%;
 }
+
 
 .pagintaion-slider  .swiper-pagination-bullet-active {
     background-color: #00274D !important
