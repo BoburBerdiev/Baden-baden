@@ -59,9 +59,9 @@ const ReviewsSlider = ({feedbacks}) => {
           ))
         }
        
-        {/*<div className="relative flex items-center justify-center py-2 mt-5  gap-x-5">*/}
-        {/*  <div className="inline-flex items-center gap-x-4 my-pagination-cards-reviews pagintaion-slider"></div>*/}
-        {/*</div>*/}
+        <div className="relative flex items-center justify-center py-2 mt-5  gap-x-5">
+          <div className="inline-flex items-center gap-x-4 my-pagination-cards-reviews pagintaion-slider"></div>
+        </div>
       </Swiper>
   );
 };
