@@ -1,5 +1,5 @@
 import {Swiper, SwiperSlide} from "swiper/react";
-import {Navigation, Pagination} from "swiper/modules";
+import { Pagination} from "swiper/modules";
 import {NewsCard} from "@/components/index";
 import {langSelect} from "@/helper";
 import {useSelector} from "react-redux";
@@ -14,17 +14,9 @@ const NewsSlider = ({news}) => {
               delay: 5500,
               disableOnInteraction: false,
             }}
-            navigation={{
-              nextEl: ".swipper-button-next",
-              prevEl: ".swipper-button-prev",
-            }}
             breakpoints={{
               0: {
                 slidesPerView: 1,
-                spaceBetween: 10,
-              },
-              400: {
-                slidesPerView: 1.8,
                 spaceBetween: 10,
               },
               768: {
@@ -45,7 +37,7 @@ const NewsSlider = ({news}) => {
               el: ".my-pagination-cards",
             }}
             loop={true}
-            modules={[Navigation, Pagination]}
+            modules={Pagination}
             className="w-full  h-full flex items-center justify-center"
         >
           {

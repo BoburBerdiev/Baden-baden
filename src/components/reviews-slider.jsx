@@ -1,5 +1,5 @@
 import {Swiper, SwiperSlide} from "swiper/react";
-import {Navigation, Pagination} from "swiper/modules";
+import { Pagination} from "swiper/modules";
 import {FaStar} from "react-icons/fa";
 import {ImageUI} from "@/components/index";
 const ReviewsSlider = ({feedbacks}) => {
@@ -35,18 +35,12 @@ const ReviewsSlider = ({feedbacks}) => {
                   slidesPerView: 1,
                   spaceBetween: 10,
                 },
-                400: {
-                  slidesPerView: 1.8,
-                  spaceBetween: 10,
-                },
+
                 768: {
                   slidesPerView: 2,
                   spaceBetween: 20,
                 },
-                1024: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
-                },
+
 
               }}
               pagination={{
@@ -54,7 +48,7 @@ const ReviewsSlider = ({feedbacks}) => {
                 el: ".my-pagination-cards-reviews",
               }}
               loop={true}
-              modules={[Navigation, Pagination]}
+              modules={ Pagination}
               className="w-full mySwiper h-full flex items-center justify-center"
       >
         {
