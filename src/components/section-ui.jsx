@@ -7,8 +7,8 @@ const SectionUI = ({children , subTitle , title ,modeBlue =false  , cityBg , isN
           className={`${isFalsePadding ? '' : 'pt-[50px] md:pt-20'}  ${modeBlue ? "bg-[url('/image/bg-noise.jpg')]" : 'bg-white'} relative overflow-hidden`}>
         {
             cityBg &&
-            <div className={" h-[200px] md:h-full left-0 md:left-[-10%] bottom-0 absolute w-full md:w-[50%] "}>
-              <ImageUI src={'/image/uzb-img.png'} objectFitContain={true} alt={'sectoin image'}/>
+            <div className={" h-[400px] sm:h-[500px] left-0 md:left-[-10%] bottom-0 absolute w-full lg:w-[50%] "}>
+              <ImageUI src={'/image/uzb-img.png'} objectFitContain={true} alt={'sectoin image'} imageStyle={'object-bottom'}/>
             </div>
         }
         {

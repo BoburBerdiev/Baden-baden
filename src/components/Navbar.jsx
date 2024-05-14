@@ -17,8 +17,7 @@ const Navbar = () => {
     const [isScroll, setIsScroll] = useState(false)
     const router = usePathname()
 
-    const handleBurger = (e) => {
-        e.stopPropagation()
+    const handleBurger = () => {
         setSidebar(!sidebar)
     }
 
@@ -38,16 +37,6 @@ const Navbar = () => {
         }
     }, []);
 
-    useEffect(() => {
-        const handleCLoseNav = () => {
-            setSidebar(false)
-        }
-        window.addEventListener('click', handleCLoseNav)
-
-        return () => {
-            window.removeEventListener('click', handleCLoseNav)
-        }
-    }, [sidebar])
 
     const {data: contact, refetch: contactRefetch,} = useQuery("getContact", () =>
         apiService.getData('/about/contact'), {enabled: false}
@@ -86,15 +75,15 @@ const Navbar = () => {
                             <LuAlignLeft className={'text-white text-xl  cursor-pointer'}
                                          onClick={handleBurger}/>
                         </div>
-                        <div onClick={(e) => e.stopPropagation()}
+                        <div
                              className={`  duration-700 z-[100] top-[70px] ${sidebar ? 'left-0' : '-left-full'} !box-border fixed w-full md:w-[80%] bg-[url('/image/bg-noise.jpg')] bg-currentBlue   p-5 h-[calc(100vh-70px)] flex flex-col justify-between border border-currentBlue  md:hidden`}>
                             <ul className={'flex flex-col gap-4 lg:gap-7 items-center '}>
                                 {
                                     navLink.map((link, ind) => {
                                         const active = router === link.link
                                         return (
-                                            <li key={ind}><Link href={link.link}
-                                                                className={`${active ? 'border border-white px-1.5 py-0.5' : "border border-transparent px-1.5 py-0.5"}`}
+                                            <li key={ind} onClick={()=>setSidebar(false)}><Link href={link.link}
+                                                                className={`${active ? 'border-b border-b-white pb-[1px]' : "border border-transparent px-1.5 py-0.5"}`}
                                             >
                                                 {t(`${link.text}`)}
                                             </Link>
@@ -121,7 +110,7 @@ const Navbar = () => {
                                         const active = router === link.link
 
                                         return (
-                                            <li key={ind}><Link href={link.link} className={`${active ? 'border border-white px-1.5 py-0.5' : "border border-transparent px-1.5 py-0.5"}`}>{t(`${link.text}`)} </Link></li>
+                                            <li key={ind}><Link href={link.link} className={`${active ? 'border-b border-b-white pb-[1px]' : "border border-transparent px-1.5 py-0.5"}`}>{t(`${link.text}`)} </Link></li>
                                         )
                                     }
                                 )
@@ -144,7 +133,7 @@ const Navbar = () => {
                                     const active = router === link.link
 
                                     return (
-                                        <li key={ind}><Link href={link.link} className={`${active ? 'border border-white px-1.5 py-0.5' : "border border-transparent px-1.5 py-0.5"}`}>{t(`${link.text}`)} </Link></li>
+                                        <li key={ind}><Link href={link.link} className={`${active ? 'border-b border-b-white pb-[1px]' : "border border-transparent px-1.5 py-0.5"}`}>{t(`${link.text}`)} </Link></li>
                                     )
                                     }
                                 )
@@ -230,7 +219,7 @@ const DropdownLang = () => {
             <div className="relative">
                 <p className=" cursor-pointer text-white font-jost" onClick={opendropdown}>{t('lang.defualt')}</p>
                 <div
-                    className={`grid w-24 ${dropdown ? "grid-rows-[1fr]" : 'grid-rows-[0fr]'} absolute top-[30px]  z-[150] left-0 duration-200 transition-all ease   `}>
+                    className={`grid w-24 ${dropdown ? "grid-rows-[1fr]" : 'grid-rows-[0fr]'} absolute top-[30px]  z-[150] md:left-0 max-md:right-0 duration-200 transition-all ease  bg-currentBlue `}>
                     <div
                         onClick={e => e.stopPropagation()}
                         className={`overflow-hidden bg-currentBlue flex flex-col   ${dropdown ? "border-b border-x border-white " : ''} rounded-b`}>
