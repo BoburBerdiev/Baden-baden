@@ -30,13 +30,13 @@ const AboutContent = ({aboutTitle ,aboutFacilities , amenities ,aboutTitleAmenit
             <div className={'order-1 md:order-2 py-0 md:py-20 md:col-span-6'}>
               {
                 aboutFacilities?.map((facilites, ind ) => (
-                    <AccordionAbhout key={facilites?.id}  fristIsOpen={ind === 0} image={facilites?.inner_image?.image} title={langSelect(lang ,facilites?.title_ru , facilites?.title_en ,facilites?.title_uz )}     selectImage={setFacilitesImage}
+                    <AccordionAbout key={facilites?.id}  fristIsOpen={ind === 0} image={facilites?.inner_image?.image} title={langSelect(lang ,facilites?.title_ru , facilites?.title_en ,facilites?.title_uz )}     selectImage={setFacilitesImage}
                                     subTitle={langSelect(lang ,facilites?.sub_title_ru , facilites?.sub_title_en ,facilites?.sub_title_uz )}/>
                 ))
               }
             </div>
           </div>
-        </SectionUI>h
+        </SectionUI>
         <SectionUI isFalsePadding={true} modeBlue={true} isNoContainer={true}>
           <div className={'w-full h-[300px] md:h-[500px] lg:h-[700px]'}>
             <video className="object-cover w-full h-full" autoPlay loop muted>
