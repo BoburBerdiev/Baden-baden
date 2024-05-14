@@ -18,7 +18,6 @@ const Navbar = () => {
     const router = usePathname()
 
     const handleBurger = () => {
-        // e.stopPropagation()
         setSidebar(!sidebar)
     }
 
@@ -38,16 +37,6 @@ const Navbar = () => {
         }
     }, []);
 
-    // useEffect(() => {
-    //     const handleCLoseNav = () => {
-    //         setSidebar(false)
-    //     }
-    //     window.addEventListener('click', handleCLoseNav)
-    //
-    //     return () => {
-    //         window.removeEventListener('click', handleCLoseNav)
-    //     }
-    // }, [sidebar])
 
     const {data: contact, refetch: contactRefetch,} = useQuery("getContact", () =>
         apiService.getData('/about/contact'), {enabled: false}
@@ -86,7 +75,7 @@ const Navbar = () => {
                             <LuAlignLeft className={'text-white text-xl  cursor-pointer'}
                                          onClick={handleBurger}/>
                         </div>
-                        <div onClick={(e) => e.stopPropagation()}
+                        <div
                              className={`  duration-700 z-[100] top-[70px] ${sidebar ? 'left-0' : '-left-full'} !box-border fixed w-full md:w-[80%] bg-[url('/image/bg-noise.jpg')] bg-currentBlue   p-5 h-[calc(100vh-70px)] flex flex-col justify-between border border-currentBlue  md:hidden`}>
                             <ul className={'flex flex-col gap-4 lg:gap-7 items-center '}>
                                 {
