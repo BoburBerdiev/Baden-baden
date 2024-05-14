@@ -11,7 +11,7 @@ const SectionTitle = ({title  , subTitle , modeBlue}) => {
         </h2>
         {
           subTitle &&
-        <p data-aos="fade-up" data-aos-delay={50} className={`text-sm md:text-base ${modeBlue ? 'text-white' :'text-currentBlack'} font-jost  w-full md:w-[90%] text-center font-normal`}>
+        <p data-aos="fade-up" data-aos-delay={50} className={`text-sm md:text-base lg:text-lg ${modeBlue ? 'text-white' :'text-currentBlack'} font-jost  w-full md:w-[90%] text-center font-normal`}>
           {subTitle}
         </p>
         }
