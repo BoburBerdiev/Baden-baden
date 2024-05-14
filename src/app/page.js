@@ -58,6 +58,19 @@ async function getHome() {
   return [banner , aboutTitle, additionalServices ,aboutTitleAmenities , amenities , landmarkcategories , gallery ,news ,newsTitle ,room, feedback,feedbackTitle]
 }
 
+export const  metadata = {
+  title: 'Baden-Baden - Создавайте воспоминания на всю жизнь.',
+  description: ' Будьте вкурсе всех новостей гостиницы BADEN-BADEN.',
+  icons:'/image/icon.png',
+  openGraph: {
+    title:'Baden-Baden - Создавайте воспоминания на всю жизнь.',
+    description: ' Будьте вкурсе всех новостей гостиницы BADEN-BADEN.',
+    type:'website',
+    url:'https://baden-baden.uz/',
+    siteName:'Baden-Baden'
+  }
+}
+
 export default async function Home() {
   const [banner , aboutTitle , additionalServices , aboutTitleAmenities ,amenities ,landmarkcategories ,gallery ,news , newsTitle ,room, feedback,feedbackTitle] = await getHome()
   return (
