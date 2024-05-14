@@ -21,8 +21,8 @@ const Footer = () => {
     return (
         <footer className="w-full bg-currentBlue bg-[url('/image/bg-noise.jpg')]">
             <div className="container">
-                <div className=" py-6 md:py-10 flex lg:flex-row flex-col gap-10 lg:gap-32 items-center font-jost">
-                    <Link href="/" className="w-36 h-20 md:w-44 md:h-28 block">
+                <div className=" py-6 md:py-10 flex lg:flex-row flex-col gap-10 lg:gap-24 items-center lg:items-start  font-jost">
+                    <Link href="/" className="w-36 aspect-[4/3] md:w-44 flex-shrink-0  block">
                         <img src="/image/baden-baden-logo-white 1.png" alt="" className="w-full h-full object-contain"/>
                     </Link>
                     <div
@@ -40,7 +40,7 @@ const Footer = () => {
                             <li>
                                 <a href={`mailto:${contact?.email}`} className="flex gap-3.5 items-center">
                                     <MdOutlineMailOutline className={'text-xl shrink-0'}/>
-                                    <span className={'hover:border-b hover:border-white border-b border-transparent duration-300'}>
+                                    <span className={'hover:border-b hover:border-white border-b border-transparent duration-300 break-all'}>
                                     {contact?.email1}
                                     </span>
                                 </a>

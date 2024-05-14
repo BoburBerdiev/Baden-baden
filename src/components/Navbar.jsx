@@ -17,8 +17,8 @@ const Navbar = () => {
     const [isScroll, setIsScroll] = useState(false)
     const router = usePathname()
 
-    const handleBurger = (e) => {
-        e.stopPropagation()
+    const handleBurger = () => {
+        // e.stopPropagation()
         setSidebar(!sidebar)
     }
 
@@ -38,16 +38,16 @@ const Navbar = () => {
         }
     }, []);
 
-    useEffect(() => {
-        const handleCLoseNav = () => {
-            setSidebar(false)
-        }
-        window.addEventListener('click', handleCLoseNav)
-
-        return () => {
-            window.removeEventListener('click', handleCLoseNav)
-        }
-    }, [sidebar])
+    // useEffect(() => {
+    //     const handleCLoseNav = () => {
+    //         setSidebar(false)
+    //     }
+    //     window.addEventListener('click', handleCLoseNav)
+    //
+    //     return () => {
+    //         window.removeEventListener('click', handleCLoseNav)
+    //     }
+    // }, [sidebar])
 
     const {data: contact, refetch: contactRefetch,} = useQuery("getContact", () =>
         apiService.getData('/about/contact'), {enabled: false}
@@ -93,8 +93,8 @@ const Navbar = () => {
                                     navLink.map((link, ind) => {
                                         const active = router === link.link
                                         return (
-                                            <li key={ind}><Link href={link.link}
-                                                                className={`${active ? 'border border-white px-1.5 py-0.5' : "border border-transparent px-1.5 py-0.5"}`}
+                                            <li key={ind} onClick={()=>setSidebar(false)}><Link href={link.link}
+                                                                className={`${active ? 'border-b border-b-white pb-[1px]' : "border border-transparent px-1.5 py-0.5"}`}
                                             >
                                                 {t(`${link.text}`)}
                                             </Link>
@@ -121,7 +121,7 @@ const Navbar = () => {
                                         const active = router === link.link
 
                                         return (
-                                            <li key={ind}><Link href={link.link} className={`${active ? 'border border-white px-1.5 py-0.5' : "border border-transparent px-1.5 py-0.5"}`}>{t(`${link.text}`)} </Link></li>
+                                            <li key={ind}><Link href={link.link} className={`${active ? 'border-b border-b-white pb-[1px]' : "border border-transparent px-1.5 py-0.5"}`}>{t(`${link.text}`)} </Link></li>
                                         )
                                     }
                                 )
@@ -144,7 +144,7 @@ const Navbar = () => {
                                     const active = router === link.link
 
                                     return (
-                                        <li key={ind}><Link href={link.link} className={`${active ? 'border border-white px-1.5 py-0.5' : "border border-transparent px-1.5 py-0.5"}`}>{t(`${link.text}`)} </Link></li>
+                                        <li key={ind}><Link href={link.link} className={`${active ? 'border-b border-b-white pb-[1px]' : "border border-transparent px-1.5 py-0.5"}`}>{t(`${link.text}`)} </Link></li>
                                     )
                                     }
                                 )
@@ -230,7 +230,7 @@ const DropdownLang = () => {
             <div className="relative">
                 <p className=" cursor-pointer text-white font-jost" onClick={opendropdown}>{t('lang.defualt')}</p>
                 <div
-                    className={`grid w-24 ${dropdown ? "grid-rows-[1fr]" : 'grid-rows-[0fr]'} absolute top-[30px]  z-[150] left-0 duration-200 transition-all ease   `}>
+                    className={`grid w-24 ${dropdown ? "grid-rows-[1fr]" : 'grid-rows-[0fr]'} absolute top-[30px]  z-[150] md:left-0 max-md:right-0 duration-200 transition-all ease  bg-currentBlue `}>
                     <div
                         onClick={e => e.stopPropagation()}
                         className={`overflow-hidden bg-currentBlue flex flex-col   ${dropdown ? "border-b border-x border-white " : ''} rounded-b`}>

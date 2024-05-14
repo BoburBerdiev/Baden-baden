@@ -42,10 +42,10 @@ const NewsSlider = ({news}) => {
         >
           {
             news?.map(item => (
-                <SwiperSlide key={item?.id} className={"h-full pt-[2%]"}>
+                <SwiperSlide key={item?.id} className={"h-full pt-[4%]"}>
                   <NewsCard image={item?.image} link={item?.link}
                             title={langSelect(lang, item?.title_ru, item?.title_en, item?.title_uz)}
-                            subTitle={langSelect(lang, item?.sub_title_ru, item?.sub_title_en, item?.sub_title_uz)}/>
+                            subTitle={langSelect(lang, item?.text_ru, item?.text_en, item?.text_uz)}/>
                 </SwiperSlide>
             ))
           }

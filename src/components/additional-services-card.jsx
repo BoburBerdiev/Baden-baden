@@ -3,7 +3,7 @@ import {ImageUI} from "@/components/index";
 
 const AdditionalServicesCard = ({image , title}) => {
   return (
-      <div  >
+      <div  className={'space-y-2.5 md:space-y-5'}>
         <div className={`relative aspect-[4/3] md:aspect-square  `}>
           <ImageUI alt={'room'} src={image} imageStyle={'z-10'} isBorder={true}/>
         </div>

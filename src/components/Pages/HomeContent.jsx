@@ -90,8 +90,8 @@ const HomeContent = ({
         </SectionUI>
         <SectionUI title={t('index.section4.title')} modeBlue={true} cityBg={true} >
           <div className={'relative'}>
-            <div className="grid grid-cols-1 md:grid-cols-2   pb-[60px] lg:pb-20">
-              <div className={'hidden md:block'}>
+            <div className="grid grid-cols-1 lg:grid-cols-2   pb-[60px] lg:pb-20">
+              <div className={'hidden lg:block'}>
 
               </div>
               <div className={'grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-5 md:gap-y-[30px]'}>

@@ -75,8 +75,8 @@ const RoomsSlider = ({room}) => {
                `}>
             <ImageUI isBorder={true} isBorderWhite={true} imageStyle={'object-center'} src={image} alt={'title'}/>
             <div
-                className={'absolute z-[12] h-full top-0  w-full left-0 z-5 flex items-center  flex-col gap-2 md:gap-5 justify-end text-white p-4'}>
-              <h4 className={'text-2xl md:text-4xl text-white'}>
+                className={'absolute z-[12] h-full top-0  w-full left-0 z-5 flex items-center  flex-col gap-1.5 justify-end text-white p-4'}>
+              <h4 className={'text-2xl md:text-4xl text-white font-forum'}>
                 {title}
               </h4>
               <div className={'text-lg md:text-2xl flex gap-x-2'}>

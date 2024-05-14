@@ -26,8 +26,8 @@ const ReviewsSlider = ({feedbacks}) => {
               slidesPerView: 2,
               spaceBetween: 20,
             },
-            1380: {
-              slidesPerView: 2,
+            1280: {
+              slidesPerView: 3,
               spaceBetween: 20,
             },
           }}
