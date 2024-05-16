@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0875101f-c9e0-4ef2-945f-6eeda6b04bc8" name="Changes" comment="metadata qoshildi, pull uchun">
+    <list default="true" id="0875101f-c9e0-4ef2-945f-6eeda6b04bc8" name="Changes" comment="SEO adding">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/reviews-slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/reviews-slider.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,12 +57,12 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;/home/islom/.nvm/versions/node/v18.17.0/bin/node&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;npm.dev (1).executor&quot;: &quot;Run&quot;,
     &quot;npm.dev.executor&quot;: &quot;Run&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/islom/.local/share/JetBrains/Toolbox/apps/webstorm/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\webstorm\\WebStorm 2023.3.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -136,6 +138,12 @@
       <workItem from="1715242692692" duration="19568000" />
       <workItem from="1715334157627" duration="4922000" />
       <workItem from="1715427518573" duration="6971000" />
+      <workItem from="1715578709621" duration="12507000" />
+      <workItem from="1715665557759" duration="6541000" />
+      <workItem from="1715692690759" duration="355000" />
+      <workItem from="1715750445981" duration="595000" />
+      <workItem from="1715755999585" duration="53000" />
+      <workItem from="1715855222577" duration="3120000" />
     </task>
     <task id="LOCAL-00001" summary="news card">
       <option name="closed" value="true" />
@@ -209,7 +217,79 @@
       <option name="project" value="LOCAL" />
       <updated>1715432597073</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="metadata qoshildi, pull uchun">
+      <option name="closed" value="true" />
+      <created>1715578731464</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1715578731464</updated>
+    </task>
+    <task id="LOCAL-00011" summary="swiper bowqatdan ustakofka boldi.">
+      <option name="closed" value="true" />
+      <created>1715579988944</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1715579988944</updated>
+    </task>
+    <task id="LOCAL-00012" summary="swiper full work">
+      <option name="closed" value="true" />
+      <created>1715589224223</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1715589224223</updated>
+    </task>
+    <task id="LOCAL-00013" summary="about page accordion-about work">
+      <option name="closed" value="true" />
+      <created>1715602578173</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1715602578173</updated>
+    </task>
+    <task id="LOCAL-00014" summary="section title contact page full">
+      <option name="closed" value="true" />
+      <created>1715670427126</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1715670427126</updated>
+    </task>
+    <task id="LOCAL-00015" summary="section title contact page full">
+      <option name="closed" value="true" />
+      <created>1715670580299</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1715670580299</updated>
+    </task>
+    <task id="LOCAL-00016" summary="SEO adding">
+      <option name="closed" value="true" />
+      <created>1715692487501</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1715692487501</updated>
+    </task>
+    <task id="LOCAL-00017" summary="SEO adding">
+      <option name="closed" value="true" />
+      <created>1715692497547</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1715692497547</updated>
+    </task>
+    <task id="LOCAL-00018" summary="SEO adding">
+      <option name="closed" value="true" />
+      <created>1715855362651</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1715855362651</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,17 +316,11 @@
     <MESSAGE value="ozgarishlarni pull qilish" />
     <MESSAGE value="full" />
     <MESSAGE value="metadata qoshildi, pull uchun" />
-    <option name="LAST_COMMIT_MESSAGE" value="metadata qoshildi, pull uchun" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/layout.js</url>
-          <line>36</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="swiper bowqatdan ustakofka boldi." />
+    <MESSAGE value="swiper full work" />
+    <MESSAGE value="about page accordion-about work" />
+    <MESSAGE value="section title contact page full" />
+    <MESSAGE value="SEO adding" />
+    <option name="LAST_COMMIT_MESSAGE" value="SEO adding" />
   </component>
 </project>

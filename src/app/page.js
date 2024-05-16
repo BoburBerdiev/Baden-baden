@@ -1,6 +1,7 @@
 
 import {HomeContent} from "@/components/Pages";
 async function getHome() {
+
   // ResBanner
   const resBanner = await  fetch(`${process.env.NEXT_PUBLIC_API_URL}/about/banner/`, { cache: 'no-store' })
   const banner = await resBanner.json()
@@ -55,7 +56,7 @@ async function getHome() {
   const feedbackTitle = await resFeedbackTitle.json()
 
 
-  return [banner , aboutTitle, additionalServices ,aboutTitleAmenities , amenities , landmarkcategories , gallery ,news ,newsTitle ,room, feedback,feedbackTitle]
+  return [banner , aboutTitle, additionalServices ,aboutTitleAmenities , amenities , landmarkcategories , gallery ,news ,newsTitle ,room, feedback,feedbackTitle , aboutFacilities]
 }
 
 export const  metadata = {

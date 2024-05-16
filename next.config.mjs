@@ -2,8 +2,8 @@
 const nextConfig = {images: {
     remotePatterns: [
       {
-        protocol: 'http',
-        hostname: '95.46.96.96',
+        protocol: 'https',
+        hostname: 'baden-baden.uz',
         port: '',
       },
     ],

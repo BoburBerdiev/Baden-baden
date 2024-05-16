@@ -1,5 +1,4 @@
 import "./globals.css";
-
 import "react-datepicker/dist/react-datepicker.css";
 import { Jost, Forum} from "next/font/google";
 import Layout from "@/Layout/Layout";
@@ -20,6 +19,18 @@ const forum = Forum({
 });
 
 
+export const  metadata = {
+  title: 'Baden-Baden - Создавайте воспоминания на всю жизнь.',
+  description: ' Будьте вкурсе всех новостей гостиницы BADEN-BADEN.',
+  icons:'/image/icon.png',
+  openGraph: {
+    title:'Baden-Baden - Создавайте воспоминания на всю жизнь.',
+    description: ' Будьте вкурсе всех новостей гостиницы BADEN-BADEN.',
+    type:'website',
+    url:'https://baden-baden.uz/',
+    siteName:'Baden-Baden'
+  }
+}
 
 export default function RootLayout({children}) {
     return (
