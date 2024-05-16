@@ -1,4 +1,3 @@
-'use client'
 
 import {GalleryContent} from "@/components/Pages";
 
