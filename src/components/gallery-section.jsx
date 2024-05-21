@@ -10,6 +10,9 @@ const GallerySection = ({ gallery, isForIndex , isGalleryPage }) => {
     // console.log('lightGallery has been initialized');
   };
 
+
+  console.log(isGalleryPage)
+  console.log(1)
   return (
       <LightGallery
           onInit={onInit}

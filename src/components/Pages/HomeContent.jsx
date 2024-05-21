@@ -100,7 +100,7 @@ const HomeContent = ({
         </SectionUI>
 
         <SectionUI title={langSelect(lang ,gallery?.title_ru , gallery?.title_en ,gallery?.title_uz )}>
-          <GallerySection gallery={gallery?.images} isForIndex={true} />
+          <GallerySection gallery={gallery?.images} isForIndex={true} isGalleryPage={true} />
           <div data-aos={'fade-up'} data-aos-delay={100} className="flex flex-col items-center pb-1.5 pt-5 md:pt-10">
             <ButtonUI content={t('btn.moreAll')} hrefToPage={'/gallery'} borderBtn />
           </div>
