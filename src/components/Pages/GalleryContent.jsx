@@ -69,7 +69,7 @@ const GalleryContent = () => {
                 dataLength={productInfinity?.count || []}>
               {
                 productInfinity?.map((gallery , index) => (
-                  <GallerySection key={index} gallery={gallery} />
+                  <GallerySection key={index} gallery={gallery} isForIndex={false} isGalleryPage={true} />
                 ))
               }
             </InfiniteScroll>

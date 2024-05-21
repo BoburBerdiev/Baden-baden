@@ -33,7 +33,7 @@ const Slider = ({
           <SwiperSlide key={item?.id} className={`w-full h-full`}>
               <div className={`w-full h-full relative`}>
                 <ImageUI isBorder={true} src={item?.image} alt={'banner'} quality={Quality} priority={priority}
-                         imageStyle={'object-center'}
+                         imageStyle={'object-center h-full'}
                          card={card || false}/>
 
               </div>

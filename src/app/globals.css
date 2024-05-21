@@ -5,10 +5,10 @@
 /*       SLIDER   */
 
 
-.swiper {
-    overflow-x: hidden;
-    overflow-y: visible !important;
-}
+/*.swiper {*/
+/*    overflow-x: hidden;*/
+/*    overflow-y: visible !important;*/
+/*}*/
 
 .pagintaion-slider {
     display: inline-flex !important;

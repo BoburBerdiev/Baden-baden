@@ -47,7 +47,7 @@ const RoomsSlider = ({room}) => {
 
         {
           room?.map(item => (
-              <SwiperSlide  className={"h-full pt-[5%] md:pt-[2%] px-5 md:px-0 relative"}>
+              <SwiperSlide key={item?.id} className={"h-full pt-[5%] md:pt-[2%] px-5 md:px-0 relative"}>
                 <RoomsCard  title={langSelect(lang ,item?.title_ru , item?.title_en ,item?.title_uz )}  image={item?.index_image?.image} person={item?.num_people} bedrooms={item?.num_bedrooms} capacity={item?.capacity } slug={item?.slug} />
               </SwiperSlide>
           ))
@@ -71,11 +71,11 @@ const RoomsSlider = ({room}) => {
     const {t} = useTranslation()
     return (
         <Link href={`/room/${slug}`} className={'block'}>
-          <div className={`w-full h-[300px] md:h-[550px]  relative duration-75 
+          <div className={`w-full h-[300px] md:h-[550px]   relative duration-75 
                `}>
             <ImageUI isBorder={true} isBorderWhite={true} imageStyle={'object-center'} src={image} alt={'title'}/>
             <div
-                className={'absolute z-[12] h-full top-0  w-full left-0 z-5 flex items-center  flex-col gap-1.5 justify-end text-white p-4'}>
+                className={'absolute z-[12] h-full top-0 bg-gradient-to-t from-black/10  to-transparent w-full left-0 z-5 flex items-center  flex-col gap-1.5 justify-end text-white p-4'}>
               <h4 className={'text-2xl md:text-4xl text-white font-forum'}>
                 {title}
               </h4>

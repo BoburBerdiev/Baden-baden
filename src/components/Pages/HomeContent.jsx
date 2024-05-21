@@ -33,20 +33,12 @@ const HomeContent = ({
 
   return (
       <>
-        <SEO
-            ogImage={'/baden-baden-logo-white 1.png'}
-            title={indexSEO[lang].title}
-            description={indexSEO[lang].description}
-            ogTitle={indexSEO[lang].ogTitle}
-            ogDescription={indexSEO[lang].ogDescription}
-            twitterHandle={indexSEO[lang].twitterHandle}
-            keywords={['hotel', 'accommodation', 'lodging', 'hospitality', 'travel', 'vacation', 'resort', 'staycation', 'booking', 'hospitality industry', 'hotel amenities']}
-        />
+
         <Header title={langSelect(lang ,banner?.title_ru , banner?.title_en ,banner?.title_uz )} image={banner?.image} />
         <SectionUI title={langSelect(lang ,aboutTitle?.title_ru , aboutTitle?.title_en ,aboutTitle?.title_uz )}
                    subTitle={langSelect(lang ,aboutTitle?.sub_title_ru , aboutTitle?.sub_title_en ,aboutTitle?.sub_title_uz )}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-[20%] pb-[50px] md:pb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-5 md:gap-x-[20%] pb-[50px] md:pb-20 ">
             <div data-aos={'fade-up'}>
               <AdditionalServicesCard title={langSelect(lang , additionalServices[0]?.title_ru , additionalServices[0]?.title_en , additionalServices[0]?.title_uz )} image={additionalServices[0]?.index_image.image}  />
             </div>
@@ -59,7 +51,7 @@ const HomeContent = ({
           </div>
         </SectionUI>
         <SectionUI isFalsePadding={true} modeBlue={true} isNoContainer={true} >
-          <div className={'w-full h-[300px] md:h-[500px] lg:h-[700px]'}>
+          <div className={'w-full h-[300px] md:h-[500px] lg:h-[700px] overflow-hidden'}>
             <video className="object-cover w-full h-full" autoPlay loop muted>
               <source
                   className="w-full"
@@ -82,7 +74,7 @@ const HomeContent = ({
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5  ">
             {
               amenities?.map((item , id) => (
-                    <HotelAmenitiesCard id={id} image={item?.image} title={langSelect(lang ,item?.title_ru , item?.title_en ,item?.title_uz )}/>
+                    <HotelAmenitiesCard id={id} key={item?.id} image={item?.image} title={langSelect(lang ,item?.title_ru , item?.title_en ,item?.title_uz )}/>
 
               ))
             }
@@ -97,7 +89,7 @@ const HomeContent = ({
               <div className={'grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-5 md:gap-y-[30px]'}>
                 {
                   landmarkcategories?.map((item , id) => (
-                      <LocationInfos  data-aos-delay={id*100} image={item?.image} title={langSelect(lang ,item?.title_ru , item?.title_en ,item?.title_uz )} landmark={item?.landmarks}/>
+                      <LocationInfos key={item?.id}  data-aos-delay={id*100} image={item?.image} title={langSelect(lang ,item?.title_ru , item?.title_en ,item?.title_uz )} landmark={item?.landmarks}/>
                   ))
                 }
               </div>

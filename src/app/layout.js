@@ -2,7 +2,9 @@ import "./globals.css";
 import "react-datepicker/dist/react-datepicker.css";
 import { Jost, Forum} from "next/font/google";
 import Layout from "@/Layout/Layout";
-
+import 'lightgallery/css/lightgallery.css';
+import 'lightgallery/css/lg-thumbnail.css';
+import 'lightgallery/css/lg-zoom.css';
 const jost = Jost({
         subsets: ["latin", "cyrillic"],
         weight: ['100', '200','400' ,'500' , "600" , "700" , '800' ],
@@ -34,7 +36,7 @@ export const  metadata = {
 
 export default function RootLayout({children}) {
     return (
-        <html lang="en" className={`font-jost ${jost.variable} ${forum.variable}`}>
+        <html lang="en" className={`font-jost ${jost.variable} ${forum.variable} overflow-x-hidden`}>
         <body>
         <Layout>
             {children}

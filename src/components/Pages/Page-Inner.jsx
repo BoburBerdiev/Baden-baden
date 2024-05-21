@@ -1,7 +1,6 @@
 'use client'
-import {ButtonUI, DropdownBooking, NumberGuests, RoomsSlider, SectionUI} from "@/components";
+import {ButtonUI, DropdownBooking, ImageUI, NumberGuests, RoomsSlider, SectionUI} from "@/components";
 import {LuBath, LuBedDouble, LuFootprints, LuMaximize, LuSnowflake, LuUsers} from "react-icons/lu";
-import ImageUi from "@/components/image-ui";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {FreeMode, Grid, Navigation, Thumbs} from 'swiper/modules';
 import {useEffect, useState} from "react";
@@ -22,6 +21,20 @@ import {langSelect} from "@/helper";
 
 
 
+// import { useState } from 'react';
+// import SwiperCore, { Navigation, Thumbs, FreeMode, Grid } from 'swiper';
+// import { Swiper, SwiperSlide } from 'swiper/react';
+import LightGallery from 'lightgallery/react';
+import lgThumbnail from 'lightgallery/plugins/thumbnail';
+import lgZoom from 'lightgallery/plugins/zoom';
+
+// import 'swiper/swiper-bundle.min.css';
+import 'lightgallery/css/lightgallery.css';
+import 'lightgallery/css/lg-thumbnail.css';
+import 'lightgallery/css/lg-zoom.css';
+// import { GrNext, GrPrevious } from 'react-icons/gr';
+
+// SwiperCore.use([Navigation, Thumbs, FreeMode, Grid]);
 const Page = ({roomCatalog}) => {
     const {t} = useTranslation()
     const {lang} = useSelector(state => state.langSlice)
@@ -110,7 +123,7 @@ const Page = ({roomCatalog}) => {
             </SectionUI>
             <section className=" mb-7 sm:mb-14 md:mb-20 mt-5 md:mt-10">
                 <div className="container space-y-5 md:space-y-10">
-                    <SwiperInner images={room?.images}/>
+                    <SwiperInner images={room?.images} title={langSelect(lang ,room?.title_ru , room?.title_en ,room?.title_uz )}/>
                     <div className="grid grid-cols-1 md:grid-cols-3  gap-5">
                         <div className="col-span-2 flex flex-col gap-5 md:gap-10">
                             <div className="flex flex-col gap-3 md:gap-5">
@@ -240,100 +253,105 @@ const Page = ({roomCatalog}) => {
 export default Page;
 
 
-const SwiperInner = ({images}) => {
+const SwiperInner = ({ images , title }) => {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-
     return (
-        <>
-
-            <div className={'grid lg:grid-cols-3 gap-2.5 lg:gap-4 xl:gap-5 '}>
-                <Swiper
-
-                    spaceBetween={10}
-                    thumbs={{swiper: thumbsSwiper}}
-                    navigation={{
-                        nextEl: ".swipper-button-next",
-                        prevEl: ".swipper-button-prev",
-                    }}
-                    modules={[FreeMode, Navigation, Thumbs]}
-                    className="mySwiper2 h-[220px] sm:h-[300px]  lg:h-[450px] xl:h-[520px] lg:col-span-2 w-full"
+        <div className={'w-full grid grid-cols-1 lg:grid-cols-3 gap-2.5 lg:gap-4 xl:gap-5'}>
+            <div className={'col-span-1 lg:col-span-2'}>
+                <LightGallery
+                    speed={500}
+                    plugins={[lgThumbnail, lgZoom]}
+                    elementClassNames={'w-full '}
+                    selector=".lightgallery-item"
                 >
-                    {
-                        images?.map((image) => (
+                    <Swiper
+                        spaceBetween={10}
+                        thumbs={{ swiper: thumbsSwiper }}
+                        navigation={{
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                        }}
+                        modules={[FreeMode, Navigation, Thumbs]}
+                        className="mySwiper2 h-[220px] sm:h-[300px] lg:h-[450px] xl:h-[520px]  w-full"
+                    >
+                        {images?.map((image) => (
                             <SwiperSlide key={image?.id} className={'relative w-full h-full'}>
-                                <ImageUi alt={'inner image'} src={image.image}/>
+                                <a href={image.image} className="lightgallery-item" data-src={image.image}>
+                                    <ImageUI alt={title} src={image.image} imageStyle={'object-bottom'} />
+                                </a>
                             </SwiperSlide>
-                        ))
-                    }
+                        ))}
 
-                    <button
-                        className=" hidden lg:block  absolute left-5 top-[50%] cursor-pointer  border rounded-full border-white p-2  swipper-button-prev z-[12]  bg-white text-currentBlue">
-                        <GrPrevious className="text-xl"/>
-                    </button>
-                    <button
-                        className=" hidden lg:block absolute right-5 top-[50%] cursor-pointer  border rounded-full border-white p-2 z-20 swipper-button-next bg-white text-currentBlue">
-                        <GrNext className="text-xl"/>
-                    </button>
-                </Swiper>
-
-                <Swiper
-
-                    breakpoints={{
-                        0: {
-                            slidesPerView: 2,
-                            spaceBetween: 10,
-                            grid: {
-                                rows: 1,
-                            }
-                        },
-                        640: {
-                            slidesPerView: 2,
-                            spaceBetween: 10,
-                            grid: {
-                                rows: 1,
-                            }
-                        },
-                        768: {
-                            slidesPerView: 2,
-                            spaceBetween: 10,
-                            grid: {
-                                rows: 1,
-                            }
-                        },
-                        1024: {
-                            slidesPerView: 2,
-                            spaceBetween: 10,
-                            grid: {
-                                rows: 2,
-                            }
-                        },
-                        1280: {
-                            slidesPerView: 2,
-                            spaceBetween: 16,
-                            grid: {
-                                rows: 2,
-                            }
-                        },
-
-                    }}
-                    onSwiper={setThumbsSwiper}
-
-
-                    freeMode={true}
-                    watchSlidesProgress={true}
-                    modules={[FreeMode, Grid, Navigation, Thumbs]}
-                    className="mySwiper  h-[100px] lg:h-[450px] xl:h-[520px] w-full"
-                >
-                    {
-                        images?.map((image) => (
-                            <SwiperSlide key={image?.id} className={'relative w-full h-full'}>
-                                <ImageUi alt={'inner image'} src={image.image}/>
-                            </SwiperSlide>
-                        ))
-                    }
-                </Swiper>
+                        <button
+                            className="hidden lg:block  absolute left-5 top-[50%] cursor-pointer  border rounded-full border-white p-2  swipper-button-prev z-[12]  bg-white text-currentBlue"
+                        >
+                            <GrPrevious className="text-lg" />
+                        </button>
+                        <button
+                            className="hidden lg:block absolute right-5 top-[50%] cursor-pointer  border rounded-full border-white p-2 z-20 swipper-button-next bg-white text-currentBlue"
+                        >
+                            <GrNext className="text-lg" />
+                        </button>
+                    </Swiper>
+                </LightGallery>
             </div>
-        </>
-    )
-}
+
+<div className={'col-span-1 '}>
+    <Swiper
+        breakpoints={{
+            0: {
+                slidesPerView: 4,
+                spaceBetween: 10,
+                grid: {
+                    rows: 1,
+                },
+            },
+            640: {
+                slidesPerView: 4,
+                spaceBetween: 10,
+                grid: {
+                    rows: 1,
+                },
+            },
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 10,
+                grid: {
+                    rows: 1,
+                },
+            },
+            1024: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+                grid: {
+                    rows: 2,
+                },
+            },
+            1280: {
+                slidesPerView: 2,
+                spaceBetween: 16,
+                grid: {
+                    rows: 2,
+                },
+            },
+        }}
+        onSwiper={setThumbsSwiper}
+        freeMode={true}
+        watchSlidesProgress={true}
+        modules={[FreeMode, Grid, Navigation, Thumbs]}
+        className="mySwiper h-[100px] lg:h-[450px] xl:h-[520px] "
+    >
+        {images?.map((image) => (
+            <SwiperSlide key={image?.id} className={'relative w-full h-full'}>
+                <ImageUI alt={'inner image'} src={image.image} />
+            </SwiperSlide>
+        ))}
+    </Swiper>
+</div>
+
+        </div>
+    );
+};
+
+

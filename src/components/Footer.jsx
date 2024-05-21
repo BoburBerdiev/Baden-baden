@@ -21,15 +21,15 @@ const Footer = () => {
     return (
         <footer className="w-full bg-currentBlue bg-[url('/image/bg-noise.jpg')]">
             <div className="container">
-                <div className=" py-6 md:py-10 flex lg:flex-row flex-col gap-10 lg:gap-24 items-center lg:items-start  font-jost">
-                    <Link href="/" className="w-36 aspect-[4/3] md:w-44 flex-shrink-0  block">
+                <div className=" py-6 md:py-10 flex lg:flex-row flex-col gap-10 lg:gap-20 xl:gap-24 2xl:gap-32 items-center lg:items-start  font-jost">
+                    <Link href="/" className="w-36 aspect-[4/3] md:w-40 flex-shrink-0  block">
                         <img src="/image/baden-baden-logo-white 1.png" alt="" className="w-full h-full object-contain"/>
                     </Link>
                     <div
                         className="grid grid-cols-3 sm:grid-cols-6  gap-x-6  sm:gap-x-10 md:gap-x-12 lg:gap-x-24 xl:gap-x-36 text-white font-jost">
                         <ul className="col-span-2 flex flex-col gap-5 order-1  text-sm">
                             <li>
-                                <a href={`tel:${contact?.phone1}`} className="flex gap-3.5 items-center">
+                                <a href={`tel:${contact?.phone1}`} className="flex gap-2 items-center">
                                     <LuPhone className={'text-xl shrink-0'}/>
 
                                     <span className={'hover:border-b hover:border-white border-b border-transparent duration-300'}>
@@ -38,7 +38,7 @@ const Footer = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href={`mailto:${contact?.email}`} className="flex gap-3.5 items-center">
+                                <a href={`mailto:${contact?.email}`} className="flex gap-2 items-center">
                                     <MdOutlineMailOutline className={'text-xl shrink-0'}/>
                                     <span className={'hover:border-b hover:border-white border-b border-transparent duration-300 break-all'}>
                                     {contact?.email1}
@@ -46,7 +46,7 @@ const Footer = () => {
                                 </a>
                             </li>
                             <li>
-                                <p className="flex gap-3.5 items-center">
+                                <p className="flex gap-2 items-center">
                                     <SlLocationPin className={'text-xl shrink-0'}/>
                             <span>{langSelect(lang ,contact?.address_ru , contact?.address_en ,contact?.address_uz )}</span></p>
                             </li>

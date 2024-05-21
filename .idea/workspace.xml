@@ -4,11 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0875101f-c9e0-4ef2-945f-6eeda6b04bc8" name="Changes" comment="SEO adding">
+    <list default="true" id="0875101f-c9e0-4ef2-945f-6eeda6b04bc8" name="Changes" comment="full">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Layout/Layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Layout/Layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/GalleryContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/GalleryContent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/HomeContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/HomeContent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/Page-Inner.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/Page-Inner.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/gallery-section.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gallery-section.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/room-card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/room-card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/rooms-slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/rooms-slider.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/section-ui.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/section-ui.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slider.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/localization/uz.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/localization/uz.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +155,8 @@
       <workItem from="1715692690759" duration="355000" />
       <workItem from="1715750445981" duration="595000" />
       <workItem from="1715755999585" duration="53000" />
-      <workItem from="1715855222577" duration="3120000" />
+      <workItem from="1715855222577" duration="3812000" />
+      <workItem from="1716281602414" duration="16784000" />
     </task>
     <task id="LOCAL-00001" summary="news card">
       <option name="closed" value="true" />
@@ -289,7 +302,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715855362651</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="full">
+      <option name="closed" value="true" />
+      <created>1715858459999</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1715858460000</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,13 +335,13 @@
     <MESSAGE value="aos 80% ,  next-seo start" />
     <MESSAGE value="pull uchun" />
     <MESSAGE value="ozgarishlarni pull qilish" />
-    <MESSAGE value="full" />
     <MESSAGE value="metadata qoshildi, pull uchun" />
     <MESSAGE value="swiper bowqatdan ustakofka boldi." />
     <MESSAGE value="swiper full work" />
     <MESSAGE value="about page accordion-about work" />
     <MESSAGE value="section title contact page full" />
     <MESSAGE value="SEO adding" />
-    <option name="LAST_COMMIT_MESSAGE" value="SEO adding" />
+    <MESSAGE value="full" />
+    <option name="LAST_COMMIT_MESSAGE" value="full" />
   </component>
 </project>

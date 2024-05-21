@@ -40,7 +40,7 @@ const Layout = ({children}) => {
                     <Provider store={store}>
                         <PersistGate loading={null} persistor={persistor}>
                             <Navbar/>
-                            <main className={`min-h-screen ${router === '/' ? "" : "mt-[72px] md:mt-[125px]"} `}>
+                            <main className={`min-h-screen ${router === '/' ? "" : "mt-[72px] md:mt-[125px]"} overflow-x-hidden `}>
                                 <NextTopLoader />
                                 {children}
                             </main>

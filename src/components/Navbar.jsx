@@ -51,7 +51,7 @@ const Navbar = () => {
     return (
         <nav
             className={`${router === '/' ? isScroll ? "bg-currentBlue bg-[url('/image/bg-noise.jpg')] " : "bg-transparent " : "bg-currentBlue bg-[url('/image/bg-noise.jpg')] "} ${isScroll ? "md:-translate-y-10 border-b border-white" : ""} duration-300 top-0 fixed  left-0 z-[100] w-full`}>
-            <div className={`relative z-20 py-[10px] border-b-[0.5px] border-navBorder opacity-70  hidden md:block `}>
+            <div className={`relative w-full z-20 py-[10px] border-b-[0.5px] border-navBorder opacity-70  hidden md:block `}>
                 <div className="container">
                     <div
                         className="flex text-white font-jost text-xs lg:text-sm justify-between items-center font-normal">
@@ -66,7 +66,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-            <div className=" relative w-full z-10">
+            <div className=" relative z-10 w-full">
                 <div className="container">
                     <div
                         className="flex items-center  py-4 md:py-8 text-white font-normal justify-between text-lg font-jost   ">
@@ -217,12 +217,12 @@ const DropdownLang = () => {
     return (
         <>
             <div className="relative">
-                <p className=" cursor-pointer text-white font-jost" onClick={opendropdown}>{t('lang.defualt')}</p>
+                <p className=" cursor-pointer text-white font-jost text-center" onClick={opendropdown}>{t('lang.defualt')}</p>
                 <div
                     className={`grid w-24 ${dropdown ? "grid-rows-[1fr]" : 'grid-rows-[0fr]'} absolute top-[30px]  z-[150] md:left-0 max-md:right-0 duration-200 transition-all ease  bg-currentBlue `}>
                     <div
                         onClick={e => e.stopPropagation()}
-                        className={`overflow-hidden bg-currentBlue flex flex-col   ${dropdown ? "border-b border-x border-white " : ''} rounded-b`}>
+                        className={`overflow-x-hidden bg-currentBlue flex flex-col   ${dropdown ? "border-b border-x border-white " : ''} rounded-b`}>
                         {
                             langList.map((item) => (
                                 <div
