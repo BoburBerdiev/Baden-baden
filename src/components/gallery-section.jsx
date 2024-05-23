@@ -11,8 +11,6 @@ const GallerySection = ({ gallery, isForIndex , isGalleryPage }) => {
   };
 
 
-  console.log(isGalleryPage)
-  console.log(1)
   return (
       <LightGallery
           onInit={onInit}
